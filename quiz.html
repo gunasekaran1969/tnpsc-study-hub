@@ -1,0 +1,976 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="TNPSC Study Hub - Online TNPSC Quiz and Mock Test">
+
+<title>TNPSC Quiz | TNPSC Study Hub</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef7ff,#f7f1ff,#effcf8);
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#071952,#088395,#35a29f);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+.logo{
+    font-size:36px;
+    font-weight:bold;
+}
+
+header h1{
+    font-size:30px;
+}
+
+header p{
+    margin-top:6px;
+}
+
+nav{
+    background:#071952;
+    text-align:center;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:8px 13px;
+    margin:3px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#35a29f;
+}
+
+.container{
+    max-width:850px;
+    margin:auto;
+    padding:20px;
+}
+
+.quiz-intro{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    margin-bottom:20px;
+}
+
+.quiz-intro h2{
+    color:#071952;
+}
+
+.quiz-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 7px 20px rgba(0,0,0,.15);
+}
+
+.quiz-header{
+    background:linear-gradient(135deg,#071952,#088395);
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.question-number{
+    color:#e63946;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.option{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    text-align:left;
+    background:#f1f5f9;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.option:hover{
+    background:#dbeafe;
+}
+
+.option.correct{
+    background:#c8e6c9;
+    border:2px solid #2e7d32;
+}
+
+.option.wrong{
+    background:#ffcdd2;
+    border:2px solid #c62828;
+}
+
+.option:disabled{
+    cursor:not-allowed;
+}
+
+.explanation{
+    display:none;
+    background:#e8f5e9;
+    border-left:6px solid #2e7d32;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+.controls{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:20px;
+}
+
+.btn{
+    border:none;
+    padding:12px 18px;
+    border-radius:9px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.previous{
+    background:#607d8b;
+}
+
+.next{
+    background:#088395;
+}
+
+.start{
+    background:#e63946;
+}
+
+.result{
+    display:none;
+    background:linear-gradient(135deg,#071952,#088395);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    border-radius:18px;
+    margin-top:20px;
+}
+
+.result h2{
+    margin-bottom:10px;
+}
+
+.score{
+    font-size:50px;
+    font-weight:bold;
+}
+
+.restart{
+    background:#e63946;
+    margin-top:15px;
+}
+
+.progress{
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:#35a29f;
+}
+
+footer{
+    background:#071952;
+    color:white;
+    text-align:center;
+    margin-top:40px;
+    padding:30px 15px;
+}
+
+footer a{
+    color:#35a29f;
+    text-decoration:none;
+    margin:0 7px;
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:30px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:7px 9px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+    .question{
+        font-size:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+📚 TNPSC Study Hub
+</div>
+
+<h1>
+📝 TNPSC Online Quiz
+</h1>
+
+<p>
+Practice • Test • Improve
+</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="group1-2.html">🏆 Group 1 & 2</a>
+
+<a href="group4.html">📚 Group 4</a>
+
+<a href="study-materials.html">📖 Study Materials</a>
+
+<a href="jobs.html">💼 Jobs</a>
+
+<a href="courses.html">🎓 Courses</a>
+
+<a href="quiz.html">📝 Quiz</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<section class="quiz-intro">
+
+<h2>
+🎯 TNPSC Practice Test
+</h2>
+
+<p>
+Test your knowledge with these TNPSC-style
+multiple-choice questions.
+</p>
+
+</section>
+
+
+<section class="quiz-box">
+
+
+<div class="quiz-header">
+
+<h2>
+📚 General TNPSC Quiz
+</h2>
+
+<p>
+Answer each question and check your score.
+</p>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+id="progressBar">
+</div>
+
+</div>
+
+</div>
+
+
+<div
+class="question-number"
+id="questionNumber">
+
+Question 1 of 10
+
+</div>
+
+
+<div
+class="question"
+id="questionText">
+
+Question
+
+</div>
+
+
+<div id="options">
+</div>
+
+
+<div
+class="explanation"
+id="explanation">
+
+<strong>
+💡 Explanation:
+</strong>
+
+<span id="explanationText">
+</span>
+
+</div>
+
+
+<div class="controls">
+
+<button
+class="btn previous"
+onclick="previousQuestion()">
+
+⬅ Previous
+
+</button>
+
+
+<button
+class="btn next"
+onclick="nextQuestion()">
+
+Next ➡
+
+</button>
+
+</div>
+
+
+</section>
+
+
+<section
+class="result"
+id="result">
+
+<h2>
+🎉 Quiz Completed!
+</h2>
+
+<div
+class="score"
+id="score">
+
+0/10
+
+</div>
+
+<p id="percentage">
+</p>
+
+<p id="message">
+</p>
+
+<button
+class="btn restart"
+onclick="restartQuiz()">
+
+🔄 Try Again
+
+</button>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<h2>
+📚 TNPSC Study Hub
+</h2>
+
+<p>
+Learn • Practice • Test • Succeed
+</p>
+
+<br>
+
+<p>
+
+<a href="index.html">Home</a>
+
+<a href="group1-2.html">Group 1 & 2</a>
+
+<a href="group4.html">Group 4</a>
+
+<a href="study-materials.html">Study Materials</a>
+
+<a href="jobs.html">Jobs</a>
+
+<a href="courses.html">Courses</a>
+
+</p>
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* ==============================
+   QUESTIONS
+============================== */
+
+const questions = [
+
+{
+q:"Who is known as the Father of the Indian Constitution?",
+
+options:[
+"Jawaharlal Nehru",
+"Dr. B. R. Ambedkar",
+"Mahatma Gandhi",
+"Sardar Patel"
+],
+
+answer:1,
+
+explanation:
+"Dr. B. R. Ambedkar chaired the Drafting Committee of the Constitution."
+},
+
+
+{
+q:"When did the Constitution of India come into force?",
+
+options:[
+"15 August 1947",
+"26 November 1949",
+"26 January 1950",
+"2 October 1950"
+],
+
+answer:2,
+
+explanation:
+"The Constitution of India came into force on 26 January 1950."
+},
+
+
+{
+q:"What is the capital of Tamil Nadu?",
+
+options:[
+"Madurai",
+"Coimbatore",
+"Chennai",
+"Salem"
+],
+
+answer:2,
+
+explanation:
+"Chennai is the capital of Tamil Nadu."
+},
+
+
+{
+q:"Which is the central bank of India?",
+
+options:[
+"SBI",
+"RBI",
+"SEBI",
+"NABARD"
+],
+
+answer:1,
+
+explanation:
+"The Reserve Bank of India is the central bank of India."
+},
+
+
+{
+q:"Which soil is especially suitable for cotton cultivation?",
+
+options:[
+"Black soil",
+"Red soil",
+"Laterite soil",
+"Mountain soil"
+],
+
+answer:0,
+
+explanation:
+"Black soil has traditionally been associated with cotton cultivation."
+},
+
+
+{
+q:"What is 25% of 200?",
+
+options:[
+"25",
+"40",
+"50",
+"75"
+],
+
+answer:2,
+
+explanation:
+"25% of 200 is 50."
+},
+
+
+{
+q:"World Environment Day is observed on:",
+
+options:[
+"5 June",
+"15 August",
+"26 January",
+"10 December"
+],
+
+answer:0,
+
+explanation:
+"World Environment Day is observed on 5 June."
+},
+
+
+{
+q:"Which organ pumps blood through the human body?",
+
+options:[
+"Lungs",
+"Kidney",
+"Heart",
+"Brain"
+],
+
+answer:2,
+
+explanation:
+"The heart pumps blood throughout the circulatory system."
+},
+
+
+{
+q:"The Quit India Movement was launched in:",
+
+options:[
+"1919",
+"1930",
+"1942",
+"1947"
+],
+
+answer:2,
+
+explanation:
+"The Quit India Movement was launched in 1942."
+},
+
+
+{
+q:"National Sports Day in India is observed on:",
+
+options:[
+"29 August",
+"15 August",
+"26 January",
+"5 September"
+],
+
+answer:0,
+
+explanation:
+"National Sports Day is observed on 29 August."
+}
+
+];
+
+
+let currentQuestion=0;
+
+let score=0;
+
+let answered=false;
+
+
+/* ==============================
+   LOAD QUESTION
+============================== */
+
+function loadQuestion(){
+
+    const data=
+    questions[currentQuestion];
+
+
+    answered=false;
+
+
+    document.getElementById(
+        "questionNumber"
+    ).innerText=
+    "Question "+
+    (currentQuestion+1)+
+    " of "+
+    questions.length;
+
+
+    document.getElementById(
+        "questionText"
+    ).innerText=data.q;
+
+
+    let html="";
+
+
+    data.options.forEach(
+        function(option,index){
+
+            html+=
+            `<button
+            class="option"
+            onclick="selectAnswer(${index})">
+
+            ${String.fromCharCode(65+index)}.
+            ${option}
+
+            </button>`;
+
+        }
+    );
+
+
+    document.getElementById(
+        "options"
+    ).innerHTML=html;
+
+
+    document.getElementById(
+        "explanation"
+    ).style.display="none";
+
+
+    document.getElementById(
+        "explanationText"
+    ).innerText=data.explanation;
+
+
+    let progress=
+    ((currentQuestion+1)/
+    questions.length)*100;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width=
+    progress+"%";
+
+}
+
+
+/* ==============================
+   ANSWER
+============================== */
+
+function selectAnswer(selected){
+
+    if(answered){
+        return;
+    }
+
+
+    answered=true;
+
+
+    const data=
+    questions[currentQuestion];
+
+
+    const buttons=
+    document.querySelectorAll(".option");
+
+
+    buttons.forEach(
+        function(button,index){
+
+            button.disabled=true;
+
+
+            if(index===data.answer){
+
+                button.classList.add(
+                    "correct"
+                );
+
+            }
+
+
+            if(
+                index===selected &&
+                selected!==data.answer
+            ){
+
+                button.classList.add(
+                    "wrong"
+                );
+
+            }
+
+        }
+    );
+
+
+    if(selected===data.answer){
+
+        score++;
+
+    }
+
+
+    document.getElementById(
+        "explanation"
+    ).style.display="block";
+
+}
+
+
+/* ==============================
+   NEXT
+============================== */
+
+function nextQuestion(){
+
+    if(!answered){
+
+        alert(
+            "Please select an answer first."
+        );
+
+        return;
+
+    }
+
+
+    if(
+        currentQuestion<
+        questions.length-1
+    ){
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    }
+
+    else{
+
+        showResult();
+
+    }
+
+}
+
+
+/* ==============================
+   PREVIOUS
+============================== */
+
+function previousQuestion(){
+
+    if(currentQuestion>0){
+
+        currentQuestion--;
+
+        loadQuestion();
+
+    }
+
+}
+
+
+/* ==============================
+   RESULT
+============================== */
+
+function showResult(){
+
+    document.getElementById(
+        "result"
+    ).style.display="block";
+
+
+    document.getElementById(
+        "score"
+    ).innerText=
+    score+"/"+questions.length;
+
+
+    let percentage=
+    Math.round(
+        score/questions.length*100
+    );
+
+
+    document.getElementById(
+        "percentage"
+    ).innerText=
+    "Your Score: "+percentage+"%";
+
+
+    let message;
+
+
+    if(percentage>=80){
+
+        message=
+        "🌟 Excellent! Keep up the great preparation.";
+
+    }
+
+    else if(percentage>=60){
+
+        message=
+        "👍 Good job! Continue practising.";
+
+    }
+
+    else if(percentage>=40){
+
+        message=
+        "📚 Keep studying and try the quiz again.";
+
+    }
+
+    else{
+
+        message=
+        "💪 Keep practising. You can improve!";
+
+    }
+
+
+    document.getElementById(
+        "message"
+    ).innerText=message;
+
+
+    document.getElementById(
+        "result"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ==============================
+   RESTART
+============================== */
+
+function restartQuiz(){
+
+    currentQuestion=0;
+
+    score=0;
+
+    answered=false;
+
+
+    document.getElementById(
+        "result"
+    ).style.display="none";
+
+
+    loadQuestion();
+
+}
+
+
+/* INITIAL LOAD */
+
+loadQuestion();
+
+</script>
+
+
+</body>
+
+</html>
+```
