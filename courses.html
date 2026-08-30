@@ -1,0 +1,582 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="TNPSC Study Hub - TNPSC courses and preparation resources.">
+
+<title>Courses | TNPSC Study Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef7ff,#f7f1ff,#effcf8);
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#071952,#088395,#35a29f);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+.logo{
+    font-size:36px;
+    font-weight:bold;
+}
+
+header h1{
+    font-size:30px;
+    margin-top:5px;
+}
+
+header p{
+    margin-top:7px;
+}
+
+nav{
+    background:#071952;
+    text-align:center;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:8px 13px;
+    margin:3px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#35a29f;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.intro{
+    background:white;
+    padding:30px 20px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#071952;
+}
+
+.intro p{
+    color:#666;
+    margin-top:8px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:20px;
+}
+
+.course{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.course:hover{
+    transform:translateY(-7px);
+}
+
+.course-icon{
+    font-size:45px;
+}
+
+.course h3{
+    color:#071952;
+    margin:10px 0;
+}
+
+.course p{
+    color:#666;
+    font-size:14px;
+}
+
+.course ul{
+    padding-left:20px;
+    margin-top:10px;
+}
+
+.course li{
+    margin:5px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:11px 17px;
+    border-radius:9px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+
+.blue{
+    background:#457b9d;
+}
+
+.red{
+    background:#e63946;
+}
+
+.green{
+    background:#2a9d8f;
+}
+
+.purple{
+    background:#6c5ce7;
+}
+
+.orange{
+    background:#e76f51;
+}
+
+.info{
+    background:white;
+    padding:25px;
+    margin-top:30px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+}
+
+.info h2{
+    color:#071952;
+    margin-bottom:10px;
+}
+
+.info li{
+    margin:7px 0;
+}
+
+.info ul{
+    padding-left:22px;
+}
+
+footer{
+    background:#071952;
+    color:white;
+    text-align:center;
+    margin-top:40px;
+    padding:30px 15px;
+}
+
+footer a{
+    color:#35a29f;
+    text-decoration:none;
+    margin:0 7px;
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:30px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:7px 9px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">
+📚 TNPSC Study Hub
+</div>
+
+<h1>
+TNPSC Courses
+</h1>
+
+<p>
+Learn • Practice • Improve
+</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="group1-2.html">🏆 Group 1 & 2</a>
+
+<a href="group4.html">📚 Group 4</a>
+
+<a href="study-materials.html">📖 Study Materials</a>
+
+<a href="jobs.html">💼 Jobs</a>
+
+<a href="courses.html">🎓 Courses</a>
+
+<a href="quiz.html">📝 Quiz</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<section class="intro">
+
+<h2>
+🎓 TNPSC Learning Centre
+</h2>
+
+<p>
+Choose a course and build your preparation step by step.
+</p>
+
+</section>
+
+
+<div class="course-grid">
+
+
+<!-- GROUP 1 -->
+
+<div class="course">
+
+<div class="course-icon">
+🏆
+</div>
+
+<h3>
+TNPSC Group 1
+</h3>
+
+<p>
+Build a strong foundation for Group 1 preparation.
+</p>
+
+<ul>
+<li>General Studies</li>
+<li>History</li>
+<li>Polity</li>
+<li>Economy</li>
+<li>Geography</li>
+<li>Current Affairs</li>
+</ul>
+
+<a href="group1-2.html"
+class="btn red">
+
+Start Course
+
+</a>
+
+</div>
+
+
+<!-- GROUP 2 -->
+
+<div class="course">
+
+<div class="course-icon">
+🎓
+</div>
+
+<h3>
+TNPSC Group 2 & 2A
+</h3>
+
+<p>
+Prepare important Group 2 subjects systematically.
+</p>
+
+<ul>
+<li>General Studies</li>
+<li>General Tamil</li>
+<li>Current Affairs</li>
+<li>Aptitude</li>
+<li>Polity</li>
+<li>Tamil Nadu</li>
+</ul>
+
+<a href="group1-2.html"
+class="btn blue">
+
+Start Course
+
+</a>
+
+</div>
+
+
+<!-- GROUP 4 -->
+
+<div class="course">
+
+<div class="course-icon">
+📚
+</div>
+
+<h3>
+TNPSC Group 4
+</h3>
+
+<p>
+Prepare for Group 4 with subject-wise resources.
+</p>
+
+<ul>
+<li>General Tamil</li>
+<li>General Studies</li>
+<li>Aptitude</li>
+<li>Current Affairs</li>
+<li>History</li>
+<li>Geography</li>
+</ul>
+
+<a href="group4.html"
+class="btn green">
+
+Start Course
+
+</a>
+
+</div>
+
+
+<!-- CURRENT AFFAIRS -->
+
+<div class="course">
+
+<div class="course-icon">
+📰
+</div>
+
+<h3>
+Current Affairs
+</h3>
+
+<p>
+Improve your awareness of important events and topics.
+</p>
+
+<ul>
+<li>National Events</li>
+<li>International Events</li>
+<li>Government Schemes</li>
+<li>Science & Technology</li>
+<li>Sports</li>
+<li>Awards</li>
+</ul>
+
+<a href="study-materials.html"
+class="btn orange">
+
+Study Now
+
+</a>
+
+</div>
+
+
+<!-- APTITUDE -->
+
+<div class="course">
+
+<div class="course-icon">
+🧮
+</div>
+
+<h3>
+Aptitude & Reasoning
+</h3>
+
+<p>
+Develop speed and accuracy through regular practice.
+</p>
+
+<ul>
+<li>Number System</li>
+<li>Percentage</li>
+<li>Ratio</li>
+<li>Average</li>
+<li>Profit & Loss</li>
+<li>Reasoning</li>
+</ul>
+
+<a href="study-materials.html"
+class="btn purple">
+
+Practice Now
+
+</a>
+
+</div>
+
+
+<!-- MOCK TEST -->
+
+<div class="course">
+
+<div class="course-icon">
+📝
+</div>
+
+<h3>
+Mock Test Practice
+</h3>
+
+<p>
+Test your preparation with online practice questions.
+</p>
+
+<ul>
+<li>MCQ Questions</li>
+<li>Instant Answers</li>
+<li>Explanations</li>
+<li>Score Calculation</li>
+<li>Practice Again</li>
+</ul>
+
+<a href="quiz.html"
+class="btn blue">
+
+Take Test
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<section class="info">
+
+<h2>
+📖 How to Use TNPSC Study Hub
+</h2>
+
+<ul>
+
+<li>Choose your TNPSC examination.</li>
+
+<li>Study the important subjects.</li>
+
+<li>Practice multiple-choice questions.</li>
+
+<li>Review your incorrect answers.</li>
+
+<li>Take mock tests regularly.</li>
+
+<li>Check official TNPSC notifications before applying.</li>
+
+</ul>
+
+</section>
+
+
+<section class="info">
+
+<h2>
+🚀 More Courses Coming Soon
+</h2>
+
+<p>
+We can add detailed topic-wise lessons, video lessons,
+PDF study materials, daily quizzes and full-length mock
+tests to TNPSC Study Hub.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<h2>📚 TNPSC Study Hub</h2>
+
+<p>
+Learn • Practice • Test • Succeed
+</p>
+
+<br>
+
+<p>
+
+<a href="index.html">Home</a>
+
+<a href="group1-2.html">Group 1 & 2</a>
+
+<a href="group4.html">Group 4</a>
+
+<a href="study-materials.html">Study Materials</a>
+
+<a href="jobs.html">Jobs</a>
+
+<a href="quiz.html">Quiz</a>
+
+</p>
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
