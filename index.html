@@ -1,1021 +1,1513 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-.hero p{
-    max-width:750px;
-    margin:auto;
-    font-size:19px;
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="TNPSC Study Hub - TNPSC Group 1, Group 2, Group 2A and Group 4 preparation, study materials, quizzes and mock tests.">
+
+<meta name="keywords"
+content="TNPSC Study Hub, TNPSC Group 1, TNPSC Group 2, TNPSC Group 4, TNPSC preparation, TNPSC mock test">
+
+<title>TNPSC Study Hub | TNPSC Exam Preparation</title>
+
+
+<style>
+
+/* ==============================
+   RESET
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
     line-height:1.6;
 }
 
-.button{
-    display:inline-block;
-    border:0;
-    background:#1565c0;
+
+/* ==============================
+   TOP HEADER
+============================== */
+
+.top-header{
+
+    background:linear-gradient(
+        135deg,
+        #071952,
+        #088395,
+        #35a29f
+    );
+
     color:white;
-    padding:11px 20px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
-    cursor:pointer;
-    margin-top:8px;
+    text-align:center;
+    padding:38px 15px;
+
 }
 
-.hero .button{
-    background:white;
-    color:#1565c0;
+.logo{
+
+    font-size:42px;
+    font-weight:bold;
+    letter-spacing:1px;
+
 }
+
+.top-header h1{
+
+    font-size:34px;
+    margin-top:5px;
+
+}
+
+.top-header p{
+
+    font-size:17px;
+    margin-top:8px;
+
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+nav{
+
+    background:#071952;
+    text-align:center;
+    padding:12px;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 12px
+    rgba(0,0,0,0.25);
+
+}
+
+nav a{
+
+    display:inline-block;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:9px 14px;
+
+    margin:3px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+nav a:hover{
+
+    background:#35a29f;
+
+    color:white;
+
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
 
 .container{
+
     max-width:1150px;
+
     margin:auto;
-    padding:42px 18px;
+
+    padding:20px;
+
 }
 
-.title{
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #e8f8f7
+    );
+
+    border-radius:22px;
+
+    padding:40px 20px;
+
     text-align:center;
-    font-size:30px;
-    margin:0 0 28px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,0,0,0.12);
+
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
+.hero-badge{
 
-.card{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 3px 15px #00000012;
-}
+    display:inline-block;
 
-.center{
-    text-align:center;
-}
+    background:#35a29f;
 
-.icon{
-    font-size:42px;
-}
-
-.card h3{
-    color:#1565c0;
-}
-
-.card p{
-    color:#5c6675;
-    line-height:1.6;
-}
-
-.section{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 3px 15px #00000010;
-    margin-bottom:20px;
-}
-
-.subjects{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.subject{
-    padding:18px;
-    border:1px solid #dce3ed;
-    border-radius:12px;
-    background:#fafcff;
-}
-
-.subject h3{
-    margin-top:0;
-}
-
-.quiz-box{
-    max-width:850px;
-    margin:auto;
-    background:white;
-    padding:28px;
-    border-radius:16px;
-    box-shadow:0 3px 15px #00000012;
-}
-
-.question{
-    margin-bottom:28px;
-}
-
-.question h3{
-    margin-bottom:12px;
-}
-
-.option{
-    display:block;
-    background:#f5f7fb;
-    margin:8px 0;
-    padding:12px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.option:hover{
-    background:#e8eef8;
-}
-
-.result{
-    display:none;
-    margin-top:20px;
-    padding:18px;
-    border-radius:10px;
-    background:#eaf7ea;
-    font-weight:bold;
-}
-
-.progress-box{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 3px 15px #00000010;
-    text-align:center;
-}
-
-.progress-number{
-    font-size:42px;
-    font-weight:bold;
-    color:#1565c0;
-}
-
-.progress-bar{
-    width:100%;
-    height:20px;
-    background:#e2e7ef;
-    border-radius:20px;
-    overflow:hidden;
-    margin:15px 0;
-}
-
-.progress-fill{
-    height:100%;
-    width:0%;
-    background:#1565c0;
-    transition:0.5s;
-}
-
-.update-box{
-    background:#172033;
     color:white;
-    border-radius:16px;
-    padding:28px;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
 }
 
-.update{
-    padding:12px 0;
-    border-bottom:1px solid #ffffff30;
+.hero h2{
+
+    color:#071952;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
 }
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    color:#555;
+
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+
+    margin-top:25px;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    padding:13px 22px;
+
+    margin:5px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+.hero-btn-primary{
+
+    background:#e63946;
+
+}
+
+.hero-btn-secondary{
+
+    background:#088395;
+
+}
+
+.hero-btn:hover{
+
+    opacity:0.82;
+
+}
+
+
+/* ==============================
+   SECTION TITLE
+============================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin:35px 0 20px;
+
+}
+
+.section-title h2{
+
+    color:#071952;
+
+    font-size:27px;
+
+}
+
+.section-title p{
+
+    color:#666;
+
+    margin-top:5px;
+
+}
+
+
+/* ==============================
+   EXAM CARDS
+============================== */
+
+.exam-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(270px,1fr)
+    );
+
+    gap:22px;
+
+}
+
+
+.exam-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 7px 20px
+    rgba(0,0,0,0.12);
+
+    transition:0.3s;
+
+}
+
+.exam-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.exam-icon{
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+.exam-card h3{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+.exam-card p{
+
+    color:#666;
+
+    font-size:14px;
+
+    min-height:65px;
+
+}
+
+
+/* EXAM CARD COLORS */
+
+.group1{
+
+    border-top:8px solid #e63946;
+
+}
+
+.group1 h3{
+
+    color:#d62828;
+
+}
+
+
+.group2{
+
+    border-top:8px solid #457b9d;
+
+}
+
+.group2 h3{
+
+    color:#1d5d80;
+
+}
+
+
+.group4{
+
+    border-top:8px solid #2a9d8f;
+
+}
+
+.group4 h3{
+
+    color:#21867a;
+
+}
+
+
+.current{
+
+    border-top:8px solid #f4a261;
+
+}
+
+.current h3{
+
+    color:#e76f51;
+
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.btn{
+
+    display:inline-block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:11px 17px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}
+
+.red{
+
+    background:#e63946;
+
+}
+
+.blue{
+
+    background:#457b9d;
+
+}
+
+.green{
+
+    background:#2a9d8f;
+
+}
+
+.orange{
+
+    background:#e76f51;
+
+}
+
+.purple{
+
+    background:#6c5ce7;
+
+}
+
+.teal{
+
+    background:#088395;
+
+}
+
+.btn:hover{
+
+    opacity:0.82;
+
+}
+
+
+/* ==============================
+   FEATURES
+============================== */
+
+.features{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px 20px;
+
+    margin-top:30px;
+
+    box-shadow:
+    0 6px 18px
+    rgba(0,0,0,0.10);
+
+}
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(190px,1fr)
+    );
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.feature{
+
+    color:white;
+
+    padding:22px 10px;
+
+    text-align:center;
+
+    border-radius:13px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+.feature:hover{
+
+    transform:scale(1.04);
+
+}
+
+.feature:nth-child(1){
+
+    background:#e63946;
+
+}
+
+.feature:nth-child(2){
+
+    background:#457b9d;
+
+}
+
+.feature:nth-child(3){
+
+    background:#2a9d8f;
+
+}
+
+.feature:nth-child(4){
+
+    background:#f4a261;
+
+}
+
+.feature:nth-child(5){
+
+    background:#6c5ce7;
+
+}
+
+.feature:nth-child(6){
+
+    background:#088395;
+
+}
+
+
+/* ==============================
+   QUICK ACCESS
+============================== */
+
+.quick{
+
+    margin-top:30px;
+
+    padding:30px 20px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #071952,
+        #088395
+    );
+
+}
+
+.quick h2{
+
+    margin-bottom:10px;
+
+}
+
+.quick-buttons{
+
+    margin-top:20px;
+
+}
+
+.quick-btn{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#071952;
+
+    padding:11px 17px;
+
+    margin:5px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.quick-btn:hover{
+
+    background:#35a29f;
+
+    color:white;
+
+}
+
+
+/* ==============================
+   DAILY STUDY
+============================== */
+
+.study-plan{
+
+    background:#fff;
+
+    margin-top:30px;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px
+    rgba(0,0,0,0.10);
+
+}
+
+.study-plan h2{
+
+    color:#071952;
+
+    margin-bottom:12px;
+
+}
+
+.study-plan ul{
+
+    padding-left:22px;
+
+}
+
+.study-plan li{
+
+    margin:8px 0;
+
+}
+
+
+/* ==============================
+   NOTICE
+============================== */
+
+.notice{
+
+    background:#fff3cd;
+
+    border-left:7px solid #f4a261;
+
+    padding:20px;
+
+    margin-top:30px;
+
+    border-radius:12px;
+
+}
+
+.notice h3{
+
+    color:#b45309;
+
+    margin-bottom:7px;
+
+}
+
+
+/* ==============================
+   ABOUT
+============================== */
+
+.about{
+
+    background:white;
+
+    padding:30px;
+
+    margin-top:30px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px
+    rgba(0,0,0,0.10);
+
+}
+
+.about h2{
+
+    color:#071952;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
 
 footer{
-    background:#172033;
+
+    margin-top:40px;
+
+    background:#071952;
+
     color:white;
+
     text-align:center;
-    padding:35px 18px;
-    margin-top:20px;
+
+    padding:30px 15px;
+
 }
 
-.note{
-    background:#fff7df;
-    border:1px solid #e8ce82;
-    border-radius:10px;
-    padding:15px;
-    margin-bottom:20px;
+footer h2{
+
+    margin-bottom:8px;
+
 }
 
-.back{
-    margin-bottom:20px;
+.footer-links{
+
+    margin:15px 0;
+
 }
 
-@media(max-width:800px){
+.footer-links a{
 
-    .grid{
-        grid-template-columns:1fr 1fr;
-    }
+    color:#35a29f;
 
-    .subjects{
-        grid-template-columns:1fr;
-    }
+    text-decoration:none;
 
-    nav{
-        display:none;
-    }
+    margin:0 7px;
 
-    .hero h1{
-        font-size:35px;
-    }
 }
 
-@media(max-width:560px){
+.footer-links a:hover{
 
-    .grid{
-        grid-template-columns:1fr;
+    color:white;
+
+}
+
+footer p{
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:600px){
+
+    .logo{
+
+        font-size:32px;
+
+    }
+
+    .top-header h1{
+
+        font-size:25px;
+
+    }
+
+    .top-header p{
+
+        font-size:14px;
+
+    }
+
+    nav a{
+
+        font-size:12px;
+
+        padding:7px 9px;
+
     }
 
     .hero{
-        padding:55px 16px;
+
+        padding:30px 15px;
+
     }
 
-    .hero h1{
-        font-size:32px;
+    .hero h2{
+
+        font-size:24px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .section-title h2{
+
+        font-size:23px;
+
     }
 
     .container{
-        padding:32px 14px;
+
+        padding:12px;
+
     }
+
 }
+
+
+/* ==============================
+   TOP BUTTON
+============================== */
+
+#topButton{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#e63946;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:
+    0 4px 12px
+    rgba(0,0,0,0.3);
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
 
-<div class="header">
+<!-- ==============================
+     HEADER
+============================== -->
+
+<header class="top-header">
 
 <div class="logo">
-TNPSC Study Hub
+📚 TNPSC Study Hub
 </div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#exams">Exams</a>
-<a href="#materials">Materials</a>
-<a href="#quiz">Quiz</a>
-<a href="#mock">Mock Test</a>
-<a href="#progress">Progress</a>
-<a href="#updates">Updates</a>
-</nav>
+<h1>
+TNPSC Exam Preparation Portal
+</h1>
 
-</div>
+<p>
+Learn • Practice • Test • Succeed
+</p>
 
 </header>
 
 
-<!-- HOME -->
+<!-- ==============================
+     NAVIGATION
+============================== -->
 
-<section class="hero" id="home">
+<nav>
 
-<h1>TNPSC Study Hub</h1>
-
-<p>
-Learn • Practice • Test • Improve
-</p>
-
-<p>
-A preparation platform for TNPSC Group 1,
-Group 2, Group 2A and Group 4 aspirants.
-</p>
-
-<a class="button" href="#exams">
-Choose Your Exam
+<a href="index.html">
+🏠 Home
 </a>
 
-</section>
+<a href="group1-2.html">
+🏆 Group 1 & 2
+</a>
+
+<a href="group4.html">
+📚 Group 4
+</a>
+
+<a href="jobs.html">
+💼 Jobs
+</a>
+
+<a href="courses.html">
+🎓 Courses
+</a>
+
+<a href="quiz.html">
+📝 Quiz
+</a>
+
+</nav>
 
 
-<!-- EXAMS -->
+<!-- ==============================
+     MAIN
+============================== -->
 
-<section class="container" id="exams">
+<main class="container">
 
-<h2 class="title">
-📝 Choose Your TNPSC Exam
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-badge">
+🎯 TNPSC ASPIRANTS
+</div>
+
+<h2>
+Your Journey to a Government Job Starts Here
 </h2>
 
-<div class="grid">
-
-<div class="card center">
-
-<div class="icon">🏆</div>
-
-<h3>TNPSC Group 1</h3>
-
 <p>
-Advanced preparation resources,
-subjects and practice tests.
+TNPSC Study Hub brings TNPSC preparation resources
+together in one place. Choose your examination,
+study important subjects and test your knowledge.
 </p>
 
-<a class="button" href="#group1">
-Open Group 1
+
+<div class="hero-buttons">
+
+<a href="group1-2.html"
+class="hero-btn hero-btn-primary">
+
+🏆 Group 1 & 2 Preparation
+
 </a>
 
-</div>
 
+<a href="group4.html"
+class="hero-btn hero-btn-secondary">
 
-<div class="card center">
+📚 Group 4 Preparation
 
-<div class="icon">📚</div>
-
-<h3>TNPSC Group 2 / 2A</h3>
-
-<p>
-Preparation resources and
-practice questions.
-</p>
-
-<a class="button" href="#group2">
-Open Group 2 / 2A
 </a>
-
-</div>
-
-
-<div class="card center">
-
-<div class="icon">🎯</div>
-
-<h3>TNPSC Group 4</h3>
-
-<p>
-Start your preparation with
-important subjects and topics.
-</p>
-
-<a class="button" href="#group4">
-Open Group 4
-</a>
-<a href="group4.html">Open Group 4</a>
-</div>
 
 </div>
 
 </section>
+
+
+<!-- ==============================
+     EXAM SECTION
+============================== -->
+
+<div class="section-title">
+
+<h2>
+🎯 Choose Your TNPSC Examination
+</h2>
+
+<p>
+Select an examination to begin your preparation.
+</p>
+
+</div>
+
+
+<section class="exam-grid">
 
 
 <!-- GROUP 1 -->
 
-<section class="container" id="group1">
+<div class="exam-card group1">
 
-<div class="section">
+<div class="exam-icon">
+🏆
+</div>
 
-<h2>🏆 TNPSC Group 1 Preparation</h2>
+<h3>
+TNPSC Group 1
+</h3>
 
 <p>
-Select a subject to begin your preparation.
+Prepare for the TNPSC Group 1 examination with
+important subjects, study materials and practice tests.
 </p>
 
-<div class="subjects">
+<a href="group1-2.html"
+class="btn red">
 
-<div class="subject">
-<h3>📖 General Studies</h3>
-<p>History, Geography, Polity, Economy and Science.</p>
-<a class="button" href="#quiz">Practice Quiz</a>
-</div>
+Open Group 1
 
-<div class="subject">
-<h3>🌍 Geography</h3>
-<p>India, Tamil Nadu, resources, climate and environment.</p>
-</div>
-
-<div class="subject">
-<h3>🏛️ Indian Polity</h3>
-<p>Constitution, governance, Parliament and administration.</p>
-</div>
-
-<div class="subject">
-<h3>🔬 General Science</h3>
-<p>Physics, Chemistry, Biology and everyday science.</p>
-</div>
+</a>
 
 </div>
-
-</div>
-
-</section>
 
 
 <!-- GROUP 2 -->
 
-<section class="container" id="group2">
+<div class="exam-card group2">
 
-<div class="section">
+<div class="exam-icon">
+🎓
+</div>
 
-<h2>📚 TNPSC Group 2 / 2A Preparation</h2>
+<h3>
+TNPSC Group 2 & 2A
+</h3>
 
 <p>
-Build your preparation subject by subject.
+Study General Studies, Tamil, Current Affairs,
+Aptitude and other important areas.
 </p>
 
-<div class="subjects">
+<a href="group1-2.html"
+class="btn blue">
 
-<div class="subject">
-<h3>📖 General Tamil</h3>
-<p>Tamil grammar, literature and language practice.</p>
-</div>
+Open Group 2
 
-<div class="subject">
-<h3>🌏 General Studies</h3>
-<p>History, Geography, Polity, Economy and Science.</p>
-</div>
-
-<div class="subject">
-<h3>📰 Current Affairs</h3>
-<p>Important current events and general awareness.</p>
-</div>
-
-<div class="subject">
-<h3>🧠 Aptitude</h3>
-<p>Logical reasoning, mathematics and problem solving.</p>
-</div>
+</a>
 
 </div>
-
-</div>
-
-</section>
 
 
 <!-- GROUP 4 -->
 
-<section class="container" id="group4">
+<div class="exam-card group4">
 
-<div class="section">
+<div class="exam-icon">
+📖
+</div>
 
-<h2>🎯 TNPSC Group 4 Preparation</h2>
+<h3>
+TNPSC Group 4
+</h3>
 
 <p>
-Start with the major preparation areas.
+Complete Group 4 preparation with syllabus,
+study materials and upcoming mock tests.
 </p>
 
-<div class="subjects">
+<a href="group4.html"
+class="btn green">
 
-<div class="subject">
-<h3>📖 General Tamil</h3>
-<p>
-Grammar, vocabulary, literature and comprehension.
-</p>
+Open Group 4
 
-<a class="button" href="#quiz">
-Practice
 </a>
 
 </div>
 
 
-<div class="subject">
-<h3>🌍 General Studies</h3>
+<!-- CURRENT AFFAIRS -->
+
+<div class="exam-card current">
+
+<div class="exam-icon">
+📰
+</div>
+
+<h3>
+Current Affairs
+</h3>
+
 <p>
-History, Geography, Indian Polity, Economy and Science.
+Stay updated with important current affairs
+and events useful for TNPSC examinations.
 </p>
 
-<a class="button" href="#quiz">
-Practice
+<a href="#"
+class="btn orange"
+onclick="comingSoon('Current Affairs')">
+
+Open Current Affairs
+
 </a>
 
 </div>
 
-
-<div class="subject">
-<h3>➗ Aptitude & Mental Ability</h3>
-<p>
-Numerical ability, reasoning and problem solving.
-</p>
-
-<a class="button" href="#mock">
-Take Mock Test
-</a>
-
-</div>
-
-
-<div class="subject">
-<h3>📰 Current Affairs</h3>
-<p>
-Important events and general awareness.
-</p>
-
-</div>
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- MATERIALS -->
+<!-- ==============================
+     FEATURES
+============================== -->
 
-<section class="container" id="materials">
+<section class="features">
 
-<h2 class="title">
-📚 Study Materials
+<div class="section-title">
+
+<h2>
+📚 What You Can Do
 </h2>
 
-<div class="grid">
-
-<div class="card">
-
-<h3>📖 General Tamil</h3>
-
 <p>
-Topic-wise Tamil preparation materials.
+Useful resources for every TNPSC aspirant.
 </p>
-
-<button class="button" onclick="materialMessage()">
-Open Materials
-</button>
 
 </div>
 
 
-<div class="card">
+<div class="features-grid">
 
-<h3>🏛️ History & Polity</h3>
 
-<p>
-Important historical events and Indian Constitution topics.
-</p>
+<div class="feature"
+onclick="comingSoon('Study Materials')">
 
-<button class="button" onclick="materialMessage()">
-Open Materials
-</button>
+📖
+<br>
+Study Materials
 
 </div>
 
 
-<div class="card">
+<div class="feature"
+onclick="comingSoon('Syllabus')">
 
-<h3>🔬 Science</h3>
-
-<p>
-Basic science concepts and practice resources.
-</p>
-
-<button class="button" onclick="materialMessage()">
-Open Materials
-</button>
+📋
+<br>
+TNPSC Syllabus
 
 </div>
 
 
-<div class="card">
+<div class="feature"
+onclick="comingSoon('Mock Tests')">
 
-<h3>🌍 Geography</h3>
-
-<p>
-India and Tamil Nadu geography resources.
-</p>
-
-<button class="button" onclick="materialMessage()">
-Open Materials
-</button>
+📝
+<br>
+Mock Tests
 
 </div>
 
 
-<div class="card">
+<div class="feature"
+onclick="comingSoon('Current Affairs')">
 
-<h3>💰 Economy</h3>
-
-<p>
-Basic economic concepts and current developments.
-</p>
-
-<button class="button" onclick="materialMessage()">
-Open Materials
-</button>
+📰
+<br>
+Current Affairs
 
 </div>
 
 
-<div class="card">
+<div class="feature"
+onclick="comingSoon('Daily Quiz')">
 
-<h3>📰 Current Affairs</h3>
-
-<p>
-Verified current affairs will be added here.
-</p>
-
-<button class="button" onclick="materialMessage()">
-Open Materials
-</button>
+🧠
+<br>
+Daily Quiz
 
 </div>
+
+
+<div class="feature"
+onclick="comingSoon('Exam Updates')">
+
+🔔
+<br>
+Exam Updates
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- DAILY QUIZ -->
+<!-- ==============================
+     QUICK ACCESS
+============================== -->
 
-<section class="container" id="quiz">
+<section class="quick">
 
-<h2 class="title">
-🧠 Daily TNPSC Quiz
+<h2>
+🚀 Quick Access
 </h2>
 
-<div class="quiz-box">
-
-<div class="note">
-Answer all questions and press <b>Submit Quiz</b>.
-</div>
+<p>
+Go directly to your preparation section.
+</p>
 
 
-<div class="question">
+<div class="quick-buttons">
 
-<h3>
-1. What is the capital of Tamil Nadu?
-</h3>
+<a href="group1-2.html"
+class="quick-btn">
 
-<label class="option">
-<input type="radio" name="q1" value="1">
-Chennai
-</label>
+🏆 Group 1
 
-<label class="option">
-<input type="radio" name="q1" value="0">
-Madurai
-</label>
-
-<label class="option">
-<input type="radio" name="q1" value="0">
-Coimbatore
-</label>
-
-</div>
+</a>
 
 
-<div class="question">
+<a href="group1-2.html"
+class="quick-btn">
 
-<h3>
-2. Which is the national animal of India?
-</h3>
+🎓 Group 2
 
-<label class="option">
-<input type="radio" name="q2" value="0">
-Lion
-</label>
-
-<label class="option">
-<input type="radio" name="q2" value="1">
-Tiger
-</label>
-
-<label class="option">
-<input type="radio" name="q2" value="0">
-Elephant
-</label>
-
-</div>
+</a>
 
 
-<div class="question">
+<a href="group4.html"
+class="quick-btn">
 
-<h3>
-3. Which planet is known as the Red Planet?
-</h3>
+📚 Group 4
 
-<label class="option">
-<input type="radio" name="q3" value="1">
-Mars
-</label>
-
-<label class="option">
-<input type="radio" name="q3" value="0">
-Venus
-</label>
-
-<label class="option">
-<input type="radio" name="q3" value="0">
-Jupiter
-</label>
-
-</div>
+</a>
 
 
-<button class="button" onclick="submitQuiz()">
-Submit Quiz
-</button>
+<a href="quiz.html"
+class="quick-btn">
 
-<div class="result" id="quizResult"></div>
-
-</div>
-
-</section>
-
-
-<!-- MOCK TEST -->
-
-<section class="container" id="mock">
-
-<h2 class="title">
 📝 Mock Test
-</h2>
 
-<div class="quiz-box">
-
-<div class="note">
-This is the first demonstration mock test. More questions can be added later.
-</div>
+</a>
 
 
-<div class="question">
+<a href="courses.html"
+class="quick-btn">
 
-<h3>
-1. Which is the largest state in India by area?
-</h3>
+🎓 Courses
 
-<label class="option">
-<input type="radio" name="m1" value="1">
-Rajasthan
-</label>
-
-<label class="option">
-<input type="radio" name="m1" value="0">
-Tamil Nadu
-</label>
-
-<label class="option">
-<input type="radio" name="m1" value="0">
-Kerala
-</label>
-
-</div>
+</a>
 
 
-<div class="question">
+<a href="jobs.html"
+class="quick-btn">
 
-<h3>
-2. Which body makes laws for the Union of India?
-</h3>
+💼 Jobs
 
-<label class="option">
-<input type="radio" name="m2" value="1">
-Parliament
-</label>
-
-<label class="option">
-<input type="radio" name="m2" value="0">
-Supreme Court
-</label>
-
-<label class="option">
-<input type="radio" name="m2" value="0">
-Election Commission
-</label>
-
-</div>
-
-
-<div class="question">
-
-<h3>
-3. How many days are there in a leap year?
-</h3>
-
-<label class="option">
-<input type="radio" name="m3" value="0">
-364
-</label>
-
-<label class="option">
-<input type="radio" name="m3" value="1">
-366
-</label>
-
-<label class="option">
-<input type="radio" name="m3" value="0">
-365
-</label>
-
-</div>
-
-
-<button class="button" onclick="submitMock()">
-Submit Mock Test
-</button>
-
-<div class="result" id="mockResult"></div>
+</a>
 
 </div>
 
 </section>
 
 
-<!-- PROGRESS -->
+<!-- ==============================
+     DAILY STUDY PLAN
+============================== -->
 
-<section class="container" id="progress">
-
-<h2 class="title">
-📊 My Progress
-</h2>
-
-<div class="progress-box">
-
-<p>
-Quiz & Mock Test Score
-</p>
-
-<div class="progress-number" id="scoreNumber">
-0%
-</div>
-
-<div class="progress-bar">
-
-<div class="progress-fill" id="progressFill"></div>
-
-</div>
-
-<p id="progressText">
-Complete a quiz or mock test to start tracking your progress.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- UPDATES -->
-
-<section class="container" id="updates">
-
-<div class="update-box">
+<section class="study-plan">
 
 <h2>
-📰 TNPSC Updates
-</h2>
-
-<div class="update">
-🔹 Official TNPSC notifications will be added after verification.
-</div>
-
-<div class="update">
-🔹 Examination dates will be updated from reliable sources.
-</div>
-
-<div class="update">
-🔹 New practice questions can be added regularly.
-</div>
-
-<div class="update">
-🔹 Study materials will be expanded subject by subject.
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FUTURE -->
-
-<section class="container">
-
-<div class="section center">
-
-<h2>
-🚀 Coming Soon
+📅 Suggested Daily Study Plan
 </h2>
 
 <p>
-Student login • Large question bank • Full mock tests •
-Detailed explanations • Progress dashboard •
-Study material downloads • Premium test series
+A simple routine for TNPSC aspirants:
 </p>
 
-</div>
+<ul>
+
+<li>
+📰 <strong>30 minutes</strong> – Current Affairs
+</li>
+
+<li>
+📖 <strong>2 hours</strong> – General Studies
+</li>
+
+<li>
+🧮 <strong>1 hour</strong> – Aptitude & Mental Ability
+</li>
+
+<li>
+🏛️ <strong>1 hour</strong> – History / Polity / Geography
+</li>
+
+<li>
+📝 <strong>30 minutes</strong> – Practice Questions
+</li>
+
+<li>
+🧠 <strong>30 minutes</strong> – Revision
+</li>
+
+</ul>
 
 </section>
 
+
+<!-- ==============================
+     NOTICE
+============================== -->
+
+<section class="notice">
+
+<h3>
+📢 TNPSC Study Hub Updates
+</h3>
+
+<p>
+More study materials, daily quizzes, mock tests,
+current affairs and examination updates will be
+added to TNPSC Study Hub.
+</p>
+
+</section>
+
+
+<!-- ==============================
+     ABOUT
+============================== -->
+
+<section class="about">
+
+<h2>
+🌟 About TNPSC Study Hub
+</h2>
+
+<p>
+TNPSC Study Hub is a dedicated preparation platform
+designed to help students and government-job aspirants
+prepare for TNPSC examinations.
+</p>
+
+<br>
+
+<p>
+The platform brings examination preparation,
+study resources, practice tests and career-related
+information together in one simple website.
+</p>
+
+</section>
+
+
+</main>
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
 
 <footer>
 
-<h2>TNPSC Study Hub</h2>
+<h2>
+📚 TNPSC Study Hub
+</h2>
 
 <p>
-Learn • Practice • Test • Improve
+Learn • Practice • Test • Succeed
 </p>
 
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="group1-2.html">
+Group 1 & 2
+</a>
+
+<a href="group4.html">
+Group 4
+</a>
+
+<a href="jobs.html">
+Jobs
+</a>
+
+<a href="courses.html">
+Courses
+</a>
+
+<a href="quiz.html">
+Quiz
+</a>
+
+</div>
+
+
 <p>
-© 2026 TNPSC Study Hub
+© 2026 TNPSC Study Hub. All Rights Reserved.
 </p>
 
 </footer>
 
 
+<!-- ==============================
+     TOP BUTTON
+============================== -->
+
+<button id="topButton"
+onclick="goTop()">
+
+↑
+
+</button>
+
+
+<!-- ==============================
+     JAVASCRIPT
+============================== -->
+
 <script>
 
-let totalScore = 0;
-let totalTests = 0;
 
+function comingSoon(section){
 
-function submitQuiz(){
-
-let questions = ["q1","q2","q3"];
-
-let score = 0;
-
-for(let i=0;i<questions.length;i++){
-
-let answer = document.querySelector(
-'input[name="'+questions[i]+'"]:checked'
-);
-
-if(!answer){
-
-document.getElementById("quizResult").style.display="block";
-
-document.getElementById("quizResult").innerHTML =
-"Please answer all 3 questions.";
-
-return;
-
-}
-
-score += Number(answer.value);
-
-}
-
-totalScore += score;
-totalTests += 3;
-
-let percentage =
-Math.round((score/3)*100);
-
-document.getElementById("quizResult").style.display="block";
-
-document.getElementById("quizResult").innerHTML =
-"You scored <b>"+score+" / 3</b> ("+percentage+"%).";
-
-updateProgress();
+    alert(
+        section +
+        " will be added to TNPSC Study Hub soon!"
+    );
 
 }
 
 
-function submitMock(){
+/* SHOW TOP BUTTON */
 
-let questions = ["m1","m2","m3"];
+window.onscroll = function(){
 
-let score = 0;
+    let button =
+    document.getElementById("topButton");
 
-for(let i=0;i<questions.length;i++){
+    if(
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ){
 
-let answer = document.querySelector(
-'input[name="'+questions[i]+'"]:checked'
-);
+        button.style.display = "block";
 
-if(!answer){
+    }
 
-document.getElementById("mockResult").style.display="block";
+    else{
 
-document.getElementById("mockResult").innerHTML =
-"Please answer all 3 questions.";
+        button.style.display = "none";
 
-return;
+    }
 
-}
-
-score += Number(answer.value);
-
-}
-
-totalScore += score;
-totalTests += 3;
-
-let percentage =
-Math.round((score/3)*100);
-
-document.getElementById("mockResult").style.display="block";
-
-document.getElementById("mockResult").innerHTML =
-"You scored <b>"+score+" / 3</b> ("+percentage+"%).";
-
-updateProgress();
-
-}
+};
 
 
-function updateProgress(){
+/* GO TO TOP */
 
-let percentage =
-Math.round((totalScore/totalTests)*100);
+function goTop(){
 
-document.getElementById("scoreNumber").innerHTML =
-percentage+"%";
+    window.scrollTo({
 
-document.getElementById("progressFill").style.width =
-percentage+"%";
+        top:0,
 
-document.getElementById("progressText").innerHTML =
-"Tests completed: "+Math.round(totalTests/3);
+        behavior:"smooth"
 
-}
-
-
-function materialMessage(){
-
-alert(
-"Study materials will be added to this section in the next stage."
-);
+    });
 
 }
 
 </script>
 
+
 </body>
+
 </html>
+```
