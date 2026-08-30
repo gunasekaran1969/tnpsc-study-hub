@@ -1,0 +1,577 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TNPSC Group 1 & 2 | Career Point 360</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#e3f2fd,#fce4ec,#fff3e0);
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#6a1b9a,#1565c0,#00838f);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:17px;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#212121;
+    text-align:center;
+    padding:14px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 12px;
+    padding:9px 14px;
+    border-radius:20px;
+    display:inline-block;
+}
+
+nav a:hover{
+    background:#ffca28;
+    color:#212121;
+}
+
+/* MAIN */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    border-left:7px solid #8e24aa;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.intro h2{
+    color:#6a1b9a;
+    margin-bottom:10px;
+}
+
+/* EXAM GRID */
+
+.exam-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+/* CARDS */
+
+.exam-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 7px 18px rgba(0,0,0,0.18);
+    transition:0.3s;
+}
+
+.exam-card:hover{
+    transform:translateY(-7px);
+}
+
+.group1{
+    border-top:8px solid #e53935;
+}
+
+.group2{
+    border-top:8px solid #1e88e5;
+}
+
+.exam-card h2{
+    margin-bottom:12px;
+}
+
+.group1 h2{
+    color:#d32f2f;
+}
+
+.group2 h2{
+    color:#1565c0;
+}
+
+.exam-card h3{
+    margin-top:18px;
+    color:#6a1b9a;
+}
+
+.exam-card ul{
+    padding-left:22px;
+    margin-top:10px;
+}
+
+.exam-card li{
+    margin:7px 0;
+}
+
+/* BUTTONS */
+
+.buttons{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.btn{
+    color:white;
+    text-decoration:none;
+    padding:11px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.red-btn{
+    background:#e53935;
+}
+
+.blue-btn{
+    background:#1565c0;
+}
+
+.green-btn{
+    background:#2e7d32;
+}
+
+.orange-btn{
+    background:#ef6c00;
+}
+
+.btn:hover{
+    opacity:0.8;
+}
+
+/* SUBJECT SECTION */
+
+.study-section{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.study-section h2{
+    color:#6a1b9a;
+    margin-bottom:10px;
+}
+
+.subjects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.subject{
+    padding:20px 10px;
+    color:white;
+    border-radius:12px;
+    text-align:center;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.subject:hover{
+    transform:scale(1.05);
+}
+
+/* DIFFERENT COLORS */
+
+.subject:nth-child(1){
+    background:#e53935;
+}
+
+.subject:nth-child(2){
+    background:#8e24aa;
+}
+
+.subject:nth-child(3){
+    background:#1565c0;
+}
+
+.subject:nth-child(4){
+    background:#00897b;
+}
+
+.subject:nth-child(5){
+    background:#ef6c00;
+}
+
+.subject:nth-child(6){
+    background:#2e7d32;
+}
+
+.subject:nth-child(7){
+    background:#5e35b1;
+}
+
+.subject:nth-child(8){
+    background:#c62828;
+}
+
+/* QUIZ */
+
+.quiz-box{
+    margin-top:30px;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    color:white;
+    background:linear-gradient(135deg,#ff6f00,#e91e63,#7b1fa2);
+    box-shadow:0 7px 18px rgba(0,0,0,0.2);
+}
+
+.quiz-box h2{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.quiz-btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:13px 22px;
+    background:white;
+    color:#7b1fa2;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.quiz-btn:hover{
+    background:#ffca28;
+    color:#222;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:35px;
+    background:#212121;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    nav a{
+        margin:4px;
+        padding:7px 9px;
+        font-size:13px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>🎯 TNPSC Group 1 & Group 2</h1>
+
+<p>Complete Government Exam Preparation Portal</p>
+
+<p>🚀 Career Point 360</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="group1-2.html">🏆 Group 1 & 2</a>
+
+<a href="group4.html">📚 Group 4</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<h2>📖 TNPSC Group 1 & Group 2 Preparation</h2>
+
+<p>
+Prepare for TNPSC examinations with syllabus,
+study materials, current affairs, quizzes and mock tests.
+</p>
+
+</section>
+
+
+<!-- GROUP CARDS -->
+
+<section class="exam-grid">
+
+
+<!-- GROUP 1 -->
+
+<div class="exam-card group1">
+
+<h2>🏆 TNPSC Group 1</h2>
+
+<p>
+Prepare for higher-level administrative services
+through a structured TNPSC Group 1 preparation program.
+</p>
+
+<h3>📚 Important Subjects</h3>
+
+<ul>
+
+<li>General Studies</li>
+
+<li>Current Affairs</li>
+
+<li>Indian History</li>
+
+<li>Indian Polity</li>
+
+<li>Indian Economy</li>
+
+<li>Geography</li>
+
+<li>Tamil Nadu History & Culture</li>
+
+<li>Science & Technology</li>
+
+<li>Aptitude & Mental Ability</li>
+
+</ul>
+
+<div class="buttons">
+
+<a class="btn red-btn"
+onclick="message('Group 1 Study Materials will be added soon!')">
+📖 Study Materials
+</a>
+
+<a class="btn orange-btn"
+onclick="message('Group 1 Mock Test will be added soon!')">
+📝 Mock Test
+</a>
+
+</div>
+
+</div>
+
+
+<!-- GROUP 2 -->
+
+<div class="exam-card group2">
+
+<h2>🎓 TNPSC Group 2 & 2A</h2>
+
+<p>
+Prepare for TNPSC Group 2 and Group 2A examinations
+with important subjects and practice resources.
+</p>
+
+<h3>📚 Important Subjects</h3>
+
+<ul>
+
+<li>General Tamil / General English</li>
+
+<li>General Studies</li>
+
+<li>Current Affairs</li>
+
+<li>Indian History</li>
+
+<li>Indian Polity</li>
+
+<li>Indian Economy</li>
+
+<li>Geography</li>
+
+<li>Tamil Nadu Development Administration</li>
+
+<li>Aptitude & Mental Ability</li>
+
+</ul>
+
+<div class="buttons">
+
+<a class="btn blue-btn"
+onclick="message('Group 2 Study Materials will be added soon!')">
+📖 Study Materials
+</a>
+
+<a class="btn green-btn"
+onclick="message('Group 2 Mock Test will be added soon!')">
+📝 Mock Test
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+<section class="study-section">
+
+<h2>📚 Study Materials</h2>
+
+<p>
+Choose a subject to begin your preparation.
+</p>
+
+<div class="subjects">
+
+<div class="subject"
+onclick="message('Current Affairs section coming soon!')">
+📰<br>Current Affairs
+</div>
+
+<div class="subject"
+onclick="message('History section coming soon!')">
+🏛️<br>History
+</div>
+
+<div class="subject"
+onclick="message('Polity section coming soon!')">
+⚖️<br>Indian Polity
+</div>
+
+<div class="subject"
+onclick="message('Economy section coming soon!')">
+💰<br>Indian Economy
+</div>
+
+<div class="subject"
+onclick="message('Geography section coming soon!')">
+🌍<br>Geography
+</div>
+
+<div class="subject"
+onclick="message('Science section coming soon!')">
+🔬<br>Science
+</div>
+
+<div class="subject"
+onclick="message('Aptitude section coming soon!')">
+🧮<br>Aptitude
+</div>
+
+<div class="subject"
+onclick="message('Tamil Nadu section coming soon!')">
+🌾<br>Tamil Nadu
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-box">
+
+<h2>📝 TNPSC Online Mock Test</h2>
+
+<p>
+Test your preparation with our upcoming online
+TNPSC practice tests and quizzes.
+</p>
+
+<a class="quiz-btn"
+onclick="message('Online Quiz will be added in the next stage!')">
+
+🚀 Start Practice Test
+
+</a>
+
+</section>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Career Point 360</p>
+
+<p>TNPSC Preparation • Jobs • Courses • Career Tools</p>
+
+</footer>
+
+
+<script>
+
+function message(text){
+
+alert(text);
+
+}
+
+</script>
+
+</body>
+</html>
+```
