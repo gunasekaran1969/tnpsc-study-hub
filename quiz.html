@@ -9,10 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="TNPSC Study Hub - Online TNPSC Quiz and Mock Test">
+content="TNPSC Study Hub - 100 Question TNPSC Mock Test">
 
-<title>TNPSC Quiz | TNPSC Study Hub</title>
-
+<title>100 Question Mock Test | TNPSC Study Hub</title>
 
 <style>
 
@@ -43,10 +42,11 @@ header{
 
 header h1{
     font-size:30px;
+    margin-top:6px;
 }
 
 header p{
-    margin-top:6px;
+    margin-top:7px;
 }
 
 nav{
@@ -63,7 +63,7 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    padding:8px 13px;
+    padding:8px 12px;
     margin:3px;
     border-radius:20px;
     font-size:14px;
@@ -74,12 +74,12 @@ nav a:hover{
 }
 
 .container{
-    max-width:850px;
+    max-width:900px;
     margin:auto;
     padding:20px;
 }
 
-.quiz-intro{
+.intro{
     background:white;
     padding:25px;
     border-radius:18px;
@@ -88,8 +88,13 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-.quiz-intro h2{
+.intro h2{
     color:#071952;
+}
+
+.intro p{
+    color:#666;
+    margin-top:7px;
 }
 
 .quiz-box{
@@ -107,6 +112,25 @@ nav a:hover{
     margin-bottom:20px;
 }
 
+.quiz-header h2{
+    margin-bottom:5px;
+}
+
+.progress{
+    height:12px;
+    background:#dfe6e9;
+    border-radius:20px;
+    margin-top:15px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:#35a29f;
+    transition:.3s;
+}
+
 .question-number{
     color:#e63946;
     font-weight:bold;
@@ -114,7 +138,7 @@ nav a:hover{
 }
 
 .question{
-    font-size:20px;
+    font-size:21px;
     font-weight:bold;
     margin-bottom:18px;
 }
@@ -122,14 +146,15 @@ nav a:hover{
 .option{
     display:block;
     width:100%;
+    border:none;
+    background:#f1f5f9;
     padding:14px;
     margin:10px 0;
-    border:none;
     border-radius:10px;
     text-align:left;
-    background:#f1f5f9;
     cursor:pointer;
     font-size:15px;
+    transition:.2s;
 }
 
 .option:hover{
@@ -163,16 +188,17 @@ nav a:hover{
     display:flex;
     justify-content:space-between;
     gap:10px;
-    margin-top:20px;
+    margin-top:22px;
 }
 
 .btn{
     border:none;
-    padding:12px 18px;
+    padding:12px 20px;
     border-radius:9px;
     color:white;
     font-weight:bold;
     cursor:pointer;
+    font-size:14px;
 }
 
 .previous{
@@ -181,10 +207,6 @@ nav a:hover{
 
 .next{
     background:#088395;
-}
-
-.start{
-    background:#e63946;
 }
 
 .result{
@@ -198,31 +220,33 @@ nav a:hover{
 }
 
 .result h2{
-    margin-bottom:10px;
+    font-size:28px;
 }
 
 .score{
-    font-size:50px;
+    font-size:55px;
     font-weight:bold;
+    margin:10px;
 }
 
 .restart{
     background:#e63946;
-    margin-top:15px;
+    margin-top:18px;
 }
 
-.progress{
-    height:10px;
-    background:#ddd;
-    border-radius:10px;
-    overflow:hidden;
-    margin-top:10px;
+.result-message{
+    font-size:18px;
 }
 
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:#35a29f;
+.category{
+    display:inline-block;
+    background:#e8f5e9;
+    color:#2e7d32;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 footer{
@@ -262,6 +286,14 @@ footer a{
         font-size:18px;
     }
 
+    .controls{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
 }
 
 </style>
@@ -279,11 +311,11 @@ footer a{
 </div>
 
 <h1>
-📝 TNPSC Online Quiz
+📝 100 Question TNPSC Mock Test
 </h1>
 
 <p>
-Practice • Test • Improve
+Practice • Check Answers • Improve Your Score
 </p>
 
 </header>
@@ -311,15 +343,15 @@ Practice • Test • Improve
 <main class="container">
 
 
-<section class="quiz-intro">
+<section class="intro">
 
 <h2>
-🎯 TNPSC Practice Test
+🎯 TNPSC 100 Question Practice Test
 </h2>
 
 <p>
-Test your knowledge with these TNPSC-style
-multiple-choice questions.
+This mock test contains 100 syllabus-based questions.
+Choose one answer for each question.
 </p>
 
 </section>
@@ -331,11 +363,11 @@ multiple-choice questions.
 <div class="quiz-header">
 
 <h2>
-📚 General TNPSC Quiz
+📚 TNPSC Mock Test
 </h2>
 
 <p>
-Answer each question and check your score.
+100 Questions • 100 Marks
 </p>
 
 <div class="progress">
@@ -351,20 +383,23 @@ id="progressBar">
 
 
 <div
+class="category"
+id="category">
+History
+</div>
+
+
+<div
 class="question-number"
 id="questionNumber">
-
-Question 1 of 10
-
+Question 1 of 100
 </div>
 
 
 <div
 class="question"
 id="questionText">
-
 Question
-
 </div>
 
 
@@ -416,28 +451,29 @@ class="result"
 id="result">
 
 <h2>
-🎉 Quiz Completed!
+🎉 Mock Test Completed!
 </h2>
 
 <div
 class="score"
 id="score">
 
-0/10
+0/100
 
 </div>
 
-<p id="percentage">
-</p>
+<div
+class="result-message"
+id="percentage">
+</div>
 
-<p id="message">
-</p>
+<p id="message"></p>
 
 <button
 class="btn restart"
 onclick="restartQuiz()">
 
-🔄 Try Again
+🔄 Take Test Again
 
 </button>
 
@@ -485,230 +521,1412 @@ Learn • Practice • Test • Succeed
 <script>
 
 
-/* ==============================
-   QUESTIONS
-============================== */
+/* =====================================================
+   100 TNPSC QUESTIONS
+===================================================== */
 
 const questions = [
 
-{
-q:"Who is known as the Father of the Indian Constitution?",
+/* =========================
+   HISTORY 1-20
+========================= */
 
+{
+category:"History",
+q:"Who founded the Mauryan Empire?",
+options:[
+"Chandragupta Maurya",
+"Ashoka",
+"Bindusara",
+"Harsha"
+],
+answer:0,
+explanation:"Chandragupta Maurya founded the Mauryan Empire."
+},
+
+{
+category:"History",
+q:"Who wrote Arthashastra?",
+options:[
+"Kalidasa",
+"Kautilya",
+"Banabhatta",
+"Panini"
+],
+answer:1,
+explanation:"Kautilya, also known as Chanakya, is traditionally credited with Arthashastra."
+},
+
+{
+category:"History",
+q:"Who was the grandson of Chandragupta Maurya?",
+options:[
+"Bindusara",
+"Ashoka",
+"Harsha",
+"Samudragupta"
+],
+answer:1,
+explanation:"Ashoka was the grandson of Chandragupta Maurya."
+},
+
+{
+category:"History",
+q:"The Battle of Plassey took place in:",
+options:[
+"1757",
+"1764",
+"1857",
+"1942"
+],
+answer:0,
+explanation:"The Battle of Plassey was fought in 1757."
+},
+
+{
+category:"History",
+q:"Who founded the Mughal Empire in India?",
+options:[
+"Akbar",
+"Babur",
+"Humayun",
+"Shah Jahan"
+],
+answer:1,
+explanation:"Babur founded the Mughal Empire after the First Battle of Panipat in 1526."
+},
+
+{
+category:"History",
+q:"The First Battle of Panipat was fought in:",
+options:[
+"1526",
+"1556",
+"1761",
+"1757"
+],
+answer:0,
+explanation:"The First Battle of Panipat was fought in 1526."
+},
+
+{
+category:"History",
+q:"Who built the Taj Mahal?",
+options:[
+"Akbar",
+"Shah Jahan",
+"Jahangir",
+"Aurangzeb"
+],
+answer:1,
+explanation:"Shah Jahan commissioned the Taj Mahal."
+},
+
+{
+category:"History",
+q:"The Revolt of 1857 began at:",
+options:[
+"Delhi",
+"Meerut",
+"Kanpur",
+"Lucknow"
+],
+answer:1,
+explanation:"The Revolt of 1857 began at Meerut."
+},
+
+{
+category:"History",
+q:"Who is popularly called the Father of the Nation in India?",
 options:[
 "Jawaharlal Nehru",
-"Dr. B. R. Ambedkar",
 "Mahatma Gandhi",
+"Sardar Patel",
+"Subhas Chandra Bose"
+],
+answer:1,
+explanation:"Mahatma Gandhi is popularly known as the Father of the Nation in India."
+},
+
+{
+category:"History",
+q:"The Indian National Congress was founded in:",
+options:[
+"1885",
+"1905",
+"1919",
+"1947"
+],
+answer:0,
+explanation:"The Indian National Congress was founded in 1885."
+},
+
+{
+category:"History",
+q:"Who was the first president of the Indian National Congress?",
+options:[
+"Surendranath Banerjee",
+"W.C. Bonnerjee",
+"Bal Gangadhar Tilak",
+"Gopal Krishna Gokhale"
+],
+answer:1,
+explanation:"W.C. Bonnerjee was the first president of the Indian National Congress."
+},
+
+{
+category:"History",
+q:"The Non-Cooperation Movement was launched in:",
+options:[
+"1919",
+"1920",
+"1930",
+"1942"
+],
+answer:1,
+explanation:"The Non-Cooperation Movement was launched in 1920."
+},
+
+{
+category:"History",
+q:"The Dandi March was associated with:",
+options:[
+"Quit India Movement",
+"Salt Satyagraha",
+"Swadeshi Movement",
+"Non-Cooperation Movement"
+],
+answer:1,
+explanation:"The Dandi March was part of the Salt Satyagraha."
+},
+
+{
+category:"History",
+q:"The Quit India Movement was launched in:",
+options:[
+"1930",
+"1935",
+"1942",
+"1947"
+],
+answer:2,
+explanation:"The Quit India Movement was launched in 1942."
+},
+
+{
+category:"History",
+q:"Who gave the slogan 'Give me blood and I will give you freedom'?",
+options:[
+"Mahatma Gandhi",
+"Subhas Chandra Bose",
+"Jawaharlal Nehru",
+"Bhagat Singh"
+],
+answer:1,
+explanation:"The slogan is associated with Subhas Chandra Bose."
+},
+
+{
+category:"History",
+q:"Who was known as the Iron Man of India?",
+options:[
+"Sardar Vallabhbhai Patel",
+"Rajendra Prasad",
+"Jawaharlal Nehru",
+"Subhas Chandra Bose"
+],
+answer:0,
+explanation:"Sardar Vallabhbhai Patel is popularly known as the Iron Man of India."
+},
+
+{
+category:"History",
+q:"Who was the first Governor-General of independent India?",
+options:[
+"Lord Mountbatten",
+"C. Rajagopalachari",
+"Lord Curzon",
+"Warren Hastings"
+],
+answer:0,
+explanation:"Lord Mountbatten was the first Governor-General of independent India."
+},
+
+{
+category:"History",
+q:"Who was the first Indian Governor-General of India?",
+options:[
+"Dr. Rajendra Prasad",
+"C. Rajagopalachari",
+"Jawaharlal Nehru",
 "Sardar Patel"
 ],
-
 answer:1,
+explanation:"C. Rajagopalachari was the first Indian Governor-General."
+},
 
-explanation:
-"Dr. B. R. Ambedkar chaired the Drafting Committee of the Constitution."
+{
+category:"History",
+q:"The Simon Commission came to India in:",
+options:[
+"1919",
+"1927",
+"1930",
+"1942"
+],
+answer:1,
+explanation:"The Simon Commission was appointed in 1927."
+},
+
+{
+category:"History",
+q:"The Indian Independence Act was passed in:",
+options:[
+"1945",
+"1946",
+"1947",
+"1950"
+],
+answer:2,
+explanation:"The Indian Independence Act was passed in 1947."
 },
 
 
-{
-q:"When did the Constitution of India come into force?",
+/* =========================
+   POLITY 21-40
+========================= */
 
+{
+category:"Polity",
+q:"Who is the constitutional head of India?",
+options:[
+"Prime Minister",
+"President",
+"Chief Justice",
+"Speaker"
+],
+answer:1,
+explanation:"The President is the constitutional head of India."
+},
+
+{
+category:"Polity",
+q:"The Constitution of India came into force on:",
 options:[
 "15 August 1947",
 "26 November 1949",
 "26 January 1950",
 "2 October 1950"
 ],
-
 answer:2,
-
-explanation:
-"The Constitution of India came into force on 26 January 1950."
+explanation:"The Constitution came into force on 26 January 1950."
 },
 
-
 {
-q:"What is the capital of Tamil Nadu?",
-
+category:"Polity",
+q:"Who was the Chairman of the Drafting Committee?",
 options:[
-"Madurai",
-"Coimbatore",
-"Chennai",
-"Salem"
+"Jawaharlal Nehru",
+"Dr. B.R. Ambedkar",
+"Rajendra Prasad",
+"Sardar Patel"
 ],
+answer:1,
+explanation:"Dr. B.R. Ambedkar chaired the Drafting Committee."
+},
 
+{
+category:"Polity",
+q:"Fundamental Rights are included in which part of the Constitution?",
+options:[
+"Part I",
+"Part II",
+"Part III",
+"Part IV"
+],
 answer:2,
+explanation:"Fundamental Rights are contained in Part III."
+},
 
-explanation:
-"Chennai is the capital of Tamil Nadu."
+{
+category:"Polity",
+q:"Directive Principles of State Policy are in:",
+options:[
+"Part II",
+"Part III",
+"Part IV",
+"Part V"
+],
+answer:2,
+explanation:"Directive Principles are contained in Part IV."
+},
+
+{
+category:"Polity",
+q:"Fundamental Duties were added by which amendment?",
+options:[
+"42nd Amendment",
+"44th Amendment",
+"73rd Amendment",
+"86th Amendment"
+],
+answer:0,
+explanation:"Fundamental Duties were added by the 42nd Constitutional Amendment."
+},
+
+{
+category:"Polity",
+q:"The minimum voting age in India is:",
+options:[
+"16",
+"18",
+"21",
+"25"
+],
+answer:1,
+explanation:"The voting age was reduced to 18 years."
+},
+
+{
+category:"Polity",
+q:"The President of India is elected by:",
+options:[
+"People directly",
+"Electoral College",
+"Lok Sabha only",
+"Rajya Sabha only"
+],
+answer:1,
+explanation:"The President is elected by an Electoral College."
+},
+
+{
+category:"Polity",
+q:"The normal term of the Lok Sabha is:",
+options:[
+"4 years",
+"5 years",
+"6 years",
+"7 years"
+],
+answer:1,
+explanation:"The normal term of the Lok Sabha is five years."
+},
+
+{
+category:"Polity",
+q:"Rajya Sabha is also known as:",
+options:[
+"House of People",
+"Council of States",
+"Federal House",
+"Upper Assembly"
+],
+answer:1,
+explanation:"Rajya Sabha is the Council of States."
+},
+
+{
+category:"Polity",
+q:"Who presides over the Lok Sabha?",
+options:[
+"President",
+"Prime Minister",
+"Speaker",
+"Vice-President"
+],
+answer:2,
+explanation:"The Speaker presides over the Lok Sabha."
+},
+
+{
+category:"Polity",
+q:"Who is the ex-officio Chairman of Rajya Sabha?",
+options:[
+"President",
+"Prime Minister",
+"Vice-President",
+"Speaker"
+],
+answer:2,
+explanation:"The Vice-President is the ex-officio Chairman of Rajya Sabha."
+},
+
+{
+category:"Polity",
+q:"The Supreme Court of India is located in:",
+options:[
+"Mumbai",
+"New Delhi",
+"Kolkata",
+"Chennai"
+],
+answer:1,
+explanation:"The Supreme Court is located in New Delhi."
+},
+
+{
+category:"Polity",
+q:"Who appoints the Governor of a state?",
+options:[
+"Prime Minister",
+"Chief Minister",
+"President",
+"Chief Justice"
+],
+answer:2,
+explanation:"The Governor is appointed by the President."
+},
+
+{
+category:"Polity",
+q:"Panchayati Raj institutions were constitutionally strengthened by:",
+options:[
+"42nd Amendment",
+"44th Amendment",
+"73rd Amendment",
+"74th Amendment"
+],
+answer:2,
+explanation:"The 73rd Amendment gave constitutional status to Panchayati Raj institutions."
+},
+
+{
+category:"Polity",
+q:"Municipalities received constitutional status through:",
+options:[
+"73rd Amendment",
+"74th Amendment",
+"42nd Amendment",
+"86th Amendment"
+],
+answer:1,
+explanation:"The 74th Amendment deals with urban local bodies."
+},
+
+{
+category:"Polity",
+q:"The Election Commission of India is a:",
+options:[
+"Statutory body",
+"Constitutional body",
+"Private body",
+"Judicial body"
+],
+answer:1,
+explanation:"The Election Commission is a constitutional body under Article 324."
+},
+
+{
+category:"Polity",
+q:"The Finance Commission is mentioned under:",
+options:[
+"Article 280",
+"Article 324",
+"Article 356",
+"Article 370"
+],
+answer:0,
+explanation:"Article 280 provides for the Finance Commission."
+},
+
+{
+category:"Polity",
+q:"Who is the head of the Union Council of Ministers?",
+options:[
+"President",
+"Prime Minister",
+"Vice-President",
+"Speaker"
+],
+answer:1,
+explanation:"The Prime Minister heads the Union Council of Ministers."
+},
+
+{
+category:"Polity",
+q:"The Constitution of India is:",
+options:[
+"Written",
+"Unwritten",
+"Partly written only",
+"Temporary"
+],
+answer:0,
+explanation:"India has a written Constitution."
+
+
 },
 
 
-{
-q:"Which is the central bank of India?",
+/* =========================
+   GEOGRAPHY 41-55
+========================= */
 
+{
+category:"Geography",
+q:"Which is the longest river in India?",
+options:[
+"Ganga",
+"Yamuna",
+"Narmada",
+"Godavari"
+],
+answer:0,
+explanation:"The Ganga is generally considered the longest river in India."
+},
+
+{
+category:"Geography",
+q:"Which river is known as the 'Sorrow of Bihar'?",
+options:[
+"Ganga",
+"Kosi",
+"Yamuna",
+"Godavari"
+],
+answer:1,
+explanation:"The Kosi River is traditionally called the Sorrow of Bihar."
+},
+
+{
+category:"Geography",
+q:"Black soil is particularly suitable for:",
+options:[
+"Tea",
+"Cotton",
+"Jute",
+"Coffee"
+],
+answer:1,
+explanation:"Black soil is well suited for cotton cultivation."
+},
+
+{
+category:"Geography",
+q:"The Western Ghats are located along the:",
+options:[
+"Western side of India",
+"Eastern side only",
+"Northern plains",
+"Himalayas"
+],
+answer:0,
+explanation:"The Western Ghats run along the western side of peninsular India."
+},
+
+{
+category:"Geography",
+q:"The Himalayas are:",
+options:[
+"Young fold mountains",
+"Block mountains",
+"Volcanic mountains",
+"Plateaus"
+],
+answer:0,
+explanation:"The Himalayas are young fold mountains."
+},
+
+{
+category:"Geography",
+q:"The Thar Desert is mainly located in:",
+options:[
+"Rajasthan",
+"Punjab",
+"Kerala",
+"Assam"
+],
+answer:0,
+explanation:"The Thar Desert is mainly located in Rajasthan."
+},
+
+{
+category:"Geography",
+q:"Which is the largest state in India by area?",
+options:[
+"Madhya Pradesh",
+"Rajasthan",
+"Maharashtra",
+"Uttar Pradesh"
+],
+answer:1,
+explanation:"Rajasthan is the largest Indian state by area."
+},
+
+{
+category:"Geography",
+q:"Which is the smallest state in India by area?",
+options:[
+"Sikkim",
+"Goa",
+"Tripura",
+"Manipur"
+],
+answer:1,
+explanation:"Goa is the smallest Indian state by area."
+},
+
+{
+category:"Geography",
+q:"The Indian monsoon is mainly associated with:",
+options:[
+"Seasonal reversal of winds",
+"Permanent winds",
+"Polar winds",
+"Trade only"
+],
+answer:0,
+explanation:"The monsoon involves seasonal reversal of winds."
+},
+
+{
+category:"Geography",
+q:"The Sundarbans are famous for:",
+options:[
+"Mangrove forests",
+"Desert vegetation",
+"Tea plantations",
+"Coniferous forests"
+],
+answer:0,
+explanation:"The Sundarbans are famous for their mangrove ecosystem."
+},
+
+{
+category:"Geography",
+q:"Which ocean lies south of India?",
+options:[
+"Atlantic Ocean",
+"Pacific Ocean",
+"Indian Ocean",
+"Arctic Ocean"
+],
+answer:2,
+explanation:"The Indian Ocean lies to the south of India."
+},
+
+{
+category:"Geography",
+q:"The Deccan Plateau is mainly located in:",
+options:[
+"Peninsular India",
+"Northern India",
+"Northeastern India",
+"Coastal Odisha only"
+],
+answer:0,
+explanation:"The Deccan Plateau occupies much of peninsular India."
+},
+
+{
+category:"Geography",
+q:"Which crop requires a warm and wet climate?",
+options:[
+"Rice",
+"Wheat",
+"Barley",
+"Gram"
+],
+answer:0,
+explanation:"Rice generally requires a warm and sufficiently wet climate."
+},
+
+{
+category:"Geography",
+q:"Which state is famous for tea production?",
+options:[
+"Assam",
+"Punjab",
+"Rajasthan",
+"Haryana"
+],
+answer:0,
+explanation:"Assam is one of India's major tea-producing regions."
+},
+
+{
+category:"Geography",
+q:"The Palk Strait separates India from:",
+options:[
+"Myanmar",
+"Sri Lanka",
+"Bangladesh",
+"Maldives"
+],
+answer:1,
+explanation:"The Palk Strait separates southeastern India from Sri Lanka."
+},
+
+
+/* =========================
+   ECONOMY 56-68
+========================= */
+
+{
+category:"Economy",
+q:"What does GDP stand for?",
+options:[
+"Gross Domestic Product",
+"General Domestic Product",
+"Gross Development Plan",
+"Government Domestic Product"
+],
+answer:0,
+explanation:"GDP stands for Gross Domestic Product."
+},
+
+{
+category:"Economy",
+q:"The central bank of India is:",
 options:[
 "SBI",
 "RBI",
 "SEBI",
 "NABARD"
 ],
-
 answer:1,
-
-explanation:
-"The Reserve Bank of India is the central bank of India."
+explanation:"The Reserve Bank of India is India's central bank."
 },
 
-
 {
-q:"Which soil is especially suitable for cotton cultivation?",
-
+category:"Economy",
+q:"Inflation means:",
 options:[
-"Black soil",
-"Red soil",
-"Laterite soil",
-"Mountain soil"
+"Fall in general prices",
+"Rise in general price level",
+"Fall in income",
+"Increase in unemployment only"
 ],
+answer:1,
+explanation:"Inflation refers to a sustained rise in the general price level."
+},
 
+{
+category:"Economy",
+q:"Which institution regulates the securities market in India?",
+options:[
+"RBI",
+"SEBI",
+"NABARD",
+"SIDBI"
+],
+answer:1,
+explanation:"SEBI regulates India's securities market."
+},
+
+{
+category:"Economy",
+q:"NABARD is mainly associated with:",
+options:[
+"Agriculture and rural development",
+"Space research",
+"Railways",
+"Telecommunications"
+],
 answer:0,
+explanation:"NABARD focuses on agriculture and rural development finance."
+},
 
-explanation:
-"Black soil has traditionally been associated with cotton cultivation."
+{
+category:"Economy",
+q:"Which tax is an indirect tax?",
+options:[
+"Income Tax",
+"Corporate Tax",
+"GST",
+"Wealth Tax"
+],
+answer:2,
+explanation:"GST is an indirect tax."
+},
+
+{
+category:"Economy",
+q:"GST stands for:",
+options:[
+"Goods and Services Tax",
+"General Sales Tax",
+"Government Service Tax",
+"Goods Supply Tax"
+],
+answer:0,
+explanation:"GST means Goods and Services Tax."
+},
+
+{
+category:"Economy",
+q:"A budget mainly presents:",
+options:[
+"Government receipts and expenditure",
+"Only exports",
+"Only imports",
+"Population figures"
+],
+answer:0,
+explanation:"A government budget presents estimated receipts and expenditure."
+},
+
+{
+category:"Economy",
+q:"Per capita income means:",
+options:[
+"Income per person",
+"Total national income",
+"Government income",
+"Corporate income"
+],
+answer:0,
+explanation:"Per capita income is income measured per person."
+},
+
+{
+category:"Economy",
+q:"Which sector includes agriculture?",
+options:[
+"Primary sector",
+"Secondary sector",
+"Tertiary sector",
+"Quaternary sector only"
+],
+answer:0,
+explanation:"Agriculture belongs to the primary sector."
+},
+
+{
+category:"Economy",
+q:"Manufacturing belongs mainly to:",
+options:[
+"Primary sector",
+"Secondary sector",
+"Tertiary sector",
+"None"
+],
+answer:1,
+explanation:"Manufacturing is part of the secondary sector."
+},
+
+{
+category:"Economy",
+q:"Banking and transport are examples of:",
+options:[
+"Primary activities",
+"Secondary activities",
+"Tertiary activities",
+"Agricultural activities"
+],
+answer:2,
+explanation:"Banking and transport are service activities in the tertiary sector."
+},
+
+{
+category:"Economy",
+q:"Which institution issues currency notes in India, except the one-rupee note?",
+options:[
+"RBI",
+"SBI",
+"SEBI",
+"Finance Commission"
+],
+answer:0,
+explanation:"The RBI issues currency notes except the one-rupee note, which is issued by the Government of India."
 },
 
 
-{
-q:"What is 25% of 200?",
+/* =========================
+   SCIENCE 69-82
+========================= */
 
+{
+category:"Science",
+q:"Which gas is essential for human respiration?",
+options:[
+"Nitrogen",
+"Oxygen",
+"Hydrogen",
+"Helium"
+],
+answer:1,
+explanation:"Oxygen is essential for cellular respiration."
+},
+
+{
+category:"Science",
+q:"Which organ pumps blood throughout the body?",
+options:[
+"Lungs",
+"Heart",
+"Kidney",
+"Brain"
+],
+answer:1,
+explanation:"The heart pumps blood through the circulatory system."
+},
+
+{
+category:"Science",
+q:"Water boils at sea level at approximately:",
+options:[
+"50°C",
+"75°C",
+"100°C",
+"150°C"
+],
+answer:2,
+explanation:"Water boils at approximately 100°C at standard atmospheric pressure."
+},
+
+{
+category:"Science",
+q:"The basic unit of life is:",
+options:[
+"Tissue",
+"Cell",
+"Organ",
+"Atom"
+],
+answer:1,
+explanation:"The cell is the basic structural and functional unit of life."
+},
+
+{
+category:"Science",
+q:"Plants prepare food mainly through:",
+options:[
+"Respiration",
+"Photosynthesis",
+"Digestion",
+"Transpiration"
+],
+answer:1,
+explanation:"Plants make food through photosynthesis."
+},
+
+{
+category:"Science",
+q:"Which vitamin is produced in the skin in sunlight?",
+options:[
+"Vitamin A",
+"Vitamin B",
+"Vitamin C",
+"Vitamin D"
+],
+answer:3,
+explanation:"Sunlight helps the skin synthesize vitamin D."
+},
+
+{
+category:"Science",
+q:"Which blood cells help fight infection?",
+options:[
+"Red blood cells",
+"White blood cells",
+"Platelets",
+"Plasma"
+],
+answer:1,
+explanation:"White blood cells help defend the body against infection."
+},
+
+{
+category:"Science",
+q:"Which organ filters waste from the blood?",
+options:[
+"Heart",
+"Kidney",
+"Lung",
+"Stomach"
+],
+answer:1,
+explanation:"The kidneys filter waste products from the blood."
+},
+
+{
+category:"Science",
+q:"The SI unit of force is:",
+options:[
+"Joule",
+"Watt",
+"Newton",
+"Pascal"
+],
+answer:2,
+explanation:"The SI unit of force is the Newton."
+},
+
+{
+category:"Science",
+q:"The SI unit of electric current is:",
+options:[
+"Volt",
+"Ampere",
+"Ohm",
+"Watt"
+],
+answer:1,
+explanation:"Electric current is measured in amperes."
+},
+
+{
+category:"Science",
+q:"Which metal is liquid at room temperature?",
+options:[
+"Iron",
+"Mercury",
+"Aluminium",
+"Copper"
+],
+answer:1,
+explanation:"Mercury is liquid at normal room temperature."
+},
+
+{
+category:"Science",
+q:"The chemical formula of water is:",
+options:[
+"CO2",
+"H2O",
+"O2",
+"NaCl"
+],
+answer:1,
+explanation:"Water has the chemical formula H2O."
+},
+
+{
+category:"Science",
+q:"Which planet is known as the Red Planet?",
+options:[
+"Earth",
+"Mars",
+"Jupiter",
+"Venus"
+],
+answer:1,
+explanation:"Mars is commonly called the Red Planet."
+},
+
+{
+category:"Science",
+q:"Which is the nearest star to Earth?",
+options:[
+"Moon",
+"Sun",
+"Sirius",
+"Polaris"
+],
+answer:1,
+explanation:"The Sun is the nearest star to Earth."
+
+
+},
+
+
+/* =========================
+   TAMIL NADU 83-92
+========================= */
+
+{
+category:"Tamil Nadu",
+q:"What is the capital of Tamil Nadu?",
+options:[
+"Madurai",
+"Chennai",
+"Coimbatore",
+"Salem"
+],
+answer:1,
+explanation:"Chennai is the capital of Tamil Nadu."
+},
+
+{
+category:"Tamil Nadu",
+q:"Brihadisvara Temple is located at:",
+options:[
+"Madurai",
+"Thanjavur",
+"Salem",
+"Vellore"
+],
+answer:1,
+explanation:"The Brihadisvara Temple is located in Thanjavur."
+},
+
+{
+category:"Tamil Nadu",
+q:"The Meenakshi Amman Temple is located in:",
+options:[
+"Madurai",
+"Chennai",
+"Thanjavur",
+"Erode"
+],
+answer:0,
+explanation:"The Meenakshi Amman Temple is located in Madurai."
+},
+
+{
+category:"Tamil Nadu",
+q:"Who founded the Self-Respect Movement?",
+options:[
+"Periyar E.V. Ramasamy",
+"Rajaji",
+"Kamarajar",
+"Subramania Bharati"
+],
+answer:0,
+explanation:"Periyar E.V. Ramasamy founded the Self-Respect Movement."
+},
+
+{
+category:"Tamil Nadu",
+q:"Who is popularly known as Periyar?",
+options:[
+"E.V. Ramasamy",
+"C. Rajagopalachari",
+"K. Kamaraj",
+"V.O. Chidambaram"
+],
+answer:0,
+explanation:"E.V. Ramasamy is popularly known as Periyar."
+},
+
+{
+category:"Tamil Nadu",
+q:"Who founded the Swadeshi Steam Navigation Company?",
+options:[
+"V.O. Chidambaram Pillai",
+"Subramania Bharati",
+"Periyar",
+"Kamarajar"
+],
+answer:0,
+explanation:"V.O. Chidambaram Pillai founded the Swadeshi Steam Navigation Company."
+},
+
+{
+category:"Tamil Nadu",
+q:"Who was popularly known as VOC?",
+options:[
+"V.O. Chidambaram Pillai",
+"V. V. Giri",
+"V. K. Krishna Menon",
+"C. Rajagopalachari"
+],
+answer:0,
+explanation:"V.O. Chidambaram Pillai is popularly known as VOC."
+},
+
+{
+category:"Tamil Nadu",
+q:"Kamarajar was especially associated with:",
+options:[
+"Expansion of education",
+"Space research",
+"Foreign policy",
+"Banking"
+],
+answer:0,
+explanation:"Kamarajar is widely remembered for his contribution to education and school development in Tamil Nadu."
+},
+
+{
+category:"Tamil Nadu",
+q:"Which classical language is primarily associated with Tamil Nadu?",
+options:[
+"Tamil",
+"Punjabi",
+"Marathi",
+"Gujarati"
+],
+answer:0,
+explanation:"Tamil is the major classical language associated with Tamil Nadu."
+},
+
+{
+category:"Tamil Nadu",
+q:"The Nilgiri Hills are located in:",
+options:[
+"Tamil Nadu and adjoining states",
+"Rajasthan",
+"Punjab",
+"Bihar"
+],
+answer:0,
+explanation:"The Nilgiri Hills are located in southern India, mainly around the borders of Tamil Nadu, Kerala and Karnataka."
+
+
+},
+
+
+/* =========================
+   APTITUDE 93-100
+========================= */
+
+{
+category:"Aptitude",
+q:"What is 25% of 200?",
 options:[
 "25",
 "40",
 "50",
 "75"
 ],
-
 answer:2,
-
-explanation:
-"25% of 200 is 50."
+explanation:"25% of 200 = 200 × 25/100 = 50."
 },
 
-
 {
-q:"World Environment Day is observed on:",
-
+category:"Aptitude",
+q:"What is the average of 10, 20 and 30?",
 options:[
-"5 June",
-"15 August",
-"26 January",
-"10 December"
+"15",
+"20",
+"25",
+"30"
 ],
-
-answer:0,
-
-explanation:
-"World Environment Day is observed on 5 June."
+answer:1,
+explanation:"(10 + 20 + 30) ÷ 3 = 20."
 },
 
+{
+category:"Aptitude",
+q:"If 5 + 5 × 2 = ?",
+options:[
+"10",
+"15",
+"20",
+"25"
+],
+answer:1,
+explanation:"Multiplication is performed first: 5 + (5 × 2) = 15."
+},
 
 {
-q:"Which organ pumps blood through the human body?",
-
+category:"Aptitude",
+q:"What is 10% of 500?",
 options:[
-"Lungs",
-"Kidney",
-"Heart",
-"Brain"
+"25",
+"40",
+"50",
+"100"
 ],
-
 answer:2,
-
-explanation:
-"The heart pumps blood throughout the circulatory system."
+explanation:"10% of 500 = 50."
 },
 
-
 {
-q:"The Quit India Movement was launched in:",
-
+category:"Aptitude",
+q:"If a number is divided by 2 and the result is 10, the number is:",
 options:[
-"1919",
-"1930",
-"1942",
-"1947"
+"5",
+"10",
+"20",
+"25"
 ],
-
 answer:2,
-
-explanation:
-"The Quit India Movement was launched in 1942."
+explanation:"10 × 2 = 20."
 },
 
+{
+category:"Aptitude",
+q:"What is 12 × 5?",
+options:[
+"50",
+"60",
+"70",
+"80"
+],
+answer:1,
+explanation:"12 × 5 = 60."
+},
 
 {
-q:"National Sports Day in India is observed on:",
-
+category:"Aptitude",
+q:"What is the square of 10?",
 options:[
-"29 August",
-"15 August",
-"26 January",
-"5 September"
+"10",
+"20",
+"50",
+"100"
 ],
+answer:3,
+explanation:"10 × 10 = 100."
+},
 
-answer:0,
-
-explanation:
-"National Sports Day is observed on 29 August."
+{
+category:"Aptitude",
+q:"If 3 pens cost ₹30, what is the cost of one pen?",
+options:[
+"₹5",
+"₹10",
+"₹15",
+"₹20"
+],
+answer:1,
+explanation:"₹30 ÷ 3 = ₹10."
 }
 
 ];
 
 
-let currentQuestion=0;
+/* =====================================================
+   VARIABLES
+===================================================== */
 
-let score=0;
+let currentQuestion = 0;
 
-let answered=false;
+let score = 0;
+
+let answered = false;
 
 
-/* ==============================
+/* =====================================================
    LOAD QUESTION
-============================== */
+===================================================== */
 
 function loadQuestion(){
 
-    const data=
+    const data =
     questions[currentQuestion];
 
 
-    answered=false;
+    answered = false;
+
+
+    document.getElementById(
+        "category"
+    ).innerText =
+    data.category;
 
 
     document.getElementById(
         "questionNumber"
-    ).innerText=
-    "Question "+
-    (currentQuestion+1)+
-    " of "+
+    ).innerText =
+    "Question " +
+    (currentQuestion + 1) +
+    " of " +
     questions.length;
 
 
     document.getElementById(
         "questionText"
-    ).innerText=data.q;
+    ).innerText =
+    data.q;
 
 
-    let html="";
+    let html = "";
 
 
     data.options.forEach(
         function(option,index){
 
-            html+=
+            html +=
             `<button
             class="option"
             onclick="selectAnswer(${index})">
 
-            ${String.fromCharCode(65+index)}.
+            ${String.fromCharCode(65 + index)}.
             ${option}
 
             </button>`;
@@ -719,61 +1937,68 @@ function loadQuestion(){
 
     document.getElementById(
         "options"
-    ).innerHTML=html;
+    ).innerHTML =
+    html;
 
 
     document.getElementById(
         "explanation"
-    ).style.display="none";
+    ).style.display =
+    "none";
 
 
     document.getElementById(
         "explanationText"
-    ).innerText=data.explanation;
+    ).innerText =
+    data.explanation;
 
 
-    let progress=
-    ((currentQuestion+1)/
-    questions.length)*100;
+    let progress =
+    ((currentQuestion + 1) /
+    questions.length) * 100;
 
 
     document.getElementById(
         "progressBar"
-    ).style.width=
-    progress+"%";
+    ).style.width =
+    progress + "%";
 
 }
 
 
-/* ==============================
-   ANSWER
-============================== */
+/* =====================================================
+   SELECT ANSWER
+===================================================== */
 
 function selectAnswer(selected){
 
     if(answered){
+
         return;
+
     }
 
 
-    answered=true;
+    answered = true;
 
 
-    const data=
+    const data =
     questions[currentQuestion];
 
 
-    const buttons=
-    document.querySelectorAll(".option");
+    const buttons =
+    document.querySelectorAll(
+        ".option"
+    );
 
 
     buttons.forEach(
         function(button,index){
 
-            button.disabled=true;
+            button.disabled = true;
 
 
-            if(index===data.answer){
+            if(index === data.answer){
 
                 button.classList.add(
                     "correct"
@@ -783,8 +2008,8 @@ function selectAnswer(selected){
 
 
             if(
-                index===selected &&
-                selected!==data.answer
+                index === selected &&
+                selected !== data.answer
             ){
 
                 button.classList.add(
@@ -797,7 +2022,7 @@ function selectAnswer(selected){
     );
 
 
-    if(selected===data.answer){
+    if(selected === data.answer){
 
         score++;
 
@@ -806,14 +2031,15 @@ function selectAnswer(selected){
 
     document.getElementById(
         "explanation"
-    ).style.display="block";
+    ).style.display =
+    "block";
 
 }
 
 
-/* ==============================
-   NEXT
-============================== */
+/* =====================================================
+   NEXT QUESTION
+===================================================== */
 
 function nextQuestion(){
 
@@ -829,8 +2055,8 @@ function nextQuestion(){
 
 
     if(
-        currentQuestion<
-        questions.length-1
+        currentQuestion <
+        questions.length - 1
     ){
 
         currentQuestion++;
@@ -848,13 +2074,13 @@ function nextQuestion(){
 }
 
 
-/* ==============================
-   PREVIOUS
-============================== */
+/* =====================================================
+   PREVIOUS QUESTION
+===================================================== */
 
 function previousQuestion(){
 
-    if(currentQuestion>0){
+    if(currentQuestion > 0){
 
         currentQuestion--;
 
@@ -865,70 +2091,84 @@ function previousQuestion(){
 }
 
 
-/* ==============================
-   RESULT
-============================== */
+/* =====================================================
+   SHOW RESULT
+===================================================== */
 
 function showResult(){
 
     document.getElementById(
         "result"
-    ).style.display="block";
+    ).style.display =
+    "block";
 
 
     document.getElementById(
         "score"
-    ).innerText=
-    score+"/"+questions.length;
+    ).innerText =
+    score + "/" +
+    questions.length;
 
 
-    let percentage=
+    let percentage =
     Math.round(
-        score/questions.length*100
+        score /
+        questions.length *
+        100
     );
 
 
     document.getElementById(
         "percentage"
-    ).innerText=
-    "Your Score: "+percentage+"%";
+    ).innerText =
+    "Your Score: " +
+    percentage +
+    "%";
 
 
     let message;
 
 
-    if(percentage>=80){
+    if(percentage >= 90){
 
-        message=
-        "🌟 Excellent! Keep up the great preparation.";
-
-    }
-
-    else if(percentage>=60){
-
-        message=
-        "👍 Good job! Continue practising.";
+        message =
+        "🏆 Outstanding! Excellent TNPSC preparation.";
 
     }
 
-    else if(percentage>=40){
+    else if(percentage >= 75){
 
-        message=
-        "📚 Keep studying and try the quiz again.";
+        message =
+        "🌟 Excellent! Keep practising.";
+
+    }
+
+    else if(percentage >= 60){
+
+        message =
+        "👍 Good performance. Continue your preparation.";
+
+    }
+
+    else if(percentage >= 40){
+
+        message =
+        "📚 Keep studying and practise more questions.";
 
     }
 
     else{
 
-        message=
-        "💪 Keep practising. You can improve!";
+        message =
+        "💪 Don't give up. Study more and try again.";
 
     }
 
 
     document.getElementById(
         "message"
-    ).innerText=message;
+    ).innerText =
+    message;
 
 
     document.getElementById(
@@ -940,30 +2180,39 @@ function showResult(){
 }
 
 
-/* ==============================
+/* =====================================================
    RESTART
-============================== */
+===================================================== */
 
 function restartQuiz(){
 
-    currentQuestion=0;
+    currentQuestion = 0;
 
-    score=0;
+    score = 0;
 
-    answered=false;
+    answered = false;
 
 
     document.getElementById(
         "result"
-    ).style.display="none";
+    ).style.display =
+    "none";
 
 
     loadQuestion();
 
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
 }
 
 
-/* INITIAL LOAD */
+/* =====================================================
+   START QUIZ
+===================================================== */
 
 loadQuestion();
 
