@@ -11,9 +11,13 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f4f7fb;
     color:#172033;
 }
@@ -21,15 +25,16 @@ body{
 header{
     background:#1565c0;
     color:white;
-    padding:15px;
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
+    box-shadow:0 2px 10px #0003;
 }
 
 .header{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
+    padding:14px 18px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -40,45 +45,74 @@ header{
     font-weight:bold;
 }
 
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+}
+
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:12px;
+    padding:8px 10px;
+    border-radius:20px;
     font-size:14px;
+}
+
+nav a:hover{
+    background:#ffffff30;
 }
 
 .hero{
     background:linear-gradient(135deg,#1565c0,#4527a0);
     color:white;
     text-align:center;
-    padding:65px 20px;
+    padding:70px 20px;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:44px;
     margin:0 0 12px;
 }
 
 .hero p{
-    font-size:18px;
-    max-width:700px;
+    max-width:750px;
     margin:auto;
+    font-size:19px;
     line-height:1.6;
 }
 
+.button{
+    display:inline-block;
+    border:0;
+    background:#1565c0;
+    color:white;
+    padding:11px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+.hero .button{
+    background:white;
+    color:#1565c0;
+}
+
 .container{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
-    padding:40px 18px;
+    padding:42px 18px;
 }
 
 .title{
     text-align:center;
     font-size:30px;
-    margin-bottom:25px;
+    margin:0 0 28px;
 }
 
-.exam-grid{
+.grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
@@ -86,102 +120,190 @@ nav a{
 
 .card{
     background:white;
-    padding:25px;
     border-radius:16px;
-    text-align:center;
+    padding:25px;
     box-shadow:0 3px 15px #00000012;
 }
 
-.card h3{
-    color:#1565c0;
+.center{
+    text-align:center;
 }
 
 .icon{
     font-size:42px;
 }
 
-.button{
-    display:inline-block;
-    background:#1565c0;
-    color:white;
-    padding:11px 20px;
-    border-radius:25px;
-    text-decoration:none;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
+.card h3{
+    color:#1565c0;
 }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+.card p{
+    color:#5c6675;
+    line-height:1.6;
 }
 
-.feature{
+.section{
     background:white;
-    padding:22px;
-    border-radius:14px;
-    box-shadow:0 3px 12px #00000010;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 3px 15px #00000010;
+    margin-bottom:20px;
 }
 
-.quiz{
-    max-width:800px;
+.subjects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.subject{
+    padding:18px;
+    border:1px solid #dce3ed;
+    border-radius:12px;
+    background:#fafcff;
+}
+
+.subject h3{
+    margin-top:0;
+}
+
+.quiz-box{
+    max-width:850px;
     margin:auto;
     background:white;
-    padding:25px;
+    padding:28px;
     border-radius:16px;
     box-shadow:0 3px 15px #00000012;
 }
 
 .question{
-    margin:25px 0;
+    margin-bottom:28px;
 }
 
-.question label{
+.question h3{
+    margin-bottom:12px;
+}
+
+.option{
     display:block;
-    padding:8px 0;
+    background:#f5f7fb;
+    margin:8px 0;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#e8eef8;
 }
 
 .result{
     display:none;
     margin-top:20px;
     padding:18px;
-    background:#eaf7ea;
     border-radius:10px;
+    background:#eaf7ea;
     font-weight:bold;
 }
 
-.updates{
+.progress-box{
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 3px 15px #00000010;
+    text-align:center;
+}
+
+.progress-number{
+    font-size:42px;
+    font-weight:bold;
+    color:#1565c0;
+}
+
+.progress-bar{
+    width:100%;
+    height:20px;
+    background:#e2e7ef;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progress-fill{
+    height:100%;
+    width:0%;
+    background:#1565c0;
+    transition:0.5s;
+}
+
+.update-box{
     background:#172033;
     color:white;
-    padding:25px;
     border-radius:16px;
+    padding:28px;
+}
+
+.update{
+    padding:12px 0;
+    border-bottom:1px solid #ffffff30;
 }
 
 footer{
     background:#172033;
     color:white;
     text-align:center;
-    padding:30px;
+    padding:35px 18px;
     margin-top:20px;
 }
 
-@media(max-width:750px){
+.note{
+    background:#fff7df;
+    border:1px solid #e8ce82;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+.back{
+    margin-bottom:20px;
+}
+
+@media(max-width:800px){
+
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .subjects{
+        grid-template-columns:1fr;
+    }
 
     nav{
         display:none;
     }
 
     .hero h1{
-        font-size:34px;
+        font-size:35px;
     }
+}
 
-    .exam-grid,
-    .features{
+@media(max-width:560px){
+
+    .grid{
         grid-template-columns:1fr;
     }
 
+    .hero{
+        padding:55px 16px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .container{
+        padding:32px 14px;
+    }
 }
 </style>
 </head>
@@ -199,8 +321,10 @@ TNPSC Study Hub
 <nav>
 <a href="#home">Home</a>
 <a href="#exams">Exams</a>
-<a href="#quiz">Quiz</a>
 <a href="#materials">Materials</a>
+<a href="#quiz">Quiz</a>
+<a href="#mock">Mock Test</a>
+<a href="#progress">Progress</a>
 <a href="#updates">Updates</a>
 </nav>
 
@@ -209,16 +333,20 @@ TNPSC Study Hub
 </header>
 
 
+<!-- HOME -->
+
 <section class="hero" id="home">
 
 <h1>TNPSC Study Hub</h1>
 
 <p>
-Your complete preparation platform for TNPSC Group 1,
-Group 2, Group 2A and Group 4 examinations.
+Learn • Practice • Test • Improve
 </p>
 
-<br>
+<p>
+A preparation platform for TNPSC Group 1,
+Group 2, Group 2A and Group 4 aspirants.
+</p>
 
 <a class="button" href="#exams">
 Choose Your Exam
@@ -227,63 +355,65 @@ Choose Your Exam
 </section>
 
 
+<!-- EXAMS -->
+
 <section class="container" id="exams">
 
 <h2 class="title">
 📝 Choose Your TNPSC Exam
 </h2>
 
-<div class="exam-grid">
+<div class="grid">
 
-<div class="card">
+<div class="card center">
 
 <div class="icon">🏆</div>
 
 <h3>TNPSC Group 1</h3>
 
 <p>
-Advanced level preparation, syllabus,
-study materials and practice tests.
+Advanced preparation resources,
+subjects and practice tests.
 </p>
 
-<a class="button" href="#materials">
-Start Preparation
+<a class="button" href="#group1">
+Open Group 1
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="card center">
 
 <div class="icon">📚</div>
 
 <h3>TNPSC Group 2 / 2A</h3>
 
 <p>
-Prepare with study materials,
-practice questions and mock tests.
+Preparation resources and
+practice questions.
 </p>
 
-<a class="button" href="#materials">
-Start Preparation
+<a class="button" href="#group2">
+Open Group 2 / 2A
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="card center">
 
 <div class="icon">🎯</div>
 
 <h3>TNPSC Group 4</h3>
 
 <p>
-Begin your preparation with
-important topics and practice questions.
+Start your preparation with
+important subjects and topics.
 </p>
 
-<a class="button" href="#materials">
-Start Preparation
+<a class="button" href="#group4">
+Open Group 4
 </a>
 
 </div>
@@ -293,80 +423,149 @@ Start Preparation
 </section>
 
 
-<section class="container">
+<!-- GROUP 1 -->
 
-<h2 class="title">
-📚 Study Features
-</h2>
+<section class="container" id="group1">
 
-<div class="features">
+<div class="section">
 
-<div class="feature">
-
-<h3>📖 Study Materials</h3>
+<h2>🏆 TNPSC Group 1 Preparation</h2>
 
 <p>
-Subject-wise notes and preparation resources.
+Select a subject to begin your preparation.
 </p>
+
+<div class="subjects">
+
+<div class="subject">
+<h3>📖 General Studies</h3>
+<p>History, Geography, Polity, Economy and Science.</p>
+<a class="button" href="#quiz">Practice Quiz</a>
+</div>
+
+<div class="subject">
+<h3>🌍 Geography</h3>
+<p>India, Tamil Nadu, resources, climate and environment.</p>
+</div>
+
+<div class="subject">
+<h3>🏛️ Indian Polity</h3>
+<p>Constitution, governance, Parliament and administration.</p>
+</div>
+
+<div class="subject">
+<h3>🔬 General Science</h3>
+<p>Physics, Chemistry, Biology and everyday science.</p>
+</div>
 
 </div>
 
+</div>
 
-<div class="feature">
+</section>
 
-<h3>🧠 Daily Quiz</h3>
+
+<!-- GROUP 2 -->
+
+<section class="container" id="group2">
+
+<div class="section">
+
+<h2>📚 TNPSC Group 2 / 2A Preparation</h2>
 
 <p>
-Test your knowledge with daily practice questions.
+Build your preparation subject by subject.
+</p>
+
+<div class="subjects">
+
+<div class="subject">
+<h3>📖 General Tamil</h3>
+<p>Tamil grammar, literature and language practice.</p>
+</div>
+
+<div class="subject">
+<h3>🌏 General Studies</h3>
+<p>History, Geography, Polity, Economy and Science.</p>
+</div>
+
+<div class="subject">
+<h3>📰 Current Affairs</h3>
+<p>Important current events and general awareness.</p>
+</div>
+
+<div class="subject">
+<h3>🧠 Aptitude</h3>
+<p>Logical reasoning, mathematics and problem solving.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GROUP 4 -->
+
+<section class="container" id="group4">
+
+<div class="section">
+
+<h2>🎯 TNPSC Group 4 Preparation</h2>
+
+<p>
+Start with the major preparation areas.
+</p>
+
+<div class="subjects">
+
+<div class="subject">
+<h3>📖 General Tamil</h3>
+<p>
+Grammar, vocabulary, literature and comprehension.
 </p>
 
 <a class="button" href="#quiz">
-Take Quiz
+Practice
 </a>
 
 </div>
 
 
-<div class="feature">
-
-<h3>📝 Mock Tests</h3>
-
+<div class="subject">
+<h3>🌍 General Studies</h3>
 <p>
-Practice full-length examination questions.
+History, Geography, Indian Polity, Economy and Science.
 </p>
+
+<a class="button" href="#quiz">
+Practice
+</a>
 
 </div>
 
 
-<div class="feature">
-
-<h3>📄 Previous Year Questions</h3>
-
+<div class="subject">
+<h3>➗ Aptitude & Mental Ability</h3>
 <p>
-Practice questions from previous examinations.
+Numerical ability, reasoning and problem solving.
 </p>
+
+<a class="button" href="#mock">
+Take Mock Test
+</a>
 
 </div>
 
 
-<div class="feature">
-
-<h3>📊 My Progress</h3>
-
+<div class="subject">
+<h3>📰 Current Affairs</h3>
 <p>
-Track your preparation and quiz scores.
+Important events and general awareness.
 </p>
 
 </div>
-
-
-<div class="feature">
-
-<h3>📰 TNPSC Updates</h3>
-
-<p>
-Important notifications and examination information.
-</p>
 
 </div>
 
@@ -374,6 +573,8 @@ Important notifications and examination information.
 
 </section>
 
+
+<!-- MATERIALS -->
 
 <section class="container" id="materials">
 
@@ -381,37 +582,94 @@ Important notifications and examination information.
 📚 Study Materials
 </h2>
 
-<div class="features">
+<div class="grid">
 
-<div class="feature">
+<div class="card">
 
-<h3>General Tamil</h3>
+<h3>📖 General Tamil</h3>
 
 <p>
-Tamil language, grammar and literature preparation.
+Topic-wise Tamil preparation materials.
 </p>
+
+<button class="button" onclick="materialMessage()">
+Open Materials
+</button>
 
 </div>
 
 
-<div class="feature">
+<div class="card">
 
-<h3>General Studies</h3>
+<h3>🏛️ History & Polity</h3>
 
 <p>
-History, Geography, Polity, Economy and Science.
+Important historical events and Indian Constitution topics.
 </p>
+
+<button class="button" onclick="materialMessage()">
+Open Materials
+</button>
 
 </div>
 
 
-<div class="feature">
+<div class="card">
 
-<h3>Current Affairs</h3>
+<h3>🔬 Science</h3>
 
 <p>
-Important current affairs for examination preparation.
+Basic science concepts and practice resources.
 </p>
+
+<button class="button" onclick="materialMessage()">
+Open Materials
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌍 Geography</h3>
+
+<p>
+India and Tamil Nadu geography resources.
+</p>
+
+<button class="button" onclick="materialMessage()">
+Open Materials
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>💰 Economy</h3>
+
+<p>
+Basic economic concepts and current developments.
+</p>
+
+<button class="button" onclick="materialMessage()">
+Open Materials
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>📰 Current Affairs</h3>
+
+<p>
+Verified current affairs will be added here.
+</p>
+
+<button class="button" onclick="materialMessage()">
+Open Materials
+</button>
 
 </div>
 
@@ -420,30 +678,39 @@ Important current affairs for examination preparation.
 </section>
 
 
+<!-- DAILY QUIZ -->
+
 <section class="container" id="quiz">
 
 <h2 class="title">
 🧠 Daily TNPSC Quiz
 </h2>
 
-<div class="quiz">
+<div class="quiz-box">
+
+<div class="note">
+Answer all questions and press <b>Submit Quiz</b>.
+</div>
+
 
 <div class="question">
 
-<b>1. What is the capital of Tamil Nadu?</b>
+<h3>
+1. What is the capital of Tamil Nadu?
+</h3>
 
-<label>
-<input type="radio" name="q1" value="Chennai">
+<label class="option">
+<input type="radio" name="q1" value="1">
 Chennai
 </label>
 
-<label>
-<input type="radio" name="q1" value="Madurai">
+<label class="option">
+<input type="radio" name="q1" value="0">
 Madurai
 </label>
 
-<label>
-<input type="radio" name="q1" value="Coimbatore">
+<label class="option">
+<input type="radio" name="q1" value="0">
 Coimbatore
 </label>
 
@@ -452,20 +719,22 @@ Coimbatore
 
 <div class="question">
 
-<b>2. Which is the national animal of India?</b>
+<h3>
+2. Which is the national animal of India?
+</h3>
 
-<label>
-<input type="radio" name="q2" value="Lion">
+<label class="option">
+<input type="radio" name="q2" value="0">
 Lion
 </label>
 
-<label>
-<input type="radio" name="q2" value="Tiger">
+<label class="option">
+<input type="radio" name="q2" value="1">
 Tiger
 </label>
 
-<label>
-<input type="radio" name="q2" value="Elephant">
+<label class="option">
+<input type="radio" name="q2" value="0">
 Elephant
 </label>
 
@@ -474,48 +743,216 @@ Elephant
 
 <div class="question">
 
-<b>3. Which planet is known as the Red Planet?</b>
+<h3>
+3. Which planet is known as the Red Planet?
+</h3>
 
-<label>
-<input type="radio" name="q3" value="Mars">
+<label class="option">
+<input type="radio" name="q3" value="1">
 Mars
 </label>
 
-<label>
-<input type="radio" name="q3" value="Venus">
+<label class="option">
+<input type="radio" name="q3" value="0">
 Venus
 </label>
 
-<label>
-<input type="radio" name="q3" value="Jupiter">
+<label class="option">
+<input type="radio" name="q3" value="0">
 Jupiter
 </label>
 
 </div>
 
 
-<button class="button" onclick="checkQuiz()">
+<button class="button" onclick="submitQuiz()">
 Submit Quiz
 </button>
 
-<div class="result" id="result"></div>
+<div class="result" id="quizResult"></div>
 
 </div>
 
 </section>
 
 
+<!-- MOCK TEST -->
+
+<section class="container" id="mock">
+
+<h2 class="title">
+📝 Mock Test
+</h2>
+
+<div class="quiz-box">
+
+<div class="note">
+This is the first demonstration mock test. More questions can be added later.
+</div>
+
+
+<div class="question">
+
+<h3>
+1. Which is the largest state in India by area?
+</h3>
+
+<label class="option">
+<input type="radio" name="m1" value="1">
+Rajasthan
+</label>
+
+<label class="option">
+<input type="radio" name="m1" value="0">
+Tamil Nadu
+</label>
+
+<label class="option">
+<input type="radio" name="m1" value="0">
+Kerala
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+2. Which body makes laws for the Union of India?
+</h3>
+
+<label class="option">
+<input type="radio" name="m2" value="1">
+Parliament
+</label>
+
+<label class="option">
+<input type="radio" name="m2" value="0">
+Supreme Court
+</label>
+
+<label class="option">
+<input type="radio" name="m2" value="0">
+Election Commission
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+3. How many days are there in a leap year?
+</h3>
+
+<label class="option">
+<input type="radio" name="m3" value="0">
+364
+</label>
+
+<label class="option">
+<input type="radio" name="m3" value="1">
+366
+</label>
+
+<label class="option">
+<input type="radio" name="m3" value="0">
+365
+</label>
+
+</div>
+
+
+<button class="button" onclick="submitMock()">
+Submit Mock Test
+</button>
+
+<div class="result" id="mockResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRESS -->
+
+<section class="container" id="progress">
+
+<h2 class="title">
+📊 My Progress
+</h2>
+
+<div class="progress-box">
+
+<p>
+Quiz & Mock Test Score
+</p>
+
+<div class="progress-number" id="scoreNumber">
+0%
+</div>
+
+<div class="progress-bar">
+
+<div class="progress-fill" id="progressFill"></div>
+
+</div>
+
+<p id="progressText">
+Complete a quiz or mock test to start tracking your progress.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- UPDATES -->
+
 <section class="container" id="updates">
 
-<div class="updates">
+<div class="update-box">
 
-<h2>📰 TNPSC Updates</h2>
+<h2>
+📰 TNPSC Updates
+</h2>
 
-<p>🔹 Official TNPSC notifications will be added here.</p>
+<div class="update">
+🔹 Official TNPSC notifications will be added after verification.
+</div>
 
-<p>🔹 Examination dates will be updated after verification.</p>
+<div class="update">
+🔹 Examination dates will be updated from reliable sources.
+</div>
 
-<p>🔹 New study materials and quizzes can be added regularly.</p>
+<div class="update">
+🔹 New practice questions can be added regularly.
+</div>
+
+<div class="update">
+🔹 Study materials will be expanded subject by subject.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section class="container">
+
+<div class="section center">
+
+<h2>
+🚀 Coming Soon
+</h2>
+
+<p>
+Student login • Large question bank • Full mock tests •
+Detailed explanations • Progress dashboard •
+Study material downloads • Premium test series
+</p>
 
 </div>
 
@@ -524,7 +961,7 @@ Submit Quiz
 
 <footer>
 
-<h3>TNPSC Study Hub</h3>
+<h2>TNPSC Study Hub</h2>
 
 <p>
 Learn • Practice • Test • Improve
@@ -539,61 +976,118 @@ Learn • Practice • Test • Improve
 
 <script>
 
-function checkQuiz(){
+let totalScore = 0;
+let totalTests = 0;
+
+
+function submitQuiz(){
+
+let questions = ["q1","q2","q3"];
 
 let score = 0;
 
-let q1 = document.querySelector('input[name="q1"]:checked');
-let q2 = document.querySelector('input[name="q2"]:checked');
-let q3 = document.querySelector('input[name="q3"]:checked');
+for(let i=0;i<questions.length;i++){
 
-if(!q1 || !q2 || !q3){
+let answer = document.querySelector(
+'input[name="'+questions[i]+'"]:checked'
+);
 
-document.getElementById("result").style.display="block";
+if(!answer){
 
-document.getElementById("result").innerHTML =
+document.getElementById("quizResult").style.display="block";
+
+document.getElementById("quizResult").innerHTML =
 "Please answer all 3 questions.";
 
 return;
 
 }
 
-if(q1.value === "Chennai"){
-score++;
-}
-
-if(q2.value === "Tiger"){
-score++;
-}
-
-if(q3.value === "Mars"){
-score++;
-}
-
-let message =
-"You scored " + score + " out of 3.";
-
-if(score === 3){
-
-message += " 🎉 Excellent!";
+score += Number(answer.value);
 
 }
 
-else if(score === 2){
+totalScore += score;
+totalTests += 3;
 
-message += " 👍 Good job!";
+let percentage =
+Math.round((score/3)*100);
+
+document.getElementById("quizResult").style.display="block";
+
+document.getElementById("quizResult").innerHTML =
+"You scored <b>"+score+" / 3</b> ("+percentage+"%).";
+
+updateProgress();
 
 }
 
-else{
 
-message += " 📚 Keep practicing!";
+function submitMock(){
+
+let questions = ["m1","m2","m3"];
+
+let score = 0;
+
+for(let i=0;i<questions.length;i++){
+
+let answer = document.querySelector(
+'input[name="'+questions[i]+'"]:checked'
+);
+
+if(!answer){
+
+document.getElementById("mockResult").style.display="block";
+
+document.getElementById("mockResult").innerHTML =
+"Please answer all 3 questions.";
+
+return;
 
 }
 
-document.getElementById("result").style.display="block";
+score += Number(answer.value);
 
-document.getElementById("result").innerHTML = message;
+}
+
+totalScore += score;
+totalTests += 3;
+
+let percentage =
+Math.round((score/3)*100);
+
+document.getElementById("mockResult").style.display="block";
+
+document.getElementById("mockResult").innerHTML =
+"You scored <b>"+score+" / 3</b> ("+percentage+"%).";
+
+updateProgress();
+
+}
+
+
+function updateProgress(){
+
+let percentage =
+Math.round((totalScore/totalTests)*100);
+
+document.getElementById("scoreNumber").innerHTML =
+percentage+"%";
+
+document.getElementById("progressFill").style.width =
+percentage+"%";
+
+document.getElementById("progressText").innerHTML =
+"Tests completed: "+Math.round(totalTests/3);
+
+}
+
+
+function materialMessage(){
+
+alert(
+"Study materials will be added to this section in the next stage."
+);
 
 }
 
