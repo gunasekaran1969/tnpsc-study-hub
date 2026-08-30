@@ -1,0 +1,2063 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="TNPSC Study Hub - Study Materials, MCQ Practice, Quizzes and Mock Tests">
+
+<title>Study Materials | TNPSC Study Hub</title>
+
+
+<style>
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef7ff,
+        #f7f1ff,
+        #effcf8
+    );
+
+    color:#222;
+
+    line-height:1.6;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+header{
+
+    background:
+    linear-gradient(
+        135deg,
+        #071952,
+        #088395,
+        #35a29f
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:32px 15px;
+
+}
+
+.logo{
+
+    font-size:36px;
+
+    font-weight:bold;
+
+}
+
+header h1{
+
+    font-size:30px;
+
+    margin-top:5px;
+
+}
+
+header p{
+
+    margin-top:7px;
+
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav{
+
+    background:#071952;
+
+    text-align:center;
+
+    padding:12px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+nav a{
+
+    display:inline-block;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:8px 13px;
+
+    margin:3px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+nav a:hover{
+
+    background:#35a29f;
+
+}
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+
+/* =====================================
+   WELCOME
+===================================== */
+
+.welcome{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 6px 18px
+    rgba(0,0,0,0.12);
+
+    margin-bottom:25px;
+
+}
+
+.welcome h2{
+
+    color:#071952;
+
+    margin-bottom:10px;
+
+}
+
+
+/* =====================================
+   SUBJECT SELECTION
+===================================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin:30px 0 20px;
+
+}
+
+.section-title h2{
+
+    color:#071952;
+
+}
+
+.section-title p{
+
+    color:#666;
+
+}
+
+
+.subject-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(200px,1fr)
+    );
+
+    gap:16px;
+
+}
+
+
+.subject{
+
+    color:white;
+
+    padding:22px 10px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 5px 12px
+    rgba(0,0,0,0.15);
+
+    transition:0.3s;
+
+}
+
+.subject:hover{
+
+    transform:translateY(-5px)
+    scale(1.02);
+
+}
+
+.subject-icon{
+
+    font-size:38px;
+
+    margin-bottom:5px;
+
+}
+
+
+.subject:nth-child(1){
+
+    background:#e63946;
+
+}
+
+.subject:nth-child(2){
+
+    background:#457b9d;
+
+}
+
+.subject:nth-child(3){
+
+    background:#2a9d8f;
+
+}
+
+.subject:nth-child(4){
+
+    background:#e76f51;
+
+}
+
+.subject:nth-child(5){
+
+    background:#6c5ce7;
+
+}
+
+.subject:nth-child(6){
+
+    background:#088395;
+
+}
+
+.subject:nth-child(7){
+
+    background:#8e44ad;
+
+}
+
+.subject:nth-child(8){
+
+    background:#16a085;
+
+}
+
+
+/* =====================================
+   TOPIC AREA
+===================================== */
+
+#studyArea{
+
+    display:none;
+
+    margin-top:30px;
+
+}
+
+
+.topic-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 6px 18px
+    rgba(0,0,0,0.12);
+
+    margin-bottom:20px;
+
+}
+
+.topic-box h2{
+
+    color:#071952;
+
+    margin-bottom:10px;
+
+}
+
+.topic-box h3{
+
+    color:#088395;
+
+    margin-top:18px;
+
+}
+
+.topic-box ul{
+
+    padding-left:22px;
+
+}
+
+.topic-box li{
+
+    margin:7px 0;
+
+}
+
+
+/* =====================================
+   QUIZ
+===================================== */
+
+.quiz{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 6px 18px
+    rgba(0,0,0,0.12);
+
+    margin-top:20px;
+
+}
+
+
+.quiz-header{
+
+    background:
+    linear-gradient(
+        135deg,
+        #071952,
+        #088395
+    );
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+}
+
+.quiz-header h2{
+
+    margin-bottom:5px;
+
+}
+
+
+.question-number{
+
+    color:#e63946;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+
+.question{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+}
+
+
+.option{
+
+    display:block;
+
+    width:100%;
+
+    text-align:left;
+
+    border:none;
+
+    background:#f1f5f9;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:0.2s;
+
+}
+
+
+.option:hover{
+
+    background:#dbeafe;
+
+}
+
+
+.option.correct{
+
+    background:#c8e6c9;
+
+    border:2px solid #2e7d32;
+
+}
+
+
+.option.wrong{
+
+    background:#ffcdd2;
+
+    border:2px solid #c62828;
+
+}
+
+
+.option:disabled{
+
+    cursor:not-allowed;
+
+}
+
+
+/* =====================================
+   QUIZ CONTROLS
+===================================== */
+
+.quiz-controls{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+.btn{
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:9px;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+.btn:hover{
+
+    opacity:0.82;
+
+}
+
+.previous{
+
+    background:#607d8b;
+
+}
+
+.next{
+
+    background:#088395;
+
+}
+
+.restart{
+
+    background:#e63946;
+
+}
+
+
+/* =====================================
+   EXPLANATION
+===================================== */
+
+.explanation{
+
+    display:none;
+
+    background:#e8f5e9;
+
+    border-left:6px solid #2e7d32;
+
+    padding:15px;
+
+    margin-top:15px;
+
+    border-radius:8px;
+
+}
+
+.explanation strong{
+
+    color:#2e7d32;
+
+}
+
+
+/* =====================================
+   RESULT
+===================================== */
+
+.result{
+
+    display:none;
+
+    background:
+    linear-gradient(
+        135deg,
+        #071952,
+        #088395
+    );
+
+    color:white;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    margin-top:25px;
+
+}
+
+
+.result h2{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.score{
+
+    font-size:48px;
+
+    font-weight:bold;
+
+    margin:10px 0;
+
+}
+
+
+.result-message{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =====================================
+   TOPIC CARDS
+===================================== */
+
+.topic-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(220px,1fr)
+    );
+
+    gap:15px;
+
+    margin-top:15px;
+
+}
+
+.topic-card{
+
+    background:#f8fafc;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    border-left:5px solid #088395;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+    background:#071952;
+
+    color:white;
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding:28px 15px;
+
+}
+
+footer a{
+
+    color:#35a29f;
+
+    text-decoration:none;
+
+    margin:0 6px;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:600px){
+
+    .logo{
+
+        font-size:30px;
+
+    }
+
+    header h1{
+
+        font-size:24px;
+
+    }
+
+    nav a{
+
+        font-size:12px;
+
+        padding:7px 9px;
+
+    }
+
+    .container{
+
+        padding:12px;
+
+    }
+
+    .question{
+
+        font-size:18px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header>
+
+<div class="logo">
+📚 TNPSC Study Hub
+</div>
+
+<h1>
+Study Materials & Practice
+</h1>
+
+<p>
+Learn • Practice • Test • Improve
+</p>
+
+</header>
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav>
+
+<a href="index.html">
+🏠 Home
+</a>
+
+<a href="group1-2.html">
+🏆 Group 1 & 2
+</a>
+
+<a href="group4.html">
+📖 Group 4
+</a>
+
+<a href="study-materials.html">
+📚 Study Materials
+</a>
+
+<a href="quiz.html">
+📝 Quiz
+</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- =====================================
+     WELCOME
+===================================== -->
+
+<section class="welcome">
+
+<h2>
+🎯 TNPSC Study Materials
+</h2>
+
+<p>
+
+Choose a subject below to study important topics
+and practice TNPSC multiple-choice questions.
+
+</p>
+
+</section>
+
+
+<!-- =====================================
+     SUBJECTS
+===================================== -->
+
+<div class="section-title">
+
+<h2>
+📚 Select a Subject
+</h2>
+
+<p>
+Choose any subject to begin.
+</p>
+
+</div>
+
+
+<section class="subject-grid">
+
+
+<div class="subject"
+onclick="openSubject('History')">
+
+<div class="subject-icon">
+🏛️
+</div>
+
+History
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Polity')">
+
+<div class="subject-icon">
+⚖️
+</div>
+
+Indian Polity
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Economy')">
+
+<div class="subject-icon">
+💰
+</div>
+
+Indian Economy
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Geography')">
+
+<div class="subject-icon">
+🌍
+</div>
+
+Geography
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Science')">
+
+<div class="subject-icon">
+🔬
+</div>
+
+Science
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Tamil Nadu')">
+
+<div class="subject-icon">
+🌾
+</div>
+
+Tamil Nadu
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Aptitude')">
+
+<div class="subject-icon">
+🧮
+</div>
+
+Aptitude
+
+</div>
+
+
+<div class="subject"
+onclick="openSubject('Current Affairs')">
+
+<div class="subject-icon">
+📰
+</div>
+
+Current Affairs
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================
+     STUDY AREA
+===================================== -->
+
+<section id="studyArea">
+
+
+<div class="topic-box">
+
+<h2 id="subjectTitle">
+Subject
+</h2>
+
+<p id="subjectDescription">
+Select a subject.
+</p>
+
+
+<h3>
+📖 Important Topics
+</h3>
+
+<div class="topic-grid"
+id="topics">
+
+</div>
+
+</div>
+
+
+<!-- QUIZ -->
+
+<div class="quiz">
+
+<div class="quiz-header">
+
+<h2>
+📝 Practice Questions
+</h2>
+
+<p>
+Select the correct answer.
+</p>
+
+</div>
+
+
+<div class="question-number"
+id="questionNumber">
+Question 1
+</div>
+
+
+<div class="question"
+id="questionText">
+Question
+</div>
+
+
+<div id="options">
+
+</div>
+
+
+<div class="explanation"
+id="explanation">
+
+<strong>
+💡 Explanation:
+</strong>
+
+<span id="explanationText">
+</span>
+
+</div>
+
+
+<div class="quiz-controls">
+
+<button class="btn previous"
+onclick="previousQuestion()">
+
+⬅ Previous
+
+</button>
+
+
+<button class="btn next"
+onclick="nextQuestion()">
+
+Next ➡
+
+</button>
+
+</div>
+
+
+</div>
+
+
+<!-- RESULT -->
+
+<div class="result"
+id="result">
+
+<h2>
+🎉 Test Completed!
+</h2>
+
+<div class="score"
+id="finalScore">
+0/0
+</div>
+
+<div class="result-message"
+id="resultMessage">
+</div>
+
+
+<button class="btn restart"
+onclick="restartQuiz()">
+
+🔄 Try Again
+
+</button>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+<h2>
+📚 TNPSC Study Hub
+</h2>
+
+<p>
+Learn • Practice • Test • Succeed
+</p>
+
+<br>
+
+<p>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="group1-2.html">
+Group 1 & 2
+</a>
+
+<a href="group4.html">
+Group 4
+</a>
+
+<a href="study-materials.html">
+Study Materials
+</a>
+
+</p>
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =====================================
+   SUBJECT DATA
+===================================== */
+
+const subjects = {
+
+History:{
+
+description:
+"Study important events, dynasties and developments in Indian history.",
+
+topics:[
+"Ancient India",
+"Medieval India",
+"Modern India",
+"Indian Freedom Movement",
+"Important Historical Events"
+],
+
+questions:[
+
+{
+q:"Who is known as the Father of the Indian Constitution?",
+
+options:[
+"Jawaharlal Nehru",
+"Dr. B. R. Ambedkar",
+"Mahatma Gandhi",
+"Sardar Patel"
+],
+
+answer:1,
+
+explanation:
+"Dr. B. R. Ambedkar was the Chairman of the Drafting Committee of the Indian Constitution."
+},
+
+{
+q:"Who founded the Mauryan Empire?",
+
+options:[
+"Ashoka",
+"Chandragupta Maurya",
+"Harsha",
+"Akbar"
+],
+
+answer:1,
+
+explanation:
+"Chandragupta Maurya founded the Mauryan Empire around 321 BCE."
+},
+
+{
+q:"The Quit India Movement was launched in which year?",
+
+options:[
+"1930",
+"1942",
+"1947",
+"1919"
+],
+
+answer:1,
+
+explanation:
+"The Quit India Movement was launched by Mahatma Gandhi in August 1942."
+}
+
+]
+
+},
+
+
+Polity:{
+
+description:
+"Learn the Indian Constitution, government institutions and fundamental rights.",
+
+topics:[
+"Indian Constitution",
+"Fundamental Rights",
+"Directive Principles",
+"President & Parliament",
+"Judiciary",
+"Local Government"
+],
+
+questions:[
+
+{
+q:"How many Fundamental Rights are currently guaranteed by the Indian Constitution?",
+
+options:[
+"5",
+"6",
+"7",
+"8"
+],
+
+answer:1,
+
+explanation:
+"At present, the Constitution guarantees six Fundamental Rights."
+},
+
+{
+q:"Who is the constitutional head of India?",
+
+options:[
+"Prime Minister",
+"President",
+"Chief Justice",
+"Governor"
+],
+
+answer:1,
+
+explanation:
+"The President is the constitutional head of the Union of India."
+},
+
+{
+q:"The Constitution of India came into force on:",
+
+options:[
+"15 August 1947",
+"26 November 1949",
+"26 January 1950",
+"2 October 1950"
+],
+
+answer:2,
+
+explanation:
+"The Constitution came into force on 26 January 1950."
+}
+
+]
+
+},
+
+
+Economy:{
+
+description:
+"Understand basic concepts of the Indian economy and economic development.",
+
+topics:[
+"Indian Economy",
+"National Income",
+"Banking",
+"Inflation",
+"Budget",
+"Government Schemes"
+],
+
+questions:[
+
+{
+q:"Which institution is the central bank of India?",
+
+options:[
+"SBI",
+"RBI",
+"SEBI",
+"NABARD"
+],
+
+answer:1,
+
+explanation:
+"The Reserve Bank of India (RBI) is India's central bank."
+},
+
+{
+q:"What does GDP stand for?",
+
+options:[
+"Gross Domestic Product",
+"General Domestic Production",
+"Gross Development Plan",
+"Government Domestic Product"
+],
+
+answer:0,
+
+explanation:
+"GDP means Gross Domestic Product."
+},
+
+{
+q:"Inflation generally refers to:",
+
+options:[
+"Fall in prices",
+"Rise in general price level",
+"Fall in production",
+"Increase in exports only"
+],
+
+answer:1,
+
+explanation:
+"Inflation is a sustained increase in the general price level of goods and services."
+}
+
+]
+
+},
+
+
+Geography:{
+
+description:
+"Study India's physical geography, resources, climate and environment.",
+
+topics:[
+"Physical Geography",
+"Indian Rivers",
+"Climate",
+"Soils",
+"Agriculture",
+"Natural Resources"
+],
+
+questions:[
+
+{
+q:"Which is the longest river in India?",
+
+options:[
+"Ganga",
+"Godavari",
+"Yamuna",
+"Narmada"
+],
+
+answer:0,
+
+explanation:
+"The Ganga is generally considered the longest river within India."
+},
+
+{
+q:"Which soil is best suited for cotton cultivation?",
+
+options:[
+"Alluvial soil",
+"Black soil",
+"Laterite soil",
+"Red soil"
+],
+
+answer:1,
+
+explanation:
+"Black soil is particularly suitable for cotton cultivation."
+},
+
+{
+q:"The Western Ghats are located along the:",
+
+options:[
+"Eastern coast",
+"Western coast",
+"Northern border",
+"Central plateau only"
+],
+
+answer:1,
+
+explanation:
+"The Western Ghats run parallel to India's western coast."
+}
+
+]
+
+},
+
+
+Science:{
+
+description:
+"Revise important concepts from Physics, Chemistry, Biology and technology.",
+
+topics:[
+"Physics",
+"Chemistry",
+"Biology",
+"Human Body",
+"Environment",
+"Science & Technology"
+],
+
+questions:[
+
+{
+q:"Which gas is essential for human respiration?",
+
+options:[
+"Nitrogen",
+"Oxygen",
+"Carbon dioxide",
+"Hydrogen"
+],
+
+answer:1,
+
+explanation:
+"Oxygen is essential for cellular respiration in humans."
+},
+
+{
+q:"Which organ pumps blood throughout the human body?",
+
+options:[
+"Lungs",
+"Brain",
+"Heart",
+"Kidney"
+],
+
+answer:2,
+
+explanation:
+"The heart pumps blood through the circulatory system."
+},
+
+{
+q:"Water boils at sea level at approximately:",
+
+options:[
+"50°C",
+"75°C",
+"100°C",
+"150°C"
+],
+
+answer:2,
+
+explanation:
+"At standard atmospheric pressure, water boils at 100°C."
+}
+
+]
+
+},
+
+
+"Tamil Nadu":{
+
+description:
+"Study Tamil Nadu history, geography, administration, culture and development.",
+
+topics:[
+"Tamil Nadu History",
+"Tamil Culture",
+"Tamil Nadu Geography",
+"Social Reform Movements",
+"Tamil Nadu Administration",
+"Development Programmes"
+],
+
+questions:[
+
+{
+q:"What is the capital of Tamil Nadu?",
+
+options:[
+"Madurai",
+"Coimbatore",
+"Chennai",
+"Tiruchirappalli"
+],
+
+answer:2,
+
+explanation:
+"Chennai is the capital city of Tamil Nadu."
+},
+
+{
+q:"Which classical language has a very long literary tradition in Tamil Nadu?",
+
+options:[
+"Tamil",
+"Marathi",
+"Punjabi",
+"Bengali"
+],
+
+answer:0,
+
+explanation:
+"Tamil is one of the world's oldest classical languages with a rich literary tradition."
+},
+
+{
+q:"Brihadisvara Temple is located at:",
+
+options:[
+"Thanjavur",
+"Salem",
+"Erode",
+"Vellore"
+],
+
+answer:0,
+
+explanation:
+"The famous Brihadisvara Temple is located in Thanjavur."
+}
+
+]
+
+},
+
+
+Aptitude:{
+
+description:
+"Practice basic mathematics, logical reasoning and mental ability.",
+
+topics:[
+"Number System",
+"Percentage",
+"Ratio",
+"Average",
+"Profit & Loss",
+"Time & Work",
+"Reasoning"
+],
+
+questions:[
+
+{
+q:"What is 25% of 200?",
+
+options:[
+"25",
+"40",
+"50",
+"75"
+],
+
+answer:2,
+
+explanation:
+"25% of 200 = 200 × 25/100 = 50."
+},
+
+{
+q:"If 5 + 5 × 2 = ?", 
+
+options:[
+"20",
+"15",
+"10",
+"25"
+],
+
+answer:1,
+
+explanation:
+"Multiplication is performed before addition: 5 + (5 × 2) = 15."
+},
+
+{
+q:"What is the average of 10, 20 and 30?",
+
+options:[
+"15",
+"20",
+"25",
+"30"
+],
+
+answer:1,
+
+explanation:
+"(10 + 20 + 30) ÷ 3 = 20."
+}
+
+]
+
+},
+
+
+"Current Affairs":{
+
+description:
+"Practice general awareness and current-affairs style questions.",
+
+topics:[
+"National Events",
+"International Events",
+"Government Schemes",
+"Science & Technology",
+"Sports",
+"Awards & Important Days"
+],
+
+questions:[
+
+{
+q:"Which day is celebrated as India's Independence Day?",
+
+options:[
+"26 January",
+"15 August",
+"2 October",
+"14 November"
+],
+
+answer:1,
+
+explanation:
+"India celebrates Independence Day on 15 August."
+},
+
+{
+q:"National Sports Day in India is observed on:",
+
+options:[
+"29 August",
+"15 August",
+"26 January",
+"5 September"
+],
+
+answer:0,
+
+explanation:
+"National Sports Day is observed on 29 August, the birth anniversary of Major Dhyan Chand."
+},
+
+{
+q:"World Environment Day is observed on:",
+
+options:[
+"5 June",
+"22 April",
+"1 May",
+"10 December"
+],
+
+answer:0,
+
+explanation:
+"World Environment Day is observed annually on 5 June."
+}
+
+]
+
+}
+
+};
+
+
+/* =====================================
+   VARIABLES
+===================================== */
+
+let currentSubject="";
+
+let currentQuestion=0;
+
+let score=0;
+
+let answered=false;
+
+
+/* =====================================
+   OPEN SUBJECT
+===================================== */
+
+function openSubject(subject){
+
+    currentSubject=subject;
+
+    currentQuestion=0;
+
+    score=0;
+
+    answered=false;
+
+
+    document.getElementById("studyArea")
+    .style.display="block";
+
+
+    document.getElementById("subjectTitle")
+    .innerText=
+    "📚 "+subject;
+
+
+    document.getElementById("subjectDescription")
+    .innerText=
+    subjects[subject].description;
+
+
+    let topicsHTML="";
+
+
+    subjects[subject].topics.forEach(
+        function(topic){
+
+            topicsHTML+=
+            `<div class="topic-card">
+            📖 ${topic}
+            </div>`;
+
+        }
+    );
+
+
+    document.getElementById("topics")
+    .innerHTML=topicsHTML;
+
+
+    document.getElementById("result")
+    .style.display="none";
+
+
+    loadQuestion();
+
+
+    document.getElementById("studyArea")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================
+   LOAD QUESTION
+===================================== */
+
+function loadQuestion(){
+
+    let data=
+    subjects[currentSubject]
+    .questions[currentQuestion];
+
+
+    answered=false;
+
+
+    document.getElementById("questionNumber")
+    .innerText=
+    "Question "+
+    (currentQuestion+1)+
+    " of "+
+    subjects[currentSubject]
+    .questions.length;
+
+
+    document.getElementById("questionText")
+    .innerText=data.q;
+
+
+    let optionsHTML="";
+
+
+    data.options.forEach(
+        function(option,index){
+
+            optionsHTML+=
+            `<button
+            class="option"
+            onclick="selectAnswer(${index})">
+            ${String.fromCharCode(65+index)}.
+            ${option}
+            </button>`;
+
+        }
+    );
+
+
+    document.getElementById("options")
+    .innerHTML=optionsHTML;
+
+
+    document.getElementById("explanation")
+    .style.display="none";
+
+
+    document.getElementById("explanationText")
+    .innerText=
+    data.explanation;
+
+}
+
+
+/* =====================================
+   SELECT ANSWER
+===================================== */
+
+function selectAnswer(selected){
+
+    if(answered){
+        return;
+    }
+
+
+    answered=true;
+
+
+    let data=
+    subjects[currentSubject]
+    .questions[currentQuestion];
+
+
+    let buttons=
+    document.querySelectorAll(".option");
+
+
+    buttons.forEach(
+        function(button,index){
+
+            button.disabled=true;
+
+
+            if(index===data.answer){
+
+                button.classList.add("correct");
+
+            }
+
+
+            if(index===selected &&
+               selected!==data.answer){
+
+                button.classList.add("wrong");
+
+            }
+
+        }
+    );
+
+
+    if(selected===data.answer){
+
+        score++;
+
+    }
+
+
+    document.getElementById("explanation")
+    .style.display="block";
+
+}
+
+
+/* =====================================
+   NEXT QUESTION
+===================================== */
+
+function nextQuestion(){
+
+    if(!currentSubject){
+
+        alert("Please select a subject first.");
+
+        return;
+
+    }
+
+
+    if(!answered){
+
+        alert("Please select an answer first.");
+
+        return;
+
+    }
+
+
+    if(
+        currentQuestion <
+        subjects[currentSubject]
+        .questions.length-1
+    ){
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    }
+
+    else{
+
+        showResult();
+
+    }
+
+}
+
+
+/* =====================================
+   PREVIOUS
+===================================== */
+
+function previousQuestion(){
+
+    if(!currentSubject){
+
+        return;
+
+    }
+
+
+    if(currentQuestion>0){
+
+        currentQuestion--;
+
+        loadQuestion();
+
+    }
+
+}
+
+
+/* =====================================
+   RESULT
+===================================== */
+
+function showResult(){
+
+    let total=
+    subjects[currentSubject]
+    .questions.length;
+
+
+    document.getElementById("result")
+    .style.display="block";
+
+
+    document.getElementById("finalScore")
+    .innerText=
+    score+
+    "/"+
+    total;
+
+
+    let percentage=
+    Math.round(
+        (score/total)*100
+    );
+
+
+    let message="";
+
+
+    if(percentage>=80){
+
+        message=
+        "🌟 Excellent! Your preparation is strong.";
+
+    }
+
+    else if(percentage>=60){
+
+        message=
+        "👍 Good job! Keep practising.";
+
+    }
+
+    else if(percentage>=40){
+
+        message=
+        "📚 Keep studying and improve your score.";
+
+    }
+
+    else{
+
+        message=
+        "💪 Don't give up. Practice again and improve.";
+
+    }
+
+
+    document.getElementById("resultMessage")
+    .innerText=
+    message+
+    " Score: "+
+    percentage+"%";
+
+
+    document.getElementById("result")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================
+   RESTART
+===================================== */
+
+function restartQuiz(){
+
+    currentQuestion=0;
+
+    score=0;
+
+    answered=false;
+
+
+    document.getElementById("result")
+    .style.display="none";
+
+
+    loadQuestion();
+
+
+    document.getElementById("studyArea")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
