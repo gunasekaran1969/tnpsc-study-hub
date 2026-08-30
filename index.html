@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TNPSC Study Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+}
+
+header{
+    background:#1565c0;
+    color:white;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:12px;
+    font-size:14px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#1565c0,#4527a0);
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 18px;
+}
+
+.title{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.exam-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 3px 15px #00000012;
+}
+
+.card h3{
+    color:#1565c0;
+}
+
+.icon{
+    font-size:42px;
+}
+
+.button{
+    display:inline-block;
+    background:#1565c0;
+    color:white;
+    padding:11px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.feature{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    box-shadow:0 3px 12px #00000010;
+}
+
+.quiz{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 3px 15px #00000012;
+}
+
+.question{
+    margin:25px 0;
+}
+
+.question label{
+    display:block;
+    padding:8px 0;
+}
+
+.result{
+    display:none;
+    margin-top:20px;
+    padding:18px;
+    background:#eaf7ea;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.updates{
+    background:#172033;
+    color:white;
+    padding:25px;
+    border-radius:16px;
+}
+
+footer{
+    background:#172033;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:20px;
+}
+
+@media(max-width:750px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .exam-grid,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<div class="logo">
+TNPSC Study Hub
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#exams">Exams</a>
+<a href="#quiz">Quiz</a>
+<a href="#materials">Materials</a>
+<a href="#updates">Updates</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<h1>TNPSC Study Hub</h1>
+
+<p>
+Your complete preparation platform for TNPSC Group 1,
+Group 2, Group 2A and Group 4 examinations.
+</p>
+
+<br>
+
+<a class="button" href="#exams">
+Choose Your Exam
+</a>
+
+</section>
+
+
+<section class="container" id="exams">
+
+<h2 class="title">
+📝 Choose Your TNPSC Exam
+</h2>
+
+<div class="exam-grid">
+
+<div class="card">
+
+<div class="icon">🏆</div>
+
+<h3>TNPSC Group 1</h3>
+
+<p>
+Advanced level preparation, syllabus,
+study materials and practice tests.
+</p>
+
+<a class="button" href="#materials">
+Start Preparation
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📚</div>
+
+<h3>TNPSC Group 2 / 2A</h3>
+
+<p>
+Prepare with study materials,
+practice questions and mock tests.
+</p>
+
+<a class="button" href="#materials">
+Start Preparation
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎯</div>
+
+<h3>TNPSC Group 4</h3>
+
+<p>
+Begin your preparation with
+important topics and practice questions.
+</p>
+
+<a class="button" href="#materials">
+Start Preparation
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container">
+
+<h2 class="title">
+📚 Study Features
+</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>📖 Study Materials</h3>
+
+<p>
+Subject-wise notes and preparation resources.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🧠 Daily Quiz</h3>
+
+<p>
+Test your knowledge with daily practice questions.
+</p>
+
+<a class="button" href="#quiz">
+Take Quiz
+</a>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📝 Mock Tests</h3>
+
+<p>
+Practice full-length examination questions.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📄 Previous Year Questions</h3>
+
+<p>
+Practice questions from previous examinations.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📊 My Progress</h3>
+
+<p>
+Track your preparation and quiz scores.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📰 TNPSC Updates</h3>
+
+<p>
+Important notifications and examination information.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container" id="materials">
+
+<h2 class="title">
+📚 Study Materials
+</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>General Tamil</h3>
+
+<p>
+Tamil language, grammar and literature preparation.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>General Studies</h3>
+
+<p>
+History, Geography, Polity, Economy and Science.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>Current Affairs</h3>
+
+<p>
+Important current affairs for examination preparation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container" id="quiz">
+
+<h2 class="title">
+🧠 Daily TNPSC Quiz
+</h2>
+
+<div class="quiz">
+
+<div class="question">
+
+<b>1. What is the capital of Tamil Nadu?</b>
+
+<label>
+<input type="radio" name="q1" value="Chennai">
+Chennai
+</label>
+
+<label>
+<input type="radio" name="q1" value="Madurai">
+Madurai
+</label>
+
+<label>
+<input type="radio" name="q1" value="Coimbatore">
+Coimbatore
+</label>
+
+</div>
+
+
+<div class="question">
+
+<b>2. Which is the national animal of India?</b>
+
+<label>
+<input type="radio" name="q2" value="Lion">
+Lion
+</label>
+
+<label>
+<input type="radio" name="q2" value="Tiger">
+Tiger
+</label>
+
+<label>
+<input type="radio" name="q2" value="Elephant">
+Elephant
+</label>
+
+</div>
+
+
+<div class="question">
+
+<b>3. Which planet is known as the Red Planet?</b>
+
+<label>
+<input type="radio" name="q3" value="Mars">
+Mars
+</label>
+
+<label>
+<input type="radio" name="q3" value="Venus">
+Venus
+</label>
+
+<label>
+<input type="radio" name="q3" value="Jupiter">
+Jupiter
+</label>
+
+</div>
+
+
+<button class="button" onclick="checkQuiz()">
+Submit Quiz
+</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+</section>
+
+
+<section class="container" id="updates">
+
+<div class="updates">
+
+<h2>📰 TNPSC Updates</h2>
+
+<p>🔹 Official TNPSC notifications will be added here.</p>
+
+<p>🔹 Examination dates will be updated after verification.</p>
+
+<p>🔹 New study materials and quizzes can be added regularly.</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h3>TNPSC Study Hub</h3>
+
+<p>
+Learn • Practice • Test • Improve
+</p>
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+<script>
+
+function checkQuiz(){
+
+let score = 0;
+
+let q1 = document.querySelector('input[name="q1"]:checked');
+let q2 = document.querySelector('input[name="q2"]:checked');
+let q3 = document.querySelector('input[name="q3"]:checked');
+
+if(!q1 || !q2 || !q3){
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML =
+"Please answer all 3 questions.";
+
+return;
+
+}
+
+if(q1.value === "Chennai"){
+score++;
+}
+
+if(q2.value === "Tiger"){
+score++;
+}
+
+if(q3.value === "Mars"){
+score++;
+}
+
+let message =
+"You scored " + score + " out of 3.";
+
+if(score === 3){
+
+message += " 🎉 Excellent!";
+
+}
+
+else if(score === 2){
+
+message += " 👍 Good job!";
+
+}
+
+else{
+
+message += " 📚 Keep practicing!";
+
+}
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML = message;
+
+}
+
+</script>
+
+</body>
+</html>
