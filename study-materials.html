@@ -9,16 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="TNPSC Study Hub - Study Materials, MCQ Practice, Quizzes and Mock Tests">
+content="TNPSC Study Hub - 175 study questions for Group 1, Group 2, Group 4, Tamil, General Studies, Aptitude and Current Affairs.">
 
 <title>Study Materials | TNPSC Study Hub</title>
 
-
 <style>
-
-/* =====================================
-   RESET
-===================================== */
 
 *{
     margin:0;
@@ -31,717 +26,354 @@ html{
 }
 
 body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #eef7ff,
-        #f7f1ff,
-        #effcf8
-    );
-
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef7ff,#fff4f8,#f3efff);
     color:#222;
-
     line-height:1.6;
 }
 
 
-/* =====================================
-   HEADER
-===================================== */
+/* HEADER */
 
 header{
-
-    background:
-    linear-gradient(
-        135deg,
-        #071952,
-        #088395,
-        #35a29f
-    );
-
+    background:linear-gradient(135deg,#071952,#4527a0,#ad1457);
     color:white;
-
     text-align:center;
-
-    padding:32px 15px;
-
+    padding:42px 15px;
 }
 
 .logo{
-
     font-size:36px;
-
     font-weight:bold;
-
 }
 
 header h1{
-
     font-size:30px;
-
-    margin-top:5px;
-
+    margin-top:8px;
 }
 
 header p{
-
-    margin-top:7px;
-
+    font-size:17px;
+    margin-top:8px;
 }
 
 
-/* =====================================
-   NAVIGATION
-===================================== */
+/* NAV */
 
 nav{
-
-    background:#071952;
-
+    background:#061344;
     text-align:center;
-
     padding:12px;
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
 }
 
 nav a{
-
     display:inline-block;
-
     color:white;
-
     text-decoration:none;
-
-    font-weight:bold;
-
-    padding:8px 13px;
-
+    padding:9px 12px;
     margin:3px;
-
     border-radius:20px;
-
     font-size:14px;
-
+    font-weight:bold;
 }
 
 nav a:hover{
-
-    background:#35a29f;
-
+    background:#6a1b9a;
 }
 
 
-/* =====================================
-   CONTAINER
-===================================== */
+/* CONTAINER */
 
 .container{
-
-    max-width:1100px;
-
+    max-width:1150px;
     margin:auto;
-
-    padding:20px;
-
+    padding:25px 15px;
 }
 
 
-/* =====================================
-   WELCOME
-===================================== */
+/* HERO */
 
-.welcome{
-
+.hero{
     background:white;
-
-    padding:30px;
-
-    border-radius:20px;
-
+    border-radius:22px;
+    padding:35px 20px;
     text-align:center;
-
-    box-shadow:
-    0 6px 18px
-    rgba(0,0,0,0.12);
-
-    margin-bottom:25px;
-
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
 
-.welcome h2{
+.hero-icon{
+    font-size:58px;
+}
 
+.hero h2{
     color:#071952;
-
-    margin-bottom:10px;
-
+    font-size:31px;
+    margin:8px 0;
 }
 
-
-/* =====================================
-   SUBJECT SELECTION
-===================================== */
-
-.section-title{
-
-    text-align:center;
-
-    margin:30px 0 20px;
-
-}
-
-.section-title h2{
-
-    color:#071952;
-
-}
-
-.section-title p{
-
+.hero p{
     color:#666;
-
+    max-width:850px;
+    margin:0 auto 18px;
 }
 
 
-.subject-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(200px,1fr)
-    );
-
-    gap:16px;
-
-}
-
-
-.subject{
-
-    color:white;
-
-    padding:22px 10px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    box-shadow:
-    0 5px 12px
-    rgba(0,0,0,0.15);
-
-    transition:0.3s;
-
-}
-
-.subject:hover{
-
-    transform:translateY(-5px)
-    scale(1.02);
-
-}
-
-.subject-icon{
-
-    font-size:38px;
-
-    margin-bottom:5px;
-
-}
-
-
-.subject:nth-child(1){
-
-    background:#e63946;
-
-}
-
-.subject:nth-child(2){
-
-    background:#457b9d;
-
-}
-
-.subject:nth-child(3){
-
-    background:#2a9d8f;
-
-}
-
-.subject:nth-child(4){
-
-    background:#e76f51;
-
-}
-
-.subject:nth-child(5){
-
-    background:#6c5ce7;
-
-}
-
-.subject:nth-child(6){
-
-    background:#088395;
-
-}
-
-.subject:nth-child(7){
-
-    background:#8e44ad;
-
-}
-
-.subject:nth-child(8){
-
-    background:#16a085;
-
-}
-
-
-/* =====================================
-   TOPIC AREA
-===================================== */
-
-#studyArea{
-
-    display:none;
-
-    margin-top:30px;
-
-}
-
-
-.topic-box{
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:18px;
-
-    box-shadow:
-    0 6px 18px
-    rgba(0,0,0,0.12);
-
-    margin-bottom:20px;
-
-}
-
-.topic-box h2{
-
-    color:#071952;
-
-    margin-bottom:10px;
-
-}
-
-.topic-box h3{
-
-    color:#088395;
-
-    margin-top:18px;
-
-}
-
-.topic-box ul{
-
-    padding-left:22px;
-
-}
-
-.topic-box li{
-
-    margin:7px 0;
-
-}
-
-
-/* =====================================
-   QUIZ
-===================================== */
-
-.quiz{
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:18px;
-
-    box-shadow:
-    0 6px 18px
-    rgba(0,0,0,0.12);
-
-    margin-top:20px;
-
-}
-
-
-.quiz-header{
-
-    background:
-    linear-gradient(
-        135deg,
-        #071952,
-        #088395
-    );
-
-    color:white;
-
-    padding:18px;
-
-    border-radius:12px;
-
-    margin-bottom:20px;
-
-}
-
-.quiz-header h2{
-
-    margin-bottom:5px;
-
-}
-
-
-.question-number{
-
-    color:#e63946;
-
-    font-weight:bold;
-
-    margin-bottom:8px;
-
-}
-
-
-.question{
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    margin-bottom:18px;
-
-}
-
-
-.option{
-
-    display:block;
-
-    width:100%;
-
-    text-align:left;
-
-    border:none;
-
-    background:#f1f5f9;
-
-    padding:14px;
-
-    margin:10px 0;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:15px;
-
-    transition:0.2s;
-
-}
-
-
-.option:hover{
-
-    background:#dbeafe;
-
-}
-
-
-.option.correct{
-
-    background:#c8e6c9;
-
-    border:2px solid #2e7d32;
-
-}
-
-
-.option.wrong{
-
-    background:#ffcdd2;
-
-    border:2px solid #c62828;
-
-}
-
-
-.option:disabled{
-
-    cursor:not-allowed;
-
-}
-
-
-/* =====================================
-   QUIZ CONTROLS
-===================================== */
-
-.quiz-controls{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:20px;
-
-}
-
+/* BUTTONS */
 
 .btn{
-
-    border:none;
-
-    padding:12px 18px;
-
-    border-radius:9px;
-
+    display:inline-block;
     color:white;
-
+    text-decoration:none;
+    padding:11px 17px;
+    margin:5px;
+    border-radius:10px;
     font-weight:bold;
-
+    border:none;
     cursor:pointer;
-
-    font-size:14px;
-
+    transition:.2s;
 }
 
 .btn:hover{
-
-    opacity:0.82;
-
+    transform:translateY(-2px);
+    opacity:.9;
 }
 
-.previous{
-
-    background:#607d8b;
-
+.blue{
+    background:#1565c0;
 }
 
-.next{
-
-    background:#088395;
-
+.green{
+    background:#2e7d32;
 }
 
-.restart{
-
-    background:#e63946;
-
+.red{
+    background:#c62828;
 }
 
-
-/* =====================================
-   EXPLANATION
-===================================== */
-
-.explanation{
-
-    display:none;
-
-    background:#e8f5e9;
-
-    border-left:6px solid #2e7d32;
-
-    padding:15px;
-
-    margin-top:15px;
-
-    border-radius:8px;
-
+.orange{
+    background:#ef6c00;
 }
 
-.explanation strong{
+.purple{
+    background:#6a1b9a;
+}
 
-    color:#2e7d32;
+.teal{
+    background:#00838f;
+}
 
+.dark{
+    background:#263238;
 }
 
 
-/* =====================================
-   RESULT
-===================================== */
+/* SECTION TITLE */
 
-.result{
-
-    display:none;
-
-    background:
-    linear-gradient(
-        135deg,
-        #071952,
-        #088395
-    );
-
-    color:white;
-
-    padding:35px 20px;
-
+.section-title{
     text-align:center;
-
-    border-radius:18px;
-
-    margin-top:25px;
-
-}
-
-
-.result h2{
-
+    color:#071952;
     font-size:28px;
-
-    margin-bottom:10px;
-
-}
-
-.score{
-
-    font-size:48px;
-
-    font-weight:bold;
-
-    margin:10px 0;
-
+    margin:38px 0 20px;
 }
 
 
-.result-message{
+/* SUMMARY */
 
-    font-size:18px;
-
-    margin-bottom:15px;
-
-}
-
-
-/* =====================================
-   TOPIC CARDS
-===================================== */
-
-.topic-grid{
-
+.summary{
     display:grid;
-
-    grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(220px,1fr)
-    );
-
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
     gap:15px;
+    margin-top:25px;
+}
 
+.summary-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.1);
+}
+
+.summary-card strong{
+    display:block;
+    color:#071952;
+    font-size:24px;
+}
+
+
+/* MATERIAL SECTION */
+
+.material-section{
+    background:white;
+    margin:25px 0;
+    border-radius:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.1);
+    overflow:hidden;
+    border-top:8px solid #4527a0;
+}
+
+.group1{
+    border-top-color:#c62828;
+}
+
+.group2{
+    border-top-color:#1565c0;
+}
+
+.group4{
+    border-top-color:#2e7d32;
+}
+
+.tamil{
+    border-top-color:#ad1457;
+}
+
+.gs{
+    border-top-color:#6a1b9a;
+}
+
+.aptitude{
+    border-top-color:#ef6c00;
+}
+
+.current{
+    border-top-color:#00838f;
+}
+
+
+/* MATERIAL HEADER */
+
+.material-header{
+    padding:25px;
+    background:#fafafa;
+}
+
+.material-header h2{
+    color:#071952;
+    font-size:24px;
+}
+
+.material-header p{
+    color:#666;
+    margin-top:5px;
+}
+
+
+/* QUESTIONS */
+
+.questions{
+    padding:0 25px 25px;
+}
+
+.question{
+    background:#f8f9fc;
+    border-left:5px solid #6a1b9a;
     margin-top:15px;
-
+    padding:17px;
+    border-radius:10px;
 }
 
-.topic-card{
+.question strong{
+    color:#071952;
+}
 
-    background:#f8fafc;
-
-    padding:18px;
-
-    border-radius:12px;
-
-    border-left:5px solid #088395;
-
+.answer{
+    background:#e8f5e9;
+    color:#1b5e20;
+    padding:10px 12px;
+    margin-top:9px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
 
-/* =====================================
-   FOOTER
-===================================== */
+/* NOTE */
+
+.note{
+    background:#fff8e1;
+    border-left:6px solid #ff9800;
+    padding:20px;
+    border-radius:10px;
+    margin-top:25px;
+}
+
+.note h3{
+    color:#e65100;
+    margin-bottom:5px;
+}
+
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,#071952,#6a1b9a);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    border-radius:22px;
+    margin-top:35px;
+}
+
+.cta h2{
+    font-size:29px;
+}
+
+.cta p{
+    margin:8px 0 18px;
+}
+
+
+/* FOOTER */
 
 footer{
-
-    background:#071952;
-
+    background:#101010;
     color:white;
-
     text-align:center;
+    padding:35px 15px;
+    margin-top:45px;
+}
 
-    margin-top:40px;
-
-    padding:28px 15px;
-
+footer h2{
+    color:#ce93d8;
 }
 
 footer a{
-
-    color:#35a29f;
-
+    color:#b39ddb;
     text-decoration:none;
-
     margin:0 6px;
-
 }
 
 
-/* =====================================
-   MOBILE
-===================================== */
+/* MOBILE */
 
 @media(max-width:600px){
 
     .logo{
-
-        font-size:30px;
-
+        font-size:29px;
     }
 
     header h1{
-
         font-size:24px;
-
     }
 
     nav a{
-
         font-size:12px;
-
         padding:7px 9px;
-
     }
 
-    .container{
-
-        padding:12px;
-
+    .hero h2{
+        font-size:25px;
     }
 
-    .question{
-
-        font-size:18px;
-
+    .btn{
+        display:block;
+        max-width:290px;
+        margin:8px auto;
+        text-align:center;
     }
 
 }
@@ -754,9 +386,7 @@ footer a{
 <body>
 
 
-<!-- =====================================
-     HEADER
-===================================== -->
+<!-- HEADER -->
 
 <header>
 
@@ -765,19 +395,17 @@ footer a{
 </div>
 
 <h1>
-Study Materials & Practice
+📖 TNPSC Study Materials
 </h1>
 
 <p>
-Learn • Practice • Test • Improve
+175 Practice Questions • 7 Important Sections
 </p>
 
 </header>
 
 
-<!-- =====================================
-     NAVIGATION
-===================================== -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -790,15 +418,27 @@ Learn • Practice • Test • Improve
 </a>
 
 <a href="group4.html">
-📖 Group 4
+📚 Group 4
 </a>
 
 <a href="study-materials.html">
-📚 Study Materials
+📖 Materials
+</a>
+
+<a href="current-affairs.html">
+📰 Current Affairs
 </a>
 
 <a href="quiz.html">
 📝 Quiz
+</a>
+
+<a href="jobs.html">
+💼 Jobs
+</a>
+
+<a href="courses.html">
+🎓 Courses
 </a>
 
 </nav>
@@ -807,273 +447,1372 @@ Learn • Practice • Test • Improve
 <main class="container">
 
 
-<!-- =====================================
-     WELCOME
-===================================== -->
+<!-- HERO -->
 
-<section class="welcome">
+<section class="hero">
+
+<div class="hero-icon">
+📚
+</div>
 
 <h2>
-🎯 TNPSC Study Materials
+TNPSC Study Materials
 </h2>
 
 <p>
-
-Choose a subject below to study important topics
-and practice TNPSC multiple-choice questions.
-
+Revise important topics through questions and answers.
+These materials are designed as a practice and revision
+resource for TNPSC Group 1, Group 2, Group 2A and Group 4.
 </p>
+
+<a href="#group1" class="btn red">
+🏆 Group 1
+</a>
+
+<a href="#group2" class="btn blue">
+🥈 Group 2
+</a>
+
+<a href="#group4" class="btn green">
+📚 Group 4
+</a>
+
+<a href="#current" class="btn teal">
+📰 Current Affairs
+</a>
 
 </section>
 
 
-<!-- =====================================
-     SUBJECTS
-===================================== -->
+<!-- SUMMARY -->
 
-<div class="section-title">
-
-<h2>
-📚 Select a Subject
+<h2 class="section-title">
+📊 Study Material Overview
 </h2>
 
-<p>
-Choose any subject to begin.
-</p>
+<section class="summary">
 
+<div class="summary-card">
+<strong>25</strong>
+Group 1
 </div>
 
-
-<section class="subject-grid">
-
-
-<div class="subject"
-onclick="openSubject('History')">
-
-<div class="subject-icon">
-🏛️
+<div class="summary-card">
+<strong>25</strong>
+Group 2 / 2A
 </div>
 
-History
-
+<div class="summary-card">
+<strong>25</strong>
+Group 4
 </div>
 
-
-<div class="subject"
-onclick="openSubject('Polity')">
-
-<div class="subject-icon">
-⚖️
+<div class="summary-card">
+<strong>25</strong>
+Tamil
 </div>
 
-Indian Polity
-
+<div class="summary-card">
+<strong>25</strong>
+General Studies
 </div>
 
-
-<div class="subject"
-onclick="openSubject('Economy')">
-
-<div class="subject-icon">
-💰
-</div>
-
-Indian Economy
-
-</div>
-
-
-<div class="subject"
-onclick="openSubject('Geography')">
-
-<div class="subject-icon">
-🌍
-</div>
-
-Geography
-
-</div>
-
-
-<div class="subject"
-onclick="openSubject('Science')">
-
-<div class="subject-icon">
-🔬
-</div>
-
-Science
-
-</div>
-
-
-<div class="subject"
-onclick="openSubject('Tamil Nadu')">
-
-<div class="subject-icon">
-🌾
-</div>
-
-Tamil Nadu
-
-</div>
-
-
-<div class="subject"
-onclick="openSubject('Aptitude')">
-
-<div class="subject-icon">
-🧮
-</div>
-
+<div class="summary-card">
+<strong>25</strong>
 Aptitude
-
 </div>
 
-
-<div class="subject"
-onclick="openSubject('Current Affairs')">
-
-<div class="subject-icon">
-📰
-</div>
-
+<div class="summary-card">
+<strong>25</strong>
 Current Affairs
-
 </div>
-
 
 </section>
 
 
 <!-- =====================================
-     STUDY AREA
+     GROUP 1
 ===================================== -->
 
-<section id="studyArea">
+<section class="material-section group1" id="group1">
 
+<div class="material-header">
 
-<div class="topic-box">
-
-<h2 id="subjectTitle">
-Subject
+<h2>
+🏆 Group 1 – 25 Questions
 </h2>
 
-<p id="subjectDescription">
-Select a subject.
+<p>
+General preparation questions for Group 1 aspirants.
 </p>
 
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. Which body conducts the TNPSC examinations?</strong>
+<div class="answer">Answer: Tamil Nadu Public Service Commission (TNPSC)</div>
+</div>
+
+
+<div class="question">
+<strong>2. What is the capital of Tamil Nadu?</strong>
+<div class="answer">Answer: Chennai</div>
+</div>
+
+
+<div class="question">
+<strong>3. Which is the highest court in Tamil Nadu?</strong>
+<div class="answer">Answer: Madras High Court</div>
+</div>
+
+
+<div class="question">
+<strong>4. Who is the constitutional head of a state?</strong>
+<div class="answer">Answer: Governor</div>
+</div>
+
+
+<div class="question">
+<strong>5. Who is the executive head of the state government?</strong>
+<div class="answer">Answer: Chief Minister</div>
+</div>
+
+
+<div class="question">
+<strong>6. What is the supreme law of India?</strong>
+<div class="answer">Answer: Constitution of India</div>
+</div>
+
+
+<div class="question">
+<strong>7. How many Houses does the Tamil Nadu Legislature have?</strong>
+<div class="answer">Answer: One</div>
+</div>
+
+
+<div class="question">
+<strong>8. What is the minimum voting age in India?</strong>
+<div class="answer">Answer: 18 years</div>
+</div>
+
+
+<div class="question">
+<strong>9. Which institution is known as the guardian of the Constitution?</strong>
+<div class="answer">Answer: Supreme Court of India</div>
+</div>
+
+
+<div class="question">
+<strong>10. Which fundamental right deals with equality?</strong>
+<div class="answer">Answer: Right to Equality</div>
+</div>
+
+
+<div class="question">
+<strong>11. What does GDP stand for?</strong>
+<div class="answer">Answer: Gross Domestic Product</div>
+</div>
+
+
+<div class="question">
+<strong>12. Which sector includes agriculture?</strong>
+<div class="answer">Answer: Primary sector</div>
+</div>
+
+
+<div class="question">
+<strong>13. Which is the longest river in Tamil Nadu?</strong>
+<div class="answer">Answer: Kaveri</div>
+</div>
+
+
+<div class="question">
+<strong>14. Which sea lies to the east of Tamil Nadu?</strong>
+<div class="answer">Answer: Bay of Bengal</div>
+</div>
+
+
+<div class="question">
+<strong>15. What is the study of earthquakes called?</strong>
+<div class="answer">Answer: Seismology</div>
+</div>
+
+
+<div class="question">
+<strong>16. Which gas is most abundant in Earth's atmosphere?</strong>
+<div class="answer">Answer: Nitrogen</div>
+</div>
+
+
+<div class="question">
+<strong>17. Who is associated with the discovery of gravity?</strong>
+<div class="answer">Answer: Isaac Newton</div>
+</div>
+
+
+<div class="question">
+<strong>18. Which planet is known as the Red Planet?</strong>
+<div class="answer">Answer: Mars</div>
+</div>
+
+
+<div class="question">
+<strong>19. What is India's national animal?</strong>
+<div class="answer">Answer: Bengal Tiger</div>
+</div>
+
+
+<div class="question">
+<strong>20. What is India's national flower?</strong>
+<div class="answer">Answer: Lotus</div>
+</div>
+
+
+<div class="question">
+<strong>21. What is the national currency of India?</strong>
+<div class="answer">Answer: Indian Rupee</div>
+</div>
+
+
+<div class="question">
+<strong>22. Which movement was launched by Mahatma Gandhi in 1942?</strong>
+<div class="answer">Answer: Quit India Movement</div>
+</div>
+
+
+<div class="question">
+<strong>23. Who wrote the national anthem of India?</strong>
+<div class="answer">Answer: Rabindranath Tagore</div>
+</div>
+
+
+<div class="question">
+<strong>24. Which ancient Tamil work is attributed to Thiruvalluvar?</strong>
+<div class="answer">Answer: Thirukkural</div>
+</div>
+
+
+<div class="question">
+<strong>25. Which organisation is responsible for India's monetary policy?</strong>
+<div class="answer">Answer: Reserve Bank of India</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================
+     GROUP 2
+===================================== -->
+
+<section class="material-section group2" id="group2">
+
+<div class="material-header">
+
+<h2>
+🥈 Group 2 / 2A – 25 Questions
+</h2>
+
+<p>
+Important basic questions for Group 2 and Group 2A preparation.
+</p>
+
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. What does TNPSC stand for?</strong>
+<div class="answer">Answer: Tamil Nadu Public Service Commission</div>
+</div>
+
+
+<div class="question">
+<strong>2. Where is the headquarters of TNPSC?</strong>
+<div class="answer">Answer: Chennai</div>
+</div>
+
+
+<div class="question">
+<strong>3. What is the official language of Tamil Nadu?</strong>
+<div class="answer">Answer: Tamil</div>
+</div>
+
+
+<div class="question">
+<strong>4. Who appoints the Governor of a state?</strong>
+<div class="answer">Answer: President of India</div>
+</div>
+
+
+<div class="question">
+<strong>5. What is the term of the Lok Sabha?</strong>
+<div class="answer">Answer: Five years, unless dissolved earlier</div>
+</div>
+
+
+<div class="question">
+<strong>6. What is the term of the President of India?</strong>
+<div class="answer">Answer: Five years</div>
+</div>
+
+
+<div class="question">
+<strong>7. Which Article deals with equality before law?</strong>
+<div class="answer">Answer: Article 14</div>
+</div>
+
+
+<div class="question">
+<strong>8. Which Article guarantees freedom of speech and expression?</strong>
+<div class="answer">Answer: Article 19(1)(a)</div>
+</div>
+
+
+<div class="question">
+<strong>9. Which organ makes laws?</strong>
+<div class="answer">Answer: Legislature</div>
+</div>
+
+
+<div class="question">
+<strong>10. Which organ interprets laws?</strong>
+<div class="answer">Answer: Judiciary</div>
+</div>
+
+
+<div class="question">
+<strong>11. What is inflation?</strong>
+<div class="answer">Answer: A sustained rise in the general price level</div>
+</div>
+
+
+<div class="question">
+<strong>12. What is the full form of RBI?</strong>
+<div class="answer">Answer: Reserve Bank of India</div>
+</div>
+
+
+<div class="question">
+<strong>13. What is the full form of GST?</strong>
+<div class="answer">Answer: Goods and Services Tax</div>
+</div>
+
+
+<div class="question">
+<strong>14. Which institution issues Indian currency notes other than the one-rupee note?</strong>
+<div class="answer">Answer: Reserve Bank of India</div>
+</div>
+
+
+<div class="question">
+<strong>15. Which is the largest ocean?</strong>
+<div class="answer">Answer: Pacific Ocean</div>
+</div>
+
+
+<div class="question">
+<strong>16. Which is the largest continent?</strong>
+<div class="answer">Answer: Asia</div>
+</div>
+
+
+<div class="question">
+<strong>17. Which layer protects Earth from much ultraviolet radiation?</strong>
+<div class="answer">Answer: Ozone layer</div>
+</div>
+
+
+<div class="question">
+<strong>18. What is photosynthesis?</strong>
+<div class="answer">Answer: Process by which green plants make food using light</div>
+</div>
+
+
+<div class="question">
+<strong>19. Which vitamin is mainly produced in skin through sunlight?</strong>
+<div class="answer">Answer: Vitamin D</div>
+</div>
+
+
+<div class="question">
+<strong>20. What is the SI unit of force?</strong>
+<div class="answer">Answer: Newton</div>
+</div>
+
+
+<div class="question">
+<strong>21. What is the SI unit of electric current?</strong>
+<div class="answer">Answer: Ampere</div>
+</div>
+
+
+<div class="question">
+<strong>22. Who is known as the Father of the Indian Constitution?</strong>
+<div class="answer">Answer: Dr. B. R. Ambedkar</div>
+</div>
+
+
+<div class="question">
+<strong>23. When did India become a Republic?</strong>
+<div class="answer">Answer: 26 January 1950</div>
+</div>
+
+
+<div class="question">
+<strong>24. What is India's national aquatic animal?</strong>
+<div class="answer">Answer: Ganges River Dolphin</div>
+</div>
+
+
+<div class="question">
+<strong>25. What is the national tree of India?</strong>
+<div class="answer">Answer: Banyan</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================
+     GROUP 4
+===================================== -->
+
+<section class="material-section group4" id="group4">
+
+<div class="material-header">
+
+<h2>
+📚 Group 4 – 25 Questions
+</h2>
+
+<p>
+Basic and important questions for Group 4 preparation.
+</p>
+
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. What is the capital of India?</strong>
+<div class="answer">Answer: New Delhi</div>
+</div>
+
+
+<div class="question">
+<strong>2. What is the national bird of India?</strong>
+<div class="answer">Answer: Indian Peacock</div>
+</div>
+
+
+<div class="question">
+<strong>3. What is the national fruit of India?</strong>
+<div class="answer">Answer: Mango</div>
+</div>
+
+
+<div class="question">
+<strong>4. Which is the smallest state of India by area?</strong>
+<div class="answer">Answer: Goa</div>
+</div>
+
+
+<div class="question">
+<strong>5. Which is the largest state of India by area?</strong>
+<div class="answer">Answer: Rajasthan</div>
+</div>
+
+
+<div class="question">
+<strong>6. Which is the southernmost point of mainland India?</strong>
+<div class="answer">Answer: Kanyakumari</div>
+</div>
+
+
+<div class="question">
+<strong>7. Which is the highest mountain peak in the world?</strong>
+<div class="answer">Answer: Mount Everest</div>
+</div>
+
+
+<div class="question">
+<strong>8. Which planet is closest to the Sun?</strong>
+<div class="answer">Answer: Mercury</div>
+</div>
+
+
+<div class="question">
+<strong>9. Which planet is known for its prominent rings?</strong>
+<div class="answer">Answer: Saturn</div>
+</div>
+
+
+<div class="question">
+<strong>10. How many days are there in a leap year?</strong>
+<div class="answer">Answer: 366</div>
+</div>
+
+
+<div class="question">
+<strong>11. How many continents are there?</strong>
+<div class="answer">Answer: Seven</div>
+</div>
+
+
+<div class="question">
+<strong>12. How many oceans are generally recognised?</strong>
+<div class="answer">Answer: Five</div>
+</div>
+
+
+<div class="question">
+<strong>13. Which blood cells fight infections?</strong>
+<div class="answer">Answer: White blood cells</div>
+</div>
+
+
+<div class="question">
+<strong>14. Which organ pumps blood?</strong>
+<div class="answer">Answer: Heart</div>
+</div>
+
+
+<div class="question">
+<strong>15. Which organ is mainly responsible for breathing?</strong>
+<div class="answer">Answer: Lungs</div>
+</div>
+
+
+<div class="question">
+<strong>16. What is H2O?</strong>
+<div class="answer">Answer: Water</div>
+</div>
+
+
+<div class="question">
+<strong>17. What is the chemical symbol for gold?</strong>
+<div class="answer">Answer: Au</div>
+</div>
+
+
+<div class="question">
+<strong>18. What is the chemical symbol for oxygen?</strong>
+<div class="answer">Answer: O</div>
+</div>
+
+
+<div class="question">
+<strong>19. Which gas do humans need for respiration?</strong>
+<div class="answer">Answer: Oxygen</div>
+</div>
+
+
+<div class="question">
+<strong>20. What is the boiling point of water at standard atmospheric pressure?</strong>
+<div class="answer">Answer: 100°C</div>
+</div>
+
+
+<div class="question">
+<strong>21. What is the freezing point of water?</strong>
+<div class="answer">Answer: 0°C</div>
+</div>
+
+
+<div class="question">
+<strong>22. Who wrote Vande Mataram?</strong>
+<div class="answer">Answer: Bankim Chandra Chattopadhyay</div>
+</div>
+
+
+<div class="question">
+<strong>23. Who was the first President of India?</strong>
+<div class="answer">Answer: Dr. Rajendra Prasad</div>
+</div>
+
+
+<div class="question">
+<strong>24. Who was the first Prime Minister of India?</strong>
+<div class="answer">Answer: Jawaharlal Nehru</div>
+</div>
+
+
+<div class="question">
+<strong>25. What is the currency of Japan?</strong>
+<div class="answer">Answer: Yen</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================
+     TAMIL
+===================================== -->
+
+<section class="material-section tamil" id="tamil">
+
+<div class="material-header">
+
+<h2>
+🔤 Tamil – 25 Questions
+</h2>
+
+<p>
+Tamil grammar, literature and language practice.
+</p>
+
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. திருக்குறளை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: திருவள்ளுவர்</div>
+</div>
+
+
+<div class="question">
+<strong>2. திருக்குறளில் எத்தனை குறள்கள் உள்ளன?</strong>
+<div class="answer">பதில்: 1330</div>
+</div>
+
+
+<div class="question">
+<strong>3. திருக்குறளில் எத்தனை அதிகாரங்கள் உள்ளன?</strong>
+<div class="answer">பதில்: 133</div>
+</div>
+
+
+<div class="question">
+<strong>4. சிலப்பதிகாரத்தை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: இளங்கோ அடிகள்</div>
+</div>
+
+
+<div class="question">
+<strong>5. மணிமேகலையை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: சீத்தலைச் சாத்தனார்</div>
+</div>
+
+
+<div class="question">
+<strong>6. தொல்காப்பியம் எதைப் பற்றிய முக்கிய நூல்?</strong>
+<div class="answer">பதில்: தமிழ் இலக்கணம்</div>
+</div>
+
+
+<div class="question">
+<strong>7. தமிழ் எந்த மொழிக் குடும்பத்தைச் சேர்ந்தது?</strong>
+<div class="answer">பதில்: திராவிட மொழிக் குடும்பம்</div>
+</div>
+
+
+<div class="question">
+<strong>8. உயிரெழுத்துகள் எத்தனை?</strong>
+<div class="answer">பதில்: 12</div>
+</div>
+
+
+<div class="question">
+<strong>9. மெய்யெழுத்துகள் எத்தனை?</strong>
+<div class="answer">பதில்: 18</div>
+</div>
+
+
+<div class="question">
+<strong>10. உயிர்மெய் எழுத்துகள் எத்தனை?</strong>
+<div class="answer">பதில்: 216</div>
+</div>
+
+
+<div class="question">
+<strong>11. ஆய்த எழுத்து எது?</strong>
+<div class="answer">பதில்: ஃ</div>
+</div>
+
+
+<div class="question">
+<strong>12. தமிழ் எழுத்துக்கள் மொத்தம் எத்தனை?</strong>
+<div class="answer">பதில்: 247</div>
+</div>
+
+
+<div class="question">
+<strong>13. எட்டுத்தொகையில் உள்ள நூல்களின் எண்ணிக்கை என்ன?</strong>
+<div class="answer">பதில்: 8</div>
+</div>
+
+
+<div class="question">
+<strong>14. பத்துப்பாட்டில் உள்ள நூல்களின் எண்ணிக்கை என்ன?</strong>
+<div class="answer">பதில்: 10</div>
+</div>
+
+
+<div class="question">
+<strong>15. ஆத்திச்சூடியை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: ஔவையார்</div>
+</div>
+
+
+<div class="question">
+<strong>16. நாலடியார் எந்த வகை நூல்?</strong>
+<div class="answer">பதில்: பதினெண்கீழ்க்கணக்கு நூல்</div>
+</div>
+
+
+<div class="question">
+<strong>17. கம்பராமாயணத்தை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: கம்பர்</div>
+</div>
+
+
+<div class="question">
+<strong>18. பெரியபுராணத்தை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: சேக்கிழார்</div>
+</div>
+
+
+<div class="question">
+<strong>19. திருவாசகத்தை இயற்றியவர் யார்?</strong>
+<div class="answer">பதில்: மாணிக்கவாசகர்</div>
+</div>
+
+
+<div class="question">
+<strong>20. பாரதியாரின் முழுப்பெயர் என்ன?</strong>
+<div class="answer">பதில்: சுப்பிரமணிய பாரதி</div>
+</div>
+
+
+<div class="question">
+<strong>21. பாரதிதாசனின் இயற்பெயர் என்ன?</strong>
+<div class="answer">பதில்: கனகசுப்புரத்தினம்</div>
+</div>
+
+
+<div class="question">
+<strong>22. சிலப்பதிகாரத்தின் முக்கிய கதாபாத்திரம் யார்?</strong>
+<div class="answer">பதில்: கண்ணகி</div>
+</div>
+
+
+<div class="question">
+<strong>23. தமிழ் இலக்கணத்தின் பழமையான நூலாகக் கருதப்படுவது எது?</strong>
+<div class="answer">பதில்: தொல்காப்பியம்</div>
+</div>
+
+
+<div class="question">
+<strong>24. சங்க இலக்கியம் எந்த காலத்தைச் சார்ந்தது?</strong>
+<div class="answer">பதில்: சங்க காலம்</div>
+</div>
+
+
+<div class="question">
+<strong>25. தமிழ்நாட்டின் அதிகாரப்பூர்வ மொழி எது?</strong>
+<div class="answer">பதில்: தமிழ்</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================
+     GENERAL STUDIES
+===================================== -->
+
+<section class="material-section gs" id="general-studies">
+
+<div class="material-header">
+
+<h2>
+🌏 General Studies – 25 Questions
+</h2>
+
+<p>
+History, Polity, Geography, Science and Economy.
+</p>
+
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. Who is known as the Father of the Nation in India?</strong>
+<div class="answer">Answer: Mahatma Gandhi</div>
+</div>
+
+
+<div class="question">
+<strong>2. Which is the oldest Veda?</strong>
+<div class="answer">Answer: Rigveda</div>
+</div>
+
+
+<div class="question">
+<strong>3. Who founded the Mauryan Empire?</strong>
+<div class="answer">Answer: Chandragupta Maurya</div>
+</div>
+
+
+<div class="question">
+<strong>4. Who was the teacher of Chandragupta Maurya?</strong>
+<div class="answer">Answer: Chanakya</div>
+</div>
+
+
+<div class="question">
+<strong>5. Which dynasty built the Brihadisvara Temple at Thanjavur?</strong>
+<div class="answer">Answer: Chola dynasty</div>
+</div>
+
+
+<div class="question">
+<strong>6. Which Article is associated with the Right to Education?</strong>
+<div class="answer">Answer: Article 21A</div>
+</div>
+
+
+<div class="question">
+<strong>7. How many Fundamental Duties are currently listed in the Constitution?</strong>
+<div class="answer">Answer: 11</div>
+</div>
+
+
+<div class="question">
+<strong>8. Which part of the Constitution contains Fundamental Rights?</strong>
+<div class="answer">Answer: Part III</div>
+</div>
+
+
+<div class="question">
+<strong>9. Which part contains Directive Principles of State Policy?</strong>
+<div class="answer">Answer: Part IV</div>
+</div>
+
+
+<div class="question">
+<strong>10. What is democracy?</strong>
+<div class="answer">Answer: Government by the people</div>
+</div>
+
+
+<div class="question">
+<strong>11. Which is India's largest river basin?</strong>
+<div class="answer">Answer: Ganga basin</div>
+</div>
+
+
+<div class="question">
+<strong>12. Which soil is suitable for cotton cultivation?</strong>
+<div class="answer">Answer: Black soil</div>
+</div>
+
+
+<div class="question">
+<strong>13. Which is the main source of energy for Earth?</strong>
+<div class="answer">Answer: Sun</div>
+</div>
+
+
+<div class="question">
+<strong>14. What is the basic unit of life?</strong>
+<div class="answer">Answer: Cell</div>
+</div>
+
+
+<div class="question">
+<strong>15. Which organ filters waste from the blood?</strong>
+<div class="answer">Answer: Kidney</div>
+</div>
+
+
+<div class="question">
+<strong>16. What is the normal pH of pure water approximately?</strong>
+<div class="answer">Answer: 7</div>
+</div>
+
+
+<div class="question">
+<strong>17. What is renewable energy?</strong>
+<div class="answer">Answer: Energy obtained from naturally replenishing sources</div>
+</div>
+
+
+<div class="question">
+<strong>18. What is the full form of AI?</strong>
+<div class="answer">Answer: Artificial Intelligence</div>
+</div>
+
+
+<div class="question">
+<strong>19. What is the full form of DNA?</strong>
+<div class="answer">Answer: Deoxyribonucleic Acid</div>
+</div>
+
+
+<div class="question">
+<strong>20. What is the full form of UNESCO?</strong>
+<div class="answer">Answer: United Nations Educational, Scientific and Cultural Organization</div>
+</div>
+
+
+<div class="question">
+<strong>21. What is the headquarters of the United Nations?</strong>
+<div class="answer">Answer: New York City</div>
+</div>
+
+
+<div class="question">
+<strong>22. Which organization regulates international public health?</strong>
+<div class="answer">Answer: World Health Organization</div>
+</div>
+
+
+<div class="question">
+<strong>23. What does inflation reduce?</strong>
+<div class="answer">Answer: Purchasing power of money</div>
+</div>
+
+
+<div class="question">
+<strong>24. What is the full form of NITI Aayog?</strong>
+<div class="answer">Answer: National Institution for Transforming India</div>
+</div>
+
+
+<div class="question">
+<strong>25. What is the national emblem of India adapted from?</strong>
+<div class="answer">Answer: Lion Capital of Ashoka at Sarnath</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================
+     APTITUDE
+===================================== -->
+
+<section class="material-section aptitude" id="aptitude">
+
+<div class="material-header">
+
+<h2>
+🔢 Aptitude & Mental Ability – 25 Questions
+</h2>
+
+<p>
+Basic mathematical and reasoning practice.
+</p>
+
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. What is 25 + 35?</strong>
+<div class="answer">Answer: 60</div>
+</div>
+
+
+<div class="question">
+<strong>2. What is 100 - 45?</strong>
+<div class="answer">Answer: 55</div>
+</div>
+
+
+<div class="question">
+<strong>3. What is 12 × 5?</strong>
+<div class="answer">Answer: 60</div>
+</div>
+
+
+<div class="question">
+<strong>4. What is 144 ÷ 12?</strong>
+<div class="answer">Answer: 12</div>
+</div>
+
+
+<div class="question">
+<strong>5. What is 10% of 200?</strong>
+<div class="answer">Answer: 20</div>
+</div>
+
+
+<div class="question">
+<strong>6. What is 25% of 400?</strong>
+<div class="answer">Answer: 100</div>
+</div>
+
+
+<div class="question">
+<strong>7. If a number is doubled and becomes 50, what is the number?</strong>
+<div class="answer">Answer: 25</div>
+</div>
+
+
+<div class="question">
+<strong>8. What is the average of 10 and 20?</strong>
+<div class="answer">Answer: 15</div>
+</div>
+
+
+<div class="question">
+<strong>9. What is the average of 10, 20 and 30?</strong>
+<div class="answer">Answer: 20</div>
+</div>
+
+
+<div class="question">
+<strong>10. What is the ratio of 10 to 20 in simplest form?</strong>
+<div class="answer">Answer: 1 : 2</div>
+</div>
+
+
+<div class="question">
+<strong>11. What is 3²?</strong>
+<div class="answer">Answer: 9</div>
+</div>
+
+
+<div class="question">
+<strong>12. What is √81?</strong>
+<div class="answer">Answer: 9</div>
+</div>
+
+
+<div class="question">
+<strong>13. What is the next number: 2, 4, 6, 8, ?</strong>
+<div class="answer">Answer: 10</div>
+</div>
+
+
+<div class="question">
+<strong>14. What is the next number: 5, 10, 15, 20, ?</strong>
+<div class="answer">Answer: 25</div>
+</div>
+
+
+<div class="question">
+<strong>15. If 5 pens cost ₹50, what is the cost of one pen?</strong>
+<div class="answer">Answer: ₹10</div>
+</div>
+
+
+<div class="question">
+<strong>16. A shirt costs ₹500. What is 10% discount?</strong>
+<div class="answer">Answer: ₹50</div>
+</div>
+
+
+<div class="question">
+<strong>17. What is the selling price after a ₹50 discount on ₹500?</strong>
+<div class="answer">Answer: ₹450</div>
+</div>
+
+
+<div class="question">
+<strong>18. How many minutes are there in 2 hours?</strong>
+<div class="answer">Answer: 120 minutes</div>
+</div>
+
+
+<div class="question">
+<strong>19. How many seconds are there in 5 minutes?</strong>
+<div class="answer">Answer: 300 seconds</div>
+</div>
+
+
+<div class="question">
+<strong>20. If a train travels 60 km in one hour, what is its speed?</strong>
+<div class="answer">Answer: 60 km/h</div>
+</div>
+
+
+<div class="question">
+<strong>21. What is the square of 10?</strong>
+<div class="answer">Answer: 100</div>
+</div>
+
+
+<div class="question">
+<strong>22. What is the cube of 3?</strong>
+<div class="answer">Answer: 27</div>
+</div>
+
+
+<div class="question">
+<strong>23. If today is Monday, what day will it be after 7 days?</strong>
+<div class="answer">Answer: Monday</div>
+</div>
+
+
+<div class="question">
+<strong>24. Find the odd one: Apple, Mango, Carrot, Banana.</strong>
+<div class="answer">Answer: Carrot</div>
+</div>
+
+
+<div class="question">
+<strong>25. Complete: A, C, E, G, ?</strong>
+<div class="answer">Answer: I</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- =====================================
+     CURRENT AFFAIRS
+===================================== -->
+
+<section class="material-section current" id="current">
+
+<div class="material-header">
+
+<h2>
+📰 Current Affairs – 25 Questions
+</h2>
+
+<p>
+Current affairs should be updated regularly according
+to the latest reliable sources.
+</p>
+
+</div>
+
+<div class="questions">
+
+
+<div class="question">
+<strong>1. Which organization publishes official Government of India press releases?</strong>
+<div class="answer">Answer: Press Information Bureau (PIB)</div>
+</div>
+
+
+<div class="question">
+<strong>2. Which organization is India's central bank?</strong>
+<div class="answer">Answer: Reserve Bank of India</div>
+</div>
+
+
+<div class="question">
+<strong>3. Which Indian organization is responsible for major space missions?</strong>
+<div class="answer">Answer: ISRO</div>
+</div>
+
+
+<div class="question">
+<strong>4. What does ISRO stand for?</strong>
+<div class="answer">Answer: Indian Space Research Organisation</div>
+</div>
+
+
+<div class="question">
+<strong>5. Which organization is responsible for global public health?</strong>
+<div class="answer">Answer: World Health Organization</div>
+</div>
+
+
+<div class="question">
+<strong>6. Which organization is headquartered in New York and deals with international affairs?</strong>
+<div class="answer">Answer: United Nations</div>
+</div>
+
+
+<div class="question">
+<strong>7. Which document presents the Government of India's annual financial statement?</strong>
+<div class="answer">Answer: Union Budget</div>
+</div>
+
+
+<div class="question">
+<strong>8. Which institution conducts India's monetary policy?</strong>
+<div class="answer">Answer: Reserve Bank of India</div>
+</div>
+
+
+<div class="question">
+<strong>9. What does GDP measure?</strong>
+<div class="answer">Answer: The value of final goods and services produced within an economy</div>
+</div>
+
+
+<div class="question">
+<strong>10. What is climate change?</strong>
+<div class="answer">Answer: Long-term changes in climate patterns</div>
+</div>
+
+
+<div class="question">
+<strong>11. What is artificial intelligence commonly called?</strong>
+<div class="answer">Answer: AI</div>
+</div>
+
+
+<div class="question">
+<strong>12. Which field includes rockets and satellites?</strong>
+<div class="answer">Answer: Space science and technology</div>
+</div>
+
+
+<div class="question">
+<strong>13. What is a government welfare programme called?</strong>
+<div class="answer">Answer: Government scheme / programme</div>
+</div>
+
+
+<div class="question">
+<strong>14. Which sector includes farming?</strong>
+<div class="answer">Answer: Agriculture / Primary sector</div>
+</div>
+
+
+<div class="question">
+<strong>15. Which event is generally held to discuss global economic issues among major economies?</strong>
+<div class="answer">Answer: G20 Summit / related G20 meetings</div>
+</div>
+
+
+<div class="question">
+<strong>16. What does the term "current affairs" refer to?</strong>
+<div class="answer">Answer: Recent important events and developments</div>
+</div>
+
+
+<div class="question">
+<strong>17. Which official portal provides Tamil Nadu government information?</strong>
+<div class="answer">Answer: Tamil Nadu Government portal</div>
+</div>
+
+
+<div class="question">
+<strong>18. Which organization publishes India's official population census data?</strong>
+<div class="answer">Answer: Office of the Registrar General and Census Commissioner, India</div>
+</div>
+
+
+<div class="question">
+<strong>19. Which organization manages elections in India?</strong>
+<div class="answer">Answer: Election Commission of India</div>
+</div>
+
+
+<div class="question">
+<strong>20. What is the main purpose of a national budget?</strong>
+<div class="answer">Answer: To present government revenues, expenditure and financial plans</div>
+</div>
+
+
+<div class="question">
+<strong>21. Which ministry is associated with India's space programme?</strong>
+<div class="answer">Answer: Department of Space</div>
+</div>
+
+
+<div class="question">
+<strong>22. Which institution prepares India's monetary policy decisions?</strong>
+<div class="answer">Answer: Reserve Bank of India through its Monetary Policy Committee framework</div>
+</div>
+
+
+<div class="question">
+<strong>23. What is a heat wave?</strong>
+<div class="answer">Answer: A period of unusually high temperatures for a region and time period</div>
+</div>
+
+
+<div class="question">
+<strong>24. Why should TNPSC aspirants follow current affairs?</strong>
+<div class="answer">Answer: Current events are relevant to competitive examination preparation</div>
+</div>
+
+
+<div class="question">
+<strong>25. What is the best way to verify an important current-affairs fact?</strong>
+<div class="answer">Answer: Check a reliable official or authoritative source</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- IMPORTANT NOTE -->
+
+<div class="note">
 
 <h3>
-📖 Important Topics
+⚠️ Current Affairs Update
 </h3>
 
-<div class="topic-grid"
-id="topics">
+<p>
+Current-affairs questions change with time. Before an
+examination, students should revise the latest daily and
+monthly current affairs from reliable official sources.
+</p>
+
+<a href="current-affairs.html" class="btn teal">
+📰 Open Current Affairs Hub
+</a>
 
 </div>
 
-</div>
 
+<!-- CTA -->
 
-<!-- QUIZ -->
-
-<div class="quiz">
-
-<div class="quiz-header">
+<section class="cta">
 
 <h2>
-📝 Practice Questions
+🚀 Continue Your TNPSC Preparation
 </h2>
 
 <p>
-Select the correct answer.
+Study • Revise • Practise • Test
 </p>
 
-</div>
+
+<a href="quiz.html" class="btn red">
+📝 Take 100 Question Quiz
+</a>
 
 
-<div class="question-number"
-id="questionNumber">
-Question 1
-</div>
+<a href="current-affairs.html" class="btn teal">
+📰 Current Affairs
+</a>
 
 
-<div class="question"
-id="questionText">
-Question
-</div>
+<a href="group1-2.html" class="btn purple">
+🏆 Group 1 & 2
+</a>
 
 
-<div id="options">
-
-</div>
-
-
-<div class="explanation"
-id="explanation">
-
-<strong>
-💡 Explanation:
-</strong>
-
-<span id="explanationText">
-</span>
-
-</div>
+<a href="group4.html" class="btn green">
+📚 Group 4
+</a>
 
 
-<div class="quiz-controls">
-
-<button class="btn previous"
-onclick="previousQuestion()">
-
-⬅ Previous
-
-</button>
-
-
-<button class="btn next"
-onclick="nextQuestion()">
-
-Next ➡
-
-</button>
-
-</div>
-
-
-</div>
-
-
-<!-- RESULT -->
-
-<div class="result"
-id="result">
-
-<h2>
-🎉 Test Completed!
-</h2>
-
-<div class="score"
-id="finalScore">
-0/0
-</div>
-
-<div class="result-message"
-id="resultMessage">
-</div>
-
-
-<button class="btn restart"
-onclick="restartQuiz()">
-
-🔄 Try Again
-
-</button>
-
-</div>
-
+<a href="index.html" class="btn blue">
+🏠 Home
+</a>
 
 </section>
 
@@ -1081,9 +1820,7 @@ onclick="restartQuiz()">
 </main>
 
 
-<!-- =====================================
-     FOOTER
-===================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1092,969 +1829,38 @@ onclick="restartQuiz()">
 </h2>
 
 <p>
-Learn • Practice • Test • Succeed
+Study Materials • Current Affairs • Quiz • TNPSC Preparation
 </p>
 
 <br>
 
 <p>
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="group1-2.html">
-Group 1 & 2
-</a>
+<a href="group1-2.html">Group 1 & 2</a>
 
-<a href="group4.html">
-Group 4
-</a>
+<a href="group4.html">Group 4</a>
 
-<a href="study-materials.html">
-Study Materials
-</a>
+<a href="study-materials.html">Study Materials</a>
+
+<a href="current-affairs.html">Current Affairs</a>
+
+<a href="quiz.html">Quiz</a>
+
+<a href="jobs.html">Jobs</a>
+
+<a href="courses.html">Courses</a>
 
 </p>
+
+<br>
 
 <p>
 © 2026 TNPSC Study Hub
 </p>
 
 </footer>
-
-
-<script>
-
-
-/* =====================================
-   SUBJECT DATA
-===================================== */
-
-const subjects = {
-
-History:{
-
-description:
-"Study important events, dynasties and developments in Indian history.",
-
-topics:[
-"Ancient India",
-"Medieval India",
-"Modern India",
-"Indian Freedom Movement",
-"Important Historical Events"
-],
-
-questions:[
-
-{
-q:"Who is known as the Father of the Indian Constitution?",
-
-options:[
-"Jawaharlal Nehru",
-"Dr. B. R. Ambedkar",
-"Mahatma Gandhi",
-"Sardar Patel"
-],
-
-answer:1,
-
-explanation:
-"Dr. B. R. Ambedkar was the Chairman of the Drafting Committee of the Indian Constitution."
-},
-
-{
-q:"Who founded the Mauryan Empire?",
-
-options:[
-"Ashoka",
-"Chandragupta Maurya",
-"Harsha",
-"Akbar"
-],
-
-answer:1,
-
-explanation:
-"Chandragupta Maurya founded the Mauryan Empire around 321 BCE."
-},
-
-{
-q:"The Quit India Movement was launched in which year?",
-
-options:[
-"1930",
-"1942",
-"1947",
-"1919"
-],
-
-answer:1,
-
-explanation:
-"The Quit India Movement was launched by Mahatma Gandhi in August 1942."
-}
-
-]
-
-},
-
-
-Polity:{
-
-description:
-"Learn the Indian Constitution, government institutions and fundamental rights.",
-
-topics:[
-"Indian Constitution",
-"Fundamental Rights",
-"Directive Principles",
-"President & Parliament",
-"Judiciary",
-"Local Government"
-],
-
-questions:[
-
-{
-q:"How many Fundamental Rights are currently guaranteed by the Indian Constitution?",
-
-options:[
-"5",
-"6",
-"7",
-"8"
-],
-
-answer:1,
-
-explanation:
-"At present, the Constitution guarantees six Fundamental Rights."
-},
-
-{
-q:"Who is the constitutional head of India?",
-
-options:[
-"Prime Minister",
-"President",
-"Chief Justice",
-"Governor"
-],
-
-answer:1,
-
-explanation:
-"The President is the constitutional head of the Union of India."
-},
-
-{
-q:"The Constitution of India came into force on:",
-
-options:[
-"15 August 1947",
-"26 November 1949",
-"26 January 1950",
-"2 October 1950"
-],
-
-answer:2,
-
-explanation:
-"The Constitution came into force on 26 January 1950."
-}
-
-]
-
-},
-
-
-Economy:{
-
-description:
-"Understand basic concepts of the Indian economy and economic development.",
-
-topics:[
-"Indian Economy",
-"National Income",
-"Banking",
-"Inflation",
-"Budget",
-"Government Schemes"
-],
-
-questions:[
-
-{
-q:"Which institution is the central bank of India?",
-
-options:[
-"SBI",
-"RBI",
-"SEBI",
-"NABARD"
-],
-
-answer:1,
-
-explanation:
-"The Reserve Bank of India (RBI) is India's central bank."
-},
-
-{
-q:"What does GDP stand for?",
-
-options:[
-"Gross Domestic Product",
-"General Domestic Production",
-"Gross Development Plan",
-"Government Domestic Product"
-],
-
-answer:0,
-
-explanation:
-"GDP means Gross Domestic Product."
-},
-
-{
-q:"Inflation generally refers to:",
-
-options:[
-"Fall in prices",
-"Rise in general price level",
-"Fall in production",
-"Increase in exports only"
-],
-
-answer:1,
-
-explanation:
-"Inflation is a sustained increase in the general price level of goods and services."
-}
-
-]
-
-},
-
-
-Geography:{
-
-description:
-"Study India's physical geography, resources, climate and environment.",
-
-topics:[
-"Physical Geography",
-"Indian Rivers",
-"Climate",
-"Soils",
-"Agriculture",
-"Natural Resources"
-],
-
-questions:[
-
-{
-q:"Which is the longest river in India?",
-
-options:[
-"Ganga",
-"Godavari",
-"Yamuna",
-"Narmada"
-],
-
-answer:0,
-
-explanation:
-"The Ganga is generally considered the longest river within India."
-},
-
-{
-q:"Which soil is best suited for cotton cultivation?",
-
-options:[
-"Alluvial soil",
-"Black soil",
-"Laterite soil",
-"Red soil"
-],
-
-answer:1,
-
-explanation:
-"Black soil is particularly suitable for cotton cultivation."
-},
-
-{
-q:"The Western Ghats are located along the:",
-
-options:[
-"Eastern coast",
-"Western coast",
-"Northern border",
-"Central plateau only"
-],
-
-answer:1,
-
-explanation:
-"The Western Ghats run parallel to India's western coast."
-}
-
-]
-
-},
-
-
-Science:{
-
-description:
-"Revise important concepts from Physics, Chemistry, Biology and technology.",
-
-topics:[
-"Physics",
-"Chemistry",
-"Biology",
-"Human Body",
-"Environment",
-"Science & Technology"
-],
-
-questions:[
-
-{
-q:"Which gas is essential for human respiration?",
-
-options:[
-"Nitrogen",
-"Oxygen",
-"Carbon dioxide",
-"Hydrogen"
-],
-
-answer:1,
-
-explanation:
-"Oxygen is essential for cellular respiration in humans."
-},
-
-{
-q:"Which organ pumps blood throughout the human body?",
-
-options:[
-"Lungs",
-"Brain",
-"Heart",
-"Kidney"
-],
-
-answer:2,
-
-explanation:
-"The heart pumps blood through the circulatory system."
-},
-
-{
-q:"Water boils at sea level at approximately:",
-
-options:[
-"50°C",
-"75°C",
-"100°C",
-"150°C"
-],
-
-answer:2,
-
-explanation:
-"At standard atmospheric pressure, water boils at 100°C."
-}
-
-]
-
-},
-
-
-"Tamil Nadu":{
-
-description:
-"Study Tamil Nadu history, geography, administration, culture and development.",
-
-topics:[
-"Tamil Nadu History",
-"Tamil Culture",
-"Tamil Nadu Geography",
-"Social Reform Movements",
-"Tamil Nadu Administration",
-"Development Programmes"
-],
-
-questions:[
-
-{
-q:"What is the capital of Tamil Nadu?",
-
-options:[
-"Madurai",
-"Coimbatore",
-"Chennai",
-"Tiruchirappalli"
-],
-
-answer:2,
-
-explanation:
-"Chennai is the capital city of Tamil Nadu."
-},
-
-{
-q:"Which classical language has a very long literary tradition in Tamil Nadu?",
-
-options:[
-"Tamil",
-"Marathi",
-"Punjabi",
-"Bengali"
-],
-
-answer:0,
-
-explanation:
-"Tamil is one of the world's oldest classical languages with a rich literary tradition."
-},
-
-{
-q:"Brihadisvara Temple is located at:",
-
-options:[
-"Thanjavur",
-"Salem",
-"Erode",
-"Vellore"
-],
-
-answer:0,
-
-explanation:
-"The famous Brihadisvara Temple is located in Thanjavur."
-}
-
-]
-
-},
-
-
-Aptitude:{
-
-description:
-"Practice basic mathematics, logical reasoning and mental ability.",
-
-topics:[
-"Number System",
-"Percentage",
-"Ratio",
-"Average",
-"Profit & Loss",
-"Time & Work",
-"Reasoning"
-],
-
-questions:[
-
-{
-q:"What is 25% of 200?",
-
-options:[
-"25",
-"40",
-"50",
-"75"
-],
-
-answer:2,
-
-explanation:
-"25% of 200 = 200 × 25/100 = 50."
-},
-
-{
-q:"If 5 + 5 × 2 = ?", 
-
-options:[
-"20",
-"15",
-"10",
-"25"
-],
-
-answer:1,
-
-explanation:
-"Multiplication is performed before addition: 5 + (5 × 2) = 15."
-},
-
-{
-q:"What is the average of 10, 20 and 30?",
-
-options:[
-"15",
-"20",
-"25",
-"30"
-],
-
-answer:1,
-
-explanation:
-"(10 + 20 + 30) ÷ 3 = 20."
-}
-
-]
-
-},
-
-
-"Current Affairs":{
-
-description:
-"Practice general awareness and current-affairs style questions.",
-
-topics:[
-"National Events",
-"International Events",
-"Government Schemes",
-"Science & Technology",
-"Sports",
-"Awards & Important Days"
-],
-
-questions:[
-
-{
-q:"Which day is celebrated as India's Independence Day?",
-
-options:[
-"26 January",
-"15 August",
-"2 October",
-"14 November"
-],
-
-answer:1,
-
-explanation:
-"India celebrates Independence Day on 15 August."
-},
-
-{
-q:"National Sports Day in India is observed on:",
-
-options:[
-"29 August",
-"15 August",
-"26 January",
-"5 September"
-],
-
-answer:0,
-
-explanation:
-"National Sports Day is observed on 29 August, the birth anniversary of Major Dhyan Chand."
-},
-
-{
-q:"World Environment Day is observed on:",
-
-options:[
-"5 June",
-"22 April",
-"1 May",
-"10 December"
-],
-
-answer:0,
-
-explanation:
-"World Environment Day is observed annually on 5 June."
-}
-
-]
-
-}
-
-};
-
-
-/* =====================================
-   VARIABLES
-===================================== */
-
-let currentSubject="";
-
-let currentQuestion=0;
-
-let score=0;
-
-let answered=false;
-
-
-/* =====================================
-   OPEN SUBJECT
-===================================== */
-
-function openSubject(subject){
-
-    currentSubject=subject;
-
-    currentQuestion=0;
-
-    score=0;
-
-    answered=false;
-
-
-    document.getElementById("studyArea")
-    .style.display="block";
-
-
-    document.getElementById("subjectTitle")
-    .innerText=
-    "📚 "+subject;
-
-
-    document.getElementById("subjectDescription")
-    .innerText=
-    subjects[subject].description;
-
-
-    let topicsHTML="";
-
-
-    subjects[subject].topics.forEach(
-        function(topic){
-
-            topicsHTML+=
-            `<div class="topic-card">
-            📖 ${topic}
-            </div>`;
-
-        }
-    );
-
-
-    document.getElementById("topics")
-    .innerHTML=topicsHTML;
-
-
-    document.getElementById("result")
-    .style.display="none";
-
-
-    loadQuestion();
-
-
-    document.getElementById("studyArea")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =====================================
-   LOAD QUESTION
-===================================== */
-
-function loadQuestion(){
-
-    let data=
-    subjects[currentSubject]
-    .questions[currentQuestion];
-
-
-    answered=false;
-
-
-    document.getElementById("questionNumber")
-    .innerText=
-    "Question "+
-    (currentQuestion+1)+
-    " of "+
-    subjects[currentSubject]
-    .questions.length;
-
-
-    document.getElementById("questionText")
-    .innerText=data.q;
-
-
-    let optionsHTML="";
-
-
-    data.options.forEach(
-        function(option,index){
-
-            optionsHTML+=
-            `<button
-            class="option"
-            onclick="selectAnswer(${index})">
-            ${String.fromCharCode(65+index)}.
-            ${option}
-            </button>`;
-
-        }
-    );
-
-
-    document.getElementById("options")
-    .innerHTML=optionsHTML;
-
-
-    document.getElementById("explanation")
-    .style.display="none";
-
-
-    document.getElementById("explanationText")
-    .innerText=
-    data.explanation;
-
-}
-
-
-/* =====================================
-   SELECT ANSWER
-===================================== */
-
-function selectAnswer(selected){
-
-    if(answered){
-        return;
-    }
-
-
-    answered=true;
-
-
-    let data=
-    subjects[currentSubject]
-    .questions[currentQuestion];
-
-
-    let buttons=
-    document.querySelectorAll(".option");
-
-
-    buttons.forEach(
-        function(button,index){
-
-            button.disabled=true;
-
-
-            if(index===data.answer){
-
-                button.classList.add("correct");
-
-            }
-
-
-            if(index===selected &&
-               selected!==data.answer){
-
-                button.classList.add("wrong");
-
-            }
-
-        }
-    );
-
-
-    if(selected===data.answer){
-
-        score++;
-
-    }
-
-
-    document.getElementById("explanation")
-    .style.display="block";
-
-}
-
-
-/* =====================================
-   NEXT QUESTION
-===================================== */
-
-function nextQuestion(){
-
-    if(!currentSubject){
-
-        alert("Please select a subject first.");
-
-        return;
-
-    }
-
-
-    if(!answered){
-
-        alert("Please select an answer first.");
-
-        return;
-
-    }
-
-
-    if(
-        currentQuestion <
-        subjects[currentSubject]
-        .questions.length-1
-    ){
-
-        currentQuestion++;
-
-        loadQuestion();
-
-    }
-
-    else{
-
-        showResult();
-
-    }
-
-}
-
-
-/* =====================================
-   PREVIOUS
-===================================== */
-
-function previousQuestion(){
-
-    if(!currentSubject){
-
-        return;
-
-    }
-
-
-    if(currentQuestion>0){
-
-        currentQuestion--;
-
-        loadQuestion();
-
-    }
-
-}
-
-
-/* =====================================
-   RESULT
-===================================== */
-
-function showResult(){
-
-    let total=
-    subjects[currentSubject]
-    .questions.length;
-
-
-    document.getElementById("result")
-    .style.display="block";
-
-
-    document.getElementById("finalScore")
-    .innerText=
-    score+
-    "/"+
-    total;
-
-
-    let percentage=
-    Math.round(
-        (score/total)*100
-    );
-
-
-    let message="";
-
-
-    if(percentage>=80){
-
-        message=
-        "🌟 Excellent! Your preparation is strong.";
-
-    }
-
-    else if(percentage>=60){
-
-        message=
-        "👍 Good job! Keep practising.";
-
-    }
-
-    else if(percentage>=40){
-
-        message=
-        "📚 Keep studying and improve your score.";
-
-    }
-
-    else{
-
-        message=
-        "💪 Don't give up. Practice again and improve.";
-
-    }
-
-
-    document.getElementById("resultMessage")
-    .innerText=
-    message+
-    " Score: "+
-    percentage+"%";
-
-
-    document.getElementById("result")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =====================================
-   RESTART
-===================================== */
-
-function restartQuiz(){
-
-    currentQuestion=0;
-
-    score=0;
-
-    answered=false;
-
-
-    document.getElementById("result")
-    .style.display="none";
-
-
-    loadQuestion();
-
-
-    document.getElementById("studyArea")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-</script>
 
 
 </body>
