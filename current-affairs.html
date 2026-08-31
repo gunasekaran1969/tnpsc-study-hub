@@ -1,0 +1,1573 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="TNPSC Study Hub Current Affairs - Tamil Nadu, India, World, Government Schemes, Science, Sports, Economy, Awards and Current Affairs Quiz.">
+
+<title>Current Affairs | TNPSC Study Hub</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(
+        135deg,
+        #eef7ff,
+        #fff5f8,
+        #f3efff
+    );
+    color:#222;
+    line-height:1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:linear-gradient(
+        135deg,
+        #071952,
+        #00838f,
+        #6a1b9a
+    );
+    color:white;
+    text-align:center;
+    padding:42px 15px;
+}
+
+.logo{
+    font-size:36px;
+    font-weight:bold;
+}
+
+header h1{
+    font-size:31px;
+    margin-top:8px;
+}
+
+header p{
+    font-size:17px;
+    margin-top:8px;
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+    background:#061344;
+    text-align:center;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
+}
+
+nav a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:9px 13px;
+    margin:3px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#00838f;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    background:white;
+    border-radius:22px;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.hero-icon{
+    font-size:58px;
+}
+
+.hero h2{
+    color:#071952;
+    font-size:31px;
+    margin:8px 0;
+}
+
+.hero p{
+    color:#666;
+    max-width:850px;
+    margin:0 auto 20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    margin:5px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+.blue{
+    background:#1565c0;
+}
+
+.green{
+    background:#2e7d32;
+}
+
+.red{
+    background:#c62828;
+}
+
+.orange{
+    background:#ef6c00;
+}
+
+.purple{
+    background:#6a1b9a;
+}
+
+.teal{
+    background:#00838f;
+}
+
+.dark{
+    background:#263238;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    text-align:center;
+    color:#071952;
+    font-size:27px;
+    margin:38px 0 20px;
+}
+
+
+/* =========================
+   CATEGORY GRID
+========================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.category{
+    background:white;
+    padding:24px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 17px rgba(0,0,0,.1);
+    border-top:7px solid #00838f;
+}
+
+.category:nth-child(2){
+    border-top-color:#1565c0;
+}
+
+.category:nth-child(3){
+    border-top-color:#6a1b9a;
+}
+
+.category:nth-child(4){
+    border-top-color:#2e7d32;
+}
+
+.category:nth-child(5){
+    border-top-color:#ef6c00;
+}
+
+.category:nth-child(6){
+    border-top-color:#c62828;
+}
+
+.category:nth-child(7){
+    border-top-color:#ad1457;
+}
+
+.category:nth-child(8){
+    border-top-color:#4527a0;
+}
+
+.category-icon{
+    font-size:42px;
+}
+
+.category h3{
+    color:#071952;
+    margin:7px 0;
+}
+
+.category p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* =========================
+   CURRENT AFFAIRS CARDS
+========================= */
+
+.news-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.news-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 17px rgba(0,0,0,.1);
+}
+
+.news-card h3{
+    color:#071952;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.news-card p{
+    color:#666;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:15px;
+    background:#e0f2f1;
+    color:#00695c;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   DAILY UPDATE
+========================= */
+
+.daily-box{
+    background:linear-gradient(
+        135deg,
+        #e0f7fa,
+        #ede7f6
+    );
+    padding:30px 20px;
+    border-radius:20px;
+    text-align:center;
+    margin-top:25px;
+}
+
+.daily-box h2{
+    color:#071952;
+}
+
+.daily-box p{
+    color:#555;
+    max-width:800px;
+    margin:8px auto 15px;
+}
+
+
+/* =========================
+   QUIZ BOX
+========================= */
+
+.quiz-box{
+    background:linear-gradient(
+        135deg,
+        #ffebee,
+        #f3e5f5
+    );
+    padding:32px 20px;
+    border-radius:20px;
+    text-align:center;
+    margin-top:25px;
+}
+
+.quiz-box h2{
+    color:#c62828;
+}
+
+.quiz-box p{
+    color:#555;
+    margin:8px auto 15px;
+}
+
+
+/* =========================
+   MONTHLY BOX
+========================= */
+
+.month-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.month-card{
+    background:white;
+    padding:22px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.month-card h3{
+    color:#6a1b9a;
+}
+
+.month-card p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* =========================
+   SOURCE SECTION
+========================= */
+
+.source-box{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 5px 17px rgba(0,0,0,.1);
+}
+
+.source-list{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.source{
+    background:#f7f7f7;
+    padding:18px;
+    border-radius:12px;
+}
+
+.source h3{
+    color:#071952;
+    margin-bottom:5px;
+}
+
+.source p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* =========================
+   IMPORTANT NOTICE
+========================= */
+
+.notice{
+    background:#fff8e1;
+    border-left:6px solid #ff9800;
+    padding:20px;
+    border-radius:10px;
+    margin-top:25px;
+}
+
+.notice h3{
+    color:#e65100;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:linear-gradient(
+        135deg,
+        #071952,
+        #00838f
+    );
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    border-radius:22px;
+    margin-top:35px;
+}
+
+.cta h2{
+    font-size:29px;
+}
+
+.cta p{
+    margin:8px 0 18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#101010;
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+    margin-top:45px;
+}
+
+footer h2{
+    color:#80cbc4;
+}
+
+footer a{
+    color:#b39ddb;
+    text-decoration:none;
+    margin:0 6px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:29px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:7px 9px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    .btn{
+        display:block;
+        max-width:290px;
+        margin:8px auto;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="logo">
+📚 TNPSC Study Hub
+</div>
+
+<h1>
+📰 Current Affairs Hub
+</h1>
+
+<p>
+Daily • Weekly • Monthly • TNPSC Focused
+</p>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="index.html">
+🏠 Home
+</a>
+
+<a href="#categories">
+📚 Categories
+</a>
+
+<a href="#updates">
+📰 Updates
+</a>
+
+<a href="#monthly">
+📅 Monthly
+</a>
+
+<a href="#sources">
+🌐 Sources
+</a>
+
+<a href="quiz.html">
+📝 Quiz
+</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-icon">
+📰
+</div>
+
+<h2>
+TNPSC Current Affairs
+</h2>
+
+<p>
+Stay updated with important events from Tamil Nadu,
+India and around the world. Use current affairs for
+Group 1, Group 2 and Group 4 preparation.
+</p>
+
+
+<a
+href="#categories"
+class="btn teal">
+
+📚 Explore Categories
+
+</a>
+
+
+<a
+href="quiz.html"
+class="btn red">
+
+📝 Current Affairs Quiz
+
+</a>
+
+
+<a
+href="index.html"
+class="btn green">
+
+🏠 TNPSC Study Hub
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section id="categories">
+
+<h2 class="section-title">
+📚 Current Affairs Categories
+</h2>
+
+
+<div class="category-grid">
+
+
+<div class="category">
+
+<div class="category-icon">
+🏛️
+</div>
+
+<h3>
+Tamil Nadu
+</h3>
+
+<p>
+State government, schemes, policies,
+development and important events.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🇮🇳
+</div>
+
+<h3>
+India
+</h3>
+
+<p>
+National government, politics, economy,
+institutions and major developments.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🌍
+</div>
+
+<h3>
+World
+</h3>
+
+<p>
+International relations, organizations,
+summits and important global events.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏛️
+</div>
+
+<h3>
+Government Schemes
+</h3>
+
+<p>
+Central and Tamil Nadu government schemes
+important for competitive examinations.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🔬
+</div>
+
+<h3>
+Science & Technology
+</h3>
+
+<p>
+Space, AI, technology, health research
+and scientific developments.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏆
+</div>
+
+<h3>
+Sports
+</h3>
+
+<p>
+Important tournaments, championships,
+records, winners and sports awards.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+💰
+</div>
+
+<h3>
+Economy
+</h3>
+
+<p>
+Budget, banking, inflation, trade,
+business and economic developments.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏅
+</div>
+
+<h3>
+Awards & Appointments
+</h3>
+
+<p>
+Important awards, honours, appointments,
+books and authors.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     DAILY CURRENT AFFAIRS
+========================= -->
+
+<section id="updates">
+
+<h2 class="section-title">
+🔥 Important Current Affairs
+</h2>
+
+
+<div class="news-grid">
+
+
+<div class="news-card">
+
+<span class="tag">
+🇮🇳 INDIA
+</span>
+
+<h3>
+Government & National Developments
+</h3>
+
+<p>
+Track important announcements, government
+decisions, national programmes and major
+policy developments.
+</p>
+
+<a
+href="https://www.pib.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn blue">
+
+Read Official Updates
+
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="tag">
+🏛️ TAMIL NADU
+</span>
+
+<h3>
+Tamil Nadu Updates
+</h3>
+
+<p>
+Follow important state government announcements,
+schemes, administration and development news.
+</p>
+
+<a
+href="https://www.tn.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn teal">
+
+Tamil Nadu Government
+
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="tag">
+🔬 SCIENCE
+</span>
+
+<h3>
+Science & Technology
+</h3>
+
+<p>
+Prepare important developments in space,
+technology, science, AI and innovation.
+</p>
+
+<a
+href="https://www.isro.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn purple">
+
+ISRO Updates
+
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="tag">
+💰 ECONOMY
+</span>
+
+<h3>
+Economy & Banking
+</h3>
+
+<p>
+Revise important developments in banking,
+economy, finance, monetary policy and trade.
+</p>
+
+<a
+href="https://www.rbi.org.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn green">
+
+RBI Updates
+
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="tag">
+🌍 WORLD
+</span>
+
+<h3>
+International Affairs
+</h3>
+
+<p>
+Follow important international organizations,
+summits, agreements and global developments.
+</p>
+
+<a
+href="https://www.un.org/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn blue">
+
+UN Updates
+
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="tag">
+🏆 SPORTS
+</span>
+
+<h3>
+Sports Current Affairs
+</h3>
+
+<p>
+Keep track of important tournaments,
+championships, records and achievements.
+</p>
+
+<a
+href="https://www.sports.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn orange">
+
+Sports Updates
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     DAILY UPDATE
+========================= -->
+
+<section class="daily-box">
+
+<h2>
+📅 Daily Current Affairs
+</h2>
+
+<p>
+This section can be updated regularly with
+short TNPSC-focused current affairs summaries.
+</p>
+
+<p>
+<strong>
+Recommended format:
+</strong>
+Date → Event → Important Fact → TNPSC Point → Source
+</p>
+
+<a
+href="#sources"
+class="btn teal">
+
+🌐 View Sources
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     MONTHLY
+========================= -->
+
+<section id="monthly">
+
+<h2 class="section-title">
+📅 Monthly Current Affairs
+</h2>
+
+
+<div class="month-grid">
+
+
+<div class="month-card">
+
+<h3>
+📅 January
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 February
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 March
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 April
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 May
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 June
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 July
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 August
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 September
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 October
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 November
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>
+📅 December
+</h3>
+
+<p>
+Monthly revision section
+</p>
+
+<a href="#sources" class="btn purple">
+Sources
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QUIZ
+========================= -->
+
+<section class="quiz-box">
+
+<h2>
+📝 Current Affairs Quiz
+</h2>
+
+<p>
+Test your knowledge after studying current affairs.
+The existing TNPSC Quiz page can be used for practice.
+</p>
+
+
+<a
+href="quiz.html"
+class="btn red">
+
+🏆 Start Quiz
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     SOURCES
+========================= -->
+
+<section id="sources">
+
+<h2 class="section-title">
+🌐 Useful Current Affairs Sources
+</h2>
+
+
+<div class="source-box">
+
+<p>
+Use reliable and official sources whenever possible.
+TNPSC Study Hub can organize and summarize information
+while students can open the original source for details.
+</p>
+
+
+<div class="source-list">
+
+
+<div class="source">
+
+<h3>
+🇮🇳 Press Information Bureau
+</h3>
+
+<p>
+Official Government of India press releases,
+announcements and explainers.
+</p>
+
+<a
+href="https://www.pib.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn blue">
+
+Open PIB
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<h3>
+🏛️ Tamil Nadu Government
+</h3>
+
+<p>
+Official Tamil Nadu government portal for
+state information and government updates.
+</p>
+
+<a
+href="https://www.tn.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn teal">
+
+Open TN Govt
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<h3>
+🚀 ISRO
+</h3>
+
+<p>
+Official information about India's space
+missions, launches and scientific programmes.
+</p>
+
+<a
+href="https://www.isro.gov.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn purple">
+
+Open ISRO
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<h3>
+💰 Reserve Bank of India
+</h3>
+
+<p>
+Official information about monetary policy,
+banking and financial developments.
+</p>
+
+<a
+href="https://www.rbi.org.in/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn green">
+
+Open RBI
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<h3>
+🌍 United Nations
+</h3>
+
+<p>
+International affairs, global initiatives
+and United Nations developments.
+</p>
+
+<a
+href="https://www.un.org/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn blue">
+
+Open UN
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     COPYRIGHT / CONTENT NOTICE
+========================= -->
+
+<div class="notice">
+
+<h3>
+⚠️ Content & Source Notice
+</h3>
+
+<p>
+TNPSC Study Hub should use original summaries,
+facts and quiz questions. Do not copy complete
+articles, PDFs, images or other copyrighted material
+from another website without permission.
+Use source links so students can read the original
+information.
+</p>
+
+</div>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="cta">
+
+<h2>
+🚀 Make Current Affairs Your Strength
+</h2>
+
+<p>
+Read • Understand • Revise • Practise • Test
+</p>
+
+
+<a
+href="study-materials.html"
+class="btn blue">
+
+📖 Study Materials
+
+</a>
+
+
+<a
+href="quiz.html"
+class="btn red">
+
+📝 Take Quiz
+
+</a>
+
+
+<a
+href="group1-2.html"
+class="btn purple">
+
+🏆 Group 1 & 2
+
+</a>
+
+
+<a
+href="group4.html"
+class="btn green">
+
+📚 Group 4
+
+</a>
+
+
+<a
+href="index.html"
+class="btn teal">
+
+🏠 Home
+
+</a>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h2>
+📚 TNPSC Study Hub
+</h2>
+
+<p>
+Current Affairs • Group 1 • Group 2 • Group 4
+</p>
+
+<br>
+
+<p>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="group1-2.html">
+Group 1 & 2
+</a>
+
+<a href="group4.html">
+Group 4
+</a>
+
+<a href="study-materials.html">
+Study Materials
+</a>
+
+<a href="quiz.html">
+Quiz
+</a>
+
+<a href="jobs.html">
+Jobs
+</a>
+
+<a href="courses.html">
+Courses
+</a>
+
+</p>
+
+<br>
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
