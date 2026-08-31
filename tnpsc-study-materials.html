@@ -1,0 +1,1426 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="TNPSC Study Hub - Group 1, Group 2, Group 4, Tamil, General Studies, Aptitude and Current Affairs study materials.">
+
+<title>Study Materials | TNPSC Study Hub</title>
+
+
+<style>
+
+/* ================================
+   BASIC
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(
+        135deg,
+        #eef7ff,
+        #fff4f8,
+        #f3f0ff
+    );
+    color:#222;
+    line-height:1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header{
+    background:linear-gradient(
+        135deg,
+        #071952,
+        #6a1b9a,
+        #ad1457
+    );
+    color:white;
+    text-align:center;
+    padding:38px 15px;
+}
+
+.logo{
+    font-size:37px;
+    font-weight:bold;
+}
+
+header h1{
+    font-size:30px;
+    margin-top:6px;
+}
+
+header p{
+    margin-top:8px;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav{
+    background:#071952;
+    text-align:center;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+nav a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:8px 13px;
+    margin:3px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#6a1b9a;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    background:white;
+    padding:32px 20px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 7px 20px rgba(0,0,0,.12);
+    margin-bottom:25px;
+}
+
+.hero h2{
+    color:#071952;
+    font-size:29px;
+}
+
+.hero p{
+    color:#666;
+    margin:8px 0 20px;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-box{
+    max-width:650px;
+    margin:auto;
+}
+
+#search{
+    width:100%;
+    padding:15px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+#search:focus{
+    border-color:#6a1b9a;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.section-title{
+    text-align:center;
+    color:#071952;
+    margin:35px 0 20px;
+    font-size:27px;
+}
+
+
+/* ================================
+   MATERIAL CARDS
+================================ */
+
+.material-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.material-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.1);
+    border-top:7px solid #6a1b9a;
+    transition:.2s;
+}
+
+.material-card:hover{
+    transform:translateY(-4px);
+}
+
+.material-card h3{
+    color:#071952;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.material-card p{
+    color:#666;
+    font-size:14px;
+}
+
+.material-card ul{
+    padding-left:20px;
+    margin:12px 0;
+}
+
+.material-card li{
+    margin:5px 0;
+}
+
+
+/* ================================
+   DIFFERENT CARD COLORS
+================================ */
+
+.group1{
+    border-top-color:#c62828;
+}
+
+.group2{
+    border-top-color:#1565c0;
+}
+
+.group4{
+    border-top-color:#2e7d32;
+}
+
+.tamil{
+    border-top-color:#ad1457;
+}
+
+.general{
+    border-top-color:#6a1b9a;
+}
+
+.aptitude{
+    border-top-color:#ef6c00;
+}
+
+.current{
+    border-top-color:#00838f;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:11px 17px;
+    margin:5px 3px;
+    border-radius:9px;
+    font-weight:bold;
+    font-size:14px;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+.red{
+    background:#c62828;
+}
+
+.blue{
+    background:#1565c0;
+}
+
+.green{
+    background:#2e7d32;
+}
+
+.purple{
+    background:#6a1b9a;
+}
+
+.orange{
+    background:#ef6c00;
+}
+
+.teal{
+    background:#00838f;
+}
+
+.dark{
+    background:#263238;
+}
+
+
+/* ================================
+   TOPIC BOX
+================================ */
+
+.topic-box{
+    background:white;
+    padding:24px;
+    border-radius:18px;
+    box-shadow:0 5px 16px rgba(0,0,0,.1);
+    margin-top:20px;
+}
+
+.topic-box h3{
+    color:#6a1b9a;
+    margin-bottom:10px;
+}
+
+.topic-list{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(190px,1fr));
+    gap:10px;
+}
+
+.topic{
+    background:#f5f5f5;
+    padding:12px;
+    border-radius:9px;
+    font-size:14px;
+}
+
+
+/* ================================
+   CURRENT AFFAIRS
+================================ */
+
+.current-box{
+    background:linear-gradient(
+        135deg,
+        #e0f7fa,
+        #e8f5e9
+    );
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+    margin-top:25px;
+}
+
+.current-box h2{
+    color:#006064;
+}
+
+.current-box p{
+    color:#555;
+    margin:8px 0 15px;
+}
+
+
+/* ================================
+   STUDY PLAN
+================================ */
+
+.study-plan{
+    background:linear-gradient(
+        135deg,
+        #ede7f6,
+        #fce4ec
+    );
+    padding:25px;
+    border-radius:20px;
+}
+
+.plan-item{
+    background:white;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
+.plan-item strong{
+    color:#6a1b9a;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta{
+    background:linear-gradient(
+        135deg,
+        #071952,
+        #6a1b9a
+    );
+    color:white;
+    padding:38px 20px;
+    text-align:center;
+    border-radius:20px;
+    margin-top:30px;
+}
+
+.cta h2{
+    font-size:28px;
+}
+
+.cta p{
+    margin:8px 0 18px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    background:#101010;
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+    margin-top:45px;
+}
+
+footer h2{
+    color:#ce93d8;
+}
+
+footer a{
+    color:#b39ddb;
+    text-decoration:none;
+    margin:0 6px;
+}
+
+
+/* ================================
+   HIDDEN SEARCH ITEMS
+================================ */
+
+.hidden{
+    display:none;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:29px;
+    }
+
+    header h1{
+        font-size:23px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:7px 9px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .btn{
+        display:block;
+        max-width:280px;
+        margin:8px auto;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header>
+
+<div class="logo">
+📚 TNPSC Study Hub
+</div>
+
+<h1>
+📖 Study Materials
+</h1>
+
+<p>
+Group 1 • Group 2 • Group 4 • Tamil • General Studies • Aptitude • Current Affairs
+</p>
+
+</header>
+
+
+<!-- =================================
+     NAVIGATION
+================================= -->
+
+<nav>
+
+<a href="index.html">
+🏠 Home
+</a>
+
+<a href="group1-2.html">
+🏆 Group 1 & 2
+</a>
+
+<a href="group4.html">
+📚 Group 4
+</a>
+
+<a href="study-materials.html">
+📖 Materials
+</a>
+
+<a href="quiz.html">
+📝 Quiz
+</a>
+
+<a href="jobs.html">
+💼 Jobs
+</a>
+
+<a href="courses.html">
+🎓 Courses
+</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="hero">
+
+<h2>
+🎯 TNPSC Study Materials Centre
+</h2>
+
+<p>
+Choose a subject below and start your preparation.
+</p>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔎 Search materials...">
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     MAIN MATERIALS
+================================= -->
+
+<h2 class="section-title">
+📚 Choose Your Preparation Area
+</h2>
+
+
+<section
+class="material-grid"
+id="materials">
+
+
+<!-- GROUP 1 -->
+
+<div
+class="material-card group1"
+data-search="group 1 group1 civil services general studies">
+
+<h3>
+🏆 TNPSC Group 1
+</h3>
+
+<p>
+Preparation resources for Group 1 aspirants.
+</p>
+
+<ul>
+
+<li>General Studies</li>
+
+<li>Indian History</li>
+
+<li>Indian Polity</li>
+
+<li>Economy</li>
+
+<li>Geography</li>
+
+<li>Science & Technology</li>
+
+<li>Current Affairs</li>
+
+</ul>
+
+
+<a
+href="group1-2.html"
+class="btn red">
+
+Open Group 1
+
+</a>
+
+
+</div>
+
+
+<!-- GROUP 2 -->
+
+<div
+class="material-card group2"
+data-search="group 2 group2 general studies aptitude tamil">
+
+<h3>
+🥈 TNPSC Group 2
+</h3>
+
+<p>
+Study resources for Group 2 and Group 2A preparation.
+</p>
+
+<ul>
+
+<li>General Studies</li>
+
+<li>General Tamil / English</li>
+
+<li>Aptitude</li>
+
+<li>Mental Ability</li>
+
+<li>Indian Polity</li>
+
+<li>Economy</li>
+
+<li>Current Affairs</li>
+
+</ul>
+
+
+<a
+href="group1-2.html"
+class="btn blue">
+
+Open Group 2
+
+</a>
+
+
+</div>
+
+
+<!-- GROUP 4 -->
+
+<div
+class="material-card group4"
+data-search="group 4 group4 village administration assistant">
+
+<h3>
+📚 TNPSC Group 4
+</h3>
+
+<p>
+Preparation resources for Group 4 examinations.
+</p>
+
+<ul>
+
+<li>General Studies</li>
+
+<li>General Tamil</li>
+
+<li>Aptitude</li>
+
+<li>Current Affairs</li>
+
+<li>History</li>
+
+<li>Geography</li>
+
+<li>Science</li>
+
+</ul>
+
+
+<a
+href="group4.html"
+class="btn green">
+
+Open Group 4
+
+</a>
+
+
+</div>
+
+
+<!-- TAMIL -->
+
+<div
+class="material-card tamil"
+data-search="tamil general tamil grammar literature">
+
+<h3>
+🔤 Tamil
+</h3>
+
+<p>
+Tamil preparation materials and important topics.
+</p>
+
+<ul>
+
+<li>Tamil Grammar</li>
+
+<li>Literature</li>
+
+<li>Authors & Works</li>
+
+<li>Thirukkural</li>
+
+<li>Comprehension</li>
+
+<li>Important Tamil topics</li>
+
+</ul>
+
+
+<a
+href="quiz.html"
+class="btn purple">
+
+Tamil Practice
+
+</a>
+
+
+</div>
+
+
+<!-- GENERAL STUDIES -->
+
+<div
+class="material-card general"
+data-search="general studies history polity geography economy science">
+
+<h3>
+🌏 General Studies
+</h3>
+
+<p>
+Important General Studies subjects for TNPSC.
+</p>
+
+<ul>
+
+<li>History</li>
+
+<li>Polity</li>
+
+<li>Geography</li>
+
+<li>Economy</li>
+
+<li>Science</li>
+
+<li>Environment</li>
+
+<li>Indian Society</li>
+
+</ul>
+
+
+<a
+href="quiz.html"
+class="btn purple">
+
+GS Practice
+
+</a>
+
+
+</div>
+
+
+<!-- APTITUDE -->
+
+<div
+class="material-card aptitude"
+data-search="aptitude maths mathematics mental ability reasoning">
+
+<h3>
+🔢 Aptitude & Mental Ability
+</h3>
+
+<p>
+Improve your speed and accuracy through practice.
+</p>
+
+<ul>
+
+<li>Percentage</li>
+
+<li>Average</li>
+
+<li>Ratio</li>
+
+<li>Profit & Loss</li>
+
+<li>Time & Work</li>
+
+<li>Simple Interest</li>
+
+<li>Reasoning</li>
+
+</ul>
+
+
+<a
+href="quiz.html"
+class="btn orange">
+
+Aptitude Practice
+
+</a>
+
+
+</div>
+
+
+<!-- CURRENT AFFAIRS -->
+
+<div
+class="material-card current"
+data-search="current affairs news tamil nadu india world government schemes">
+
+<h3>
+📰 Current Affairs
+</h3>
+
+<p>
+Important current events for TNPSC preparation.
+</p>
+
+<ul>
+
+<li>Tamil Nadu</li>
+
+<li>India</li>
+
+<li>World</li>
+
+<li>Government Schemes</li>
+
+<li>Economy</li>
+
+<li>Science & Technology</li>
+
+<li>Sports & Awards</li>
+
+</ul>
+
+
+<a
+href="#current-affairs"
+class="btn teal">
+
+Open Section
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+<!-- =================================
+     GENERAL STUDIES TOPICS
+================================= -->
+
+<h2 class="section-title">
+🌏 General Studies – Important Topics
+</h2>
+
+
+<section class="topic-box">
+
+<h3>
+📌 Focus Areas
+</h3>
+
+
+<div class="topic-list">
+
+
+<div class="topic">
+🏛️ Indian History
+</div>
+
+<div class="topic">
+⚔️ Freedom Movement
+</div>
+
+<div class="topic">
+⚖️ Indian Constitution
+</div>
+
+<div class="topic">
+🏛️ Governance
+</div>
+
+<div class="topic">
+🌍 Indian Geography
+</div>
+
+<div class="topic">
+🌾 Agriculture
+</div>
+
+<div class="topic">
+💰 Indian Economy
+</div>
+
+<div class="topic">
+🏦 Banking
+</div>
+
+<div class="topic">
+🔬 General Science
+</div>
+
+<div class="topic">
+🌱 Environment
+</div>
+
+<div class="topic">
+💻 Science & Technology
+</div>
+
+<div class="topic">
+🏛️ Tamil Nadu Administration
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     TAMIL TOPICS
+================================= -->
+
+<h2 class="section-title">
+🔤 Tamil – Important Topics
+</h2>
+
+
+<section class="topic-box">
+
+<h3>
+📖 Tamil Preparation
+</h3>
+
+
+<div class="topic-list">
+
+<div class="topic">
+🔤 Grammar
+</div>
+
+<div class="topic">
+📚 Literature
+</div>
+
+<div class="topic">
+✍️ Authors & Works
+</div>
+
+<div class="topic">
+📜 Thirukkural
+</div>
+
+<div class="topic">
+📝 Vocabulary
+</div>
+
+<div class="topic">
+📖 Comprehension
+</div>
+
+<div class="topic">
+🎭 Tamil Culture
+</div>
+
+<div class="topic">
+🏛️ Tamil History
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     APTITUDE TOPICS
+================================= -->
+
+<h2 class="section-title">
+🔢 Aptitude – Important Topics
+</h2>
+
+
+<section class="topic-box">
+
+<h3>
+📐 Mathematics & Reasoning
+</h3>
+
+
+<div class="topic-list">
+
+<div class="topic">
+Percentage
+</div>
+
+<div class="topic">
+Ratio & Proportion
+</div>
+
+<div class="topic">
+Average
+</div>
+
+<div class="topic">
+Profit & Loss
+</div>
+
+<div class="topic">
+Simple Interest
+</div>
+
+<div class="topic">
+Compound Interest
+</div>
+
+<div class="topic">
+Time & Work
+</div>
+
+<div class="topic">
+Time & Distance
+</div>
+
+<div class="topic">
+Number System
+</div>
+
+<div class="topic">
+HCF & LCM
+</div>
+
+<div class="topic">
+Logical Reasoning
+</div>
+
+<div class="topic">
+Data Interpretation
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =================================
+     CURRENT AFFAIRS
+================================= -->
+
+<section
+class="current-box"
+id="current-affairs">
+
+<h2>
+📰 Current Affairs
+</h2>
+
+<p>
+Use this section to organize your daily current-affairs preparation.
+</p>
+
+<p>
+Focus on Tamil Nadu, India, international events,
+government schemes, economy, science, sports and awards.
+</p>
+
+
+<a
+href="quiz.html"
+class="btn teal">
+
+📝 Current Affairs Practice
+
+</a>
+
+</section>
+
+
+<!-- =================================
+     STUDY PLAN
+================================= -->
+
+<h2 class="section-title">
+📅 Daily Study Plan
+</h2>
+
+
+<section class="study-plan">
+
+
+<div class="plan-item">
+
+<strong>
+🌅 Morning – General Studies
+</strong>
+
+<p>
+Study History, Polity, Geography or Economy.
+</p>
+
+</div>
+
+
+<div class="plan-item">
+
+<strong>
+☀️ Afternoon – Tamil / Language
+</strong>
+
+<p>
+Practise grammar, literature and comprehension.
+</p>
+
+</div>
+
+
+<div class="plan-item">
+
+<strong>
+🌆 Evening – Aptitude
+</strong>
+
+<p>
+Solve mathematics and reasoning problems.
+</p>
+
+</div>
+
+
+<div class="plan-item">
+
+<strong>
+🌙 Night – Current Affairs
+</strong>
+
+<p>
+Revise important events and government schemes.
+</p>
+
+</div>
+
+
+<div class="plan-item">
+
+<strong>
+⏱️ Weekly – Mock Test
+</strong>
+
+<p>
+Take a timed mock examination and analyse mistakes.
+</p>
+
+</div>
+
+
+</section>
+
+
+<!-- =================================
+     QUICK ACTIONS
+================================= -->
+
+<h2 class="section-title">
+⚡ Quick Actions
+</h2>
+
+
+<section class="hero">
+
+
+<a
+href="quiz.html"
+class="btn red">
+
+📝 100 Question Mock Test
+
+</a>
+
+
+<a
+href="group1-2.html"
+class="btn purple">
+
+🏆 Group 1 & 2
+
+</a>
+
+
+<a
+href="group4.html"
+class="btn green">
+
+📚 Group 4
+
+</a>
+
+
+<a
+href="index.html"
+class="btn blue">
+
+🏠 Home
+
+</a>
+
+
+</section>
+
+
+<!-- =================================
+     CTA
+================================= -->
+
+<section class="cta">
+
+<h2>
+🚀 Keep Learning. Keep Practising.
+</h2>
+
+<p>
+Your consistency today can build your success tomorrow.
+</p>
+
+
+<a
+href="quiz.html"
+class="btn red">
+
+🏁 Take Mock Test
+
+</a>
+
+
+<a
+href="index.html"
+class="btn purple">
+
+🏠 Back to Home
+
+</a>
+
+</section>
+
+
+</main>
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+<h2>
+📚 TNPSC Study Hub
+</h2>
+
+<p>
+Learn • Practise • Revise • Test • Succeed
+</p>
+
+<br>
+
+
+<p>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="group1-2.html">
+Group 1 & 2
+</a>
+
+<a href="group4.html">
+Group 4
+</a>
+
+<a href="study-materials.html">
+Study Materials
+</a>
+
+<a href="quiz.html">
+Quiz
+</a>
+
+<a href="jobs.html">
+Jobs
+</a>
+
+<a href="courses.html">
+Courses
+</a>
+
+</p>
+
+
+<br>
+
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+<!-- =================================
+     SEARCH SCRIPT
+================================= -->
+
+<script>
+
+const searchBox =
+document.getElementById("search");
+
+const cards =
+document.querySelectorAll(
+    ".material-card"
+);
+
+
+searchBox.addEventListener(
+    "input",
+    function(){
+
+        const searchText =
+        this.value
+        .toLowerCase()
+        .trim();
+
+
+        cards.forEach(
+            function(card){
+
+                const keywords =
+                card
+                .getAttribute("data-search")
+                .toLowerCase();
+
+
+                if(
+                    keywords.includes(searchText)
+                ){
+
+                    card.classList.remove(
+                        "hidden"
+                    );
+
+                }
+                else{
+
+                    card.classList.add(
+                        "hidden"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
+```
