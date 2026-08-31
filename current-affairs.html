@@ -961,34 +961,103 @@ UN Updates
 
 <span class="tag">
 🏆 SPORTS
-</span>
-<<section class="card">
-    <h2>🏆 Sports Current Affairs</h2>
+```html
+<!-- SPORTS CURRENT AFFAIRS -->
+
+<section class="card sports-card">
+
+    <div class="card-icon">
+        🏆
+    </div>
+
+    <h2>Sports Current Affairs</h2>
 
     <p>
         Keep track of important tournaments, championships,
-        records and achievements.
+        records, achievements and major sports news for TNPSC preparation.
     </p>
 
- <a href=/"https://yas.gov.in/target="_blank" class="btn">
-        🏅 Sports Updates
-    </a>
+    <div class="button-group">
+
+        <!-- Sports Current Affairs -->
+        <a href="https://yas.gov.in/sports"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="sports-btn">
+            📰 Sports Current Affairs
+        </a>
+
+        <!-- Sports Updates -->
+        <a href="https://yas.gov.in/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="sports-btn update-btn">
+            🏆 Sports Updates
+        </a>
+
+    </div>
+
 </section>
 
-target="_blank"
-rel="noopener noreferrer"
-class="btn orange">
 
-Sports Updates
+<style>
 
-</a>
+.sports-card{
+    background:linear-gradient(135deg,#fff8e1,#e3f2fd);
+    border:2px solid #ffca28;
+    text-align:center;
+    padding:25px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.10);
+}
 
-</div>
+.card-icon{
+    font-size:45px;
+    margin-bottom:8px;
+}
 
+.sports-card h2{
+    color:#0d47a1;
+    font-size:25px;
+    margin:8px 0;
+}
 
-</div>
+.sports-card p{
+    color:#444;
+    line-height:1.6;
+    margin-bottom:20px;
+}
 
-</section>
+.button-group{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.sports-btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#1565c0,#283593);
+    color:white;
+    text-decoration:none;
+    padding:13px 20px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.sports-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.update-btn{
+    background:linear-gradient(135deg,#ef6c00,#d84315);
+}
+
+</style>
+```
 
 
 <!-- =========================
