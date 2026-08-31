@@ -1,0 +1,1077 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MCQ Practice | TNPSC Study Hub</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef7ff,#fff2f7,#f1edff);
+    color:#222;
+}
+
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#071952,#4527a0,#ad1457);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+.logo{
+    font-size:34px;
+    font-weight:bold;
+}
+
+header h1{
+    margin-top:8px;
+    font-size:28px;
+}
+
+header p{
+    margin-top:6px;
+}
+
+
+/* NAV */
+
+nav{
+    background:#061344;
+    text-align:center;
+    padding:11px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+    padding:8px 11px;
+    margin:3px;
+    border-radius:18px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#6a1b9a;
+}
+
+
+/* MAIN */
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+
+/* START SCREEN */
+
+.start-box{
+    background:white;
+    padding:40px 25px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.start-icon{
+    font-size:60px;
+}
+
+.start-box h2{
+    color:#071952;
+    font-size:30px;
+    margin:10px 0;
+}
+
+.start-box p{
+    color:#666;
+    max-width:700px;
+    margin:10px auto 20px;
+}
+
+
+/* BUTTON */
+
+.btn{
+    border:none;
+    color:white;
+    padding:13px 22px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:5px;
+}
+
+.start-btn{
+    background:#6a1b9a;
+}
+
+.next-btn{
+    background:#1565c0;
+}
+
+.restart-btn{
+    background:#2e7d32;
+}
+
+.home-btn{
+    background:#263238;
+}
+
+.btn:hover{
+    opacity:.9;
+    transform:translateY(-1px);
+}
+
+
+/* QUIZ */
+
+.quiz-box{
+    display:none;
+    background:white;
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+
+/* TOP */
+
+.quiz-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:15px;
+}
+
+.question-number{
+    background:#071952;
+    color:white;
+    padding:8px 13px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.score{
+    background:#e8f5e9;
+    color:#1b5e20;
+    padding:8px 13px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+
+/* PROGRESS */
+
+.progress-container{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background:#6a1b9a;
+    transition:.3s;
+}
+
+
+/* QUESTION */
+
+.question{
+    font-size:22px;
+    font-weight:bold;
+    color:#071952;
+    margin-bottom:20px;
+}
+
+
+/* OPTIONS */
+
+.options{
+    display:grid;
+    gap:12px;
+}
+
+.option{
+    background:#f7f8fc;
+    border:2px solid #ddd;
+    border-radius:12px;
+    padding:15px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.2s;
+}
+
+.option:hover{
+    border-color:#6a1b9a;
+    background:#f3e5f5;
+}
+
+.option.selected{
+    border-color:#6a1b9a;
+    background:#ede7f6;
+    font-weight:bold;
+}
+
+.option.correct{
+    border-color:#2e7d32;
+    background:#e8f5e9;
+    color:#1b5e20;
+}
+
+.option.wrong{
+    border-color:#c62828;
+    background:#ffebee;
+    color:#b71c1c;
+}
+
+
+/* RESULT MESSAGE */
+
+.result-message{
+    display:none;
+    margin-top:20px;
+    padding:16px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.correct-message{
+    background:#e8f5e9;
+    color:#1b5e20;
+}
+
+.wrong-message{
+    background:#ffebee;
+    color:#b71c1c;
+}
+
+
+/* EXPLANATION */
+
+.explanation{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    background:#fff8e1;
+    border-left:5px solid #ff9800;
+    border-radius:8px;
+}
+
+.explanation strong{
+    color:#e65100;
+}
+
+
+/* NEXT */
+
+.next-area{
+    text-align:center;
+    margin-top:20px;
+}
+
+
+/* RESULT */
+
+.final-result{
+    display:none;
+    background:white;
+    padding:40px 25px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.final-result .trophy{
+    font-size:70px;
+}
+
+.final-result h2{
+    color:#071952;
+    font-size:30px;
+}
+
+.final-score{
+    font-size:45px;
+    font-weight:bold;
+    color:#6a1b9a;
+    margin:15px;
+}
+
+.result-text{
+    font-size:18px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#101010;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    margin-top:40px;
+}
+
+footer h2{
+    color:#ce93d8;
+    margin-bottom:8px;
+}
+
+footer a{
+    color:#b39ddb;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:28px;
+    }
+
+    header h1{
+        font-size:23px;
+    }
+
+    nav a{
+        font-size:11px;
+        padding:7px 8px;
+    }
+
+    .quiz-box{
+        padding:18px;
+    }
+
+    .question{
+        font-size:19px;
+    }
+
+    .option{
+        font-size:15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+📚 TNPSC Study Hub
+</div>
+
+<h1>
+📝 TNPSC MCQ Practice
+</h1>
+
+<p>
+Choose the correct answer and test your preparation
+</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="group1-2.html">🏆 Group 1 & 2</a>
+
+<a href="group4.html">📚 Group 4</a>
+
+<a href="study-materials.html">📖 Materials</a>
+
+<a href="current-affairs.html">📰 Current Affairs</a>
+
+<a href="quiz.html">⏱️ Mock Test</a>
+
+<a href="jobs.html">💼 Jobs</a>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- START -->
+
+<section class="start-box" id="startBox">
+
+<div class="start-icon">
+📝
+</div>
+
+<h2>
+TNPSC Practice Test
+</h2>
+
+<p>
+This practice test contains 30 multiple-choice questions.
+Select one answer for each question. Your answer will
+be checked immediately.
+</p>
+
+<p>
+<strong>
+Subjects:
+</strong>
+Tamil • General Studies • Polity • History • Geography • Aptitude
+</p>
+
+<button class="btn start-btn" onclick="startQuiz()">
+🚀 Start Practice
+</button>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-box" id="quizBox">
+
+
+<div class="quiz-top">
+
+<div class="question-number" id="questionNumber">
+Question 1 / 30
+</div>
+
+<div class="score" id="score">
+Score: 0
+</div>
+
+</div>
+
+
+<div class="progress-container">
+
+<div class="progress" id="progress"></div>
+
+</div>
+
+
+<div class="question" id="questionText">
+Question
+</div>
+
+
+<div class="options" id="options">
+</div>
+
+
+<div class="result-message" id="resultMessage">
+</div>
+
+
+<div class="explanation" id="explanation">
+</div>
+
+
+<div class="next-area">
+
+<button
+class="btn next-btn"
+id="nextButton"
+onclick="nextQuestion()"
+style="display:none;">
+Next Question ➡️
+</button>
+
+</div>
+
+
+</section>
+
+
+<!-- FINAL RESULT -->
+
+<section class="final-result" id="finalResult">
+
+<div class="trophy">
+🏆
+</div>
+
+<h2>
+Practice Completed!
+</h2>
+
+<div class="final-score" id="finalScore">
+0 / 30
+</div>
+
+<div class="result-text" id="resultText">
+</div>
+
+
+<button
+class="btn restart-btn"
+onclick="restartQuiz()">
+🔄 Try Again
+</button>
+
+
+<a href="index.html" class="btn home-btn">
+🏠 Home
+</a>
+
+
+<a href="study-materials.html" class="btn start-btn">
+📖 Study Materials
+</a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<h2>
+📚 TNPSC Study Hub
+</h2>
+
+<p>
+Study • Practise • Improve • Succeed
+</p>
+
+<br>
+
+<p>
+
+<a href="index.html">Home</a>
+
+<a href="study-materials.html">Study Materials</a>
+
+<a href="current-affairs.html">Current Affairs</a>
+
+<a href="quiz.html">Mock Test</a>
+
+</p>
+
+<br>
+
+<p>
+© 2026 TNPSC Study Hub
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* QUESTION BANK */
+
+const questions = [
+
+{
+q:"தமிழ் எழுத்துக்கள் மொத்தம் எத்தனை?",
+options:["216","247","246","250"],
+answer:1,
+explanation:"தமிழில் 12 உயிரெழுத்துகள், 18 மெய்யெழுத்துகள், 216 உயிர்மெய் எழுத்துகள் மற்றும் 1 ஆய்த எழுத்து உள்ளன. மொத்தம் 247."
+},
+
+{
+q:"திருக்குறளை இயற்றியவர் யார்?",
+options:["கம்பர்","திருவள்ளுவர்","இளங்கோ அடிகள்","சீத்தலைச் சாத்தனார்"],
+answer:1,
+explanation:"திருக்குறளின் ஆசிரியர் திருவள்ளுவர்."
+},
+
+{
+q:"சிலப்பதிகாரத்தை இயற்றியவர் யார்?",
+options:["கம்பர்","இளங்கோ அடிகள்","ஔவையார்","சேக்கிழார்"],
+answer:1,
+explanation:"சிலப்பதிகாரத்தை இயற்றியவர் இளங்கோ அடிகள்."
+},
+
+{
+q:"திருக்குறளில் மொத்தம் எத்தனை குறள்கள் உள்ளன?",
+options:["1300","1330","1350","1200"],
+answer:1,
+explanation:"திருக்குறளில் 133 அதிகாரங்களும் 1330 குறள்களும் உள்ளன."
+},
+
+{
+q:"இந்திய அரசியலமைப்பின் பாதுகாவலர் என்று அழைக்கப்படுவது எது?",
+options:["நாடாளுமன்றம்","உச்சநீதிமன்றம்","குடியரசுத் தலைவர்","தேர்தல் ஆணையம்"],
+answer:1,
+explanation:"இந்திய உச்சநீதிமன்றம் அரசியலமைப்பின் பாதுகாவலராகக் கருதப்படுகிறது."
+},
+
+{
+q:"இந்திய அரசியலமைப்பின் அடிப்படை உரிமைகள் எந்தப் பகுதியில் உள்ளன?",
+options:["பகுதி I","பகுதி II","பகுதி III","பகுதி IV"],
+answer:2,
+explanation:"அடிப்படை உரிமைகள் அரசியலமைப்பின் பகுதி III-ல் உள்ளன."
+},
+
+{
+q:"இந்தியாவில் வாக்களிக்கும் குறைந்தபட்ச வயது என்ன?",
+options:["16","18","21","25"],
+answer:1,
+explanation:"இந்தியாவில் பொதுத் தேர்தல்களில் வாக்களிக்கும் குறைந்தபட்ச வயது 18."
+},
+
+{
+q:"இந்தியாவின் முதல் குடியரசுத் தலைவர் யார்?",
+options:["டாக்டர் ராஜேந்திர பிரசாத்","ஜவஹர்லால் நேரு","சர்தார் படேல்","டாக்டர் அம்பேத்கர்"],
+answer:0,
+explanation:"டாக்டர் ராஜேந்திர பிரசாத் இந்தியாவின் முதல் குடியரசுத் தலைவர்."
+},
+
+{
+q:"இந்திய அரசியலமைப்பு நடைமுறைக்கு வந்த நாள் எது?",
+options:["15 ஆகஸ்ட் 1947","26 ஜனவரி 1950","26 நவம்பர் 1949","2 அக்டோபர் 1950"],
+answer:1,
+explanation:"இந்திய அரசியலமைப்பு 26 ஜனவரி 1950 அன்று நடைமுறைக்கு வந்தது."
+},
+
+{
+q:"இந்திய அரசியலமைப்பின் தந்தை என்று அழைக்கப்படுபவர் யார்?",
+options:["மகாத்மா காந்தி","டாக்டர் பி.ஆர். அம்பேத்கர்","நேரு","ராஜேந்திர பிரசாத்"],
+answer:1,
+explanation:"டாக்டர் பி.ஆர். அம்பேத்கர் அரசியலமைப்பின் வரைவுக் குழுவின் தலைவராக இருந்தார்."
+},
+
+{
+q:"சோழர்களால் கட்டப்பட்ட புகழ்பெற்ற கோயில் எது?",
+options:["மீனாட்சி அம்மன் கோயில்","பிரகதீஸ்வரர் கோயில்","கபாலீஸ்வரர் கோயில்","ராமநாதசுவாமி கோயில்"],
+answer:1,
+explanation:"தஞ்சாவூரில் உள்ள பிரகதீஸ்வரர் கோயில் சோழர் காலத்தின் சிறப்புமிக்க கட்டிடக்கலை ஆகும்."
+},
+
+{
+q:"Quit India Movement எந்த ஆண்டு தொடங்கப்பட்டது?",
+options:["1930","1935","1942","1947"],
+answer:2,
+explanation:"வெள்ளையனே வெளியேறு இயக்கம் 1942 ஆம் ஆண்டு தொடங்கப்பட்டது."
+},
+
+{
+q:"இந்தியாவின் தேசிய விலங்கு எது?",
+options:["சிங்கம்","யானை","புலி","மயில்"],
+answer:2,
+explanation:"இந்தியாவின் தேசிய விலங்கு வங்காளப் புலி."
+},
+
+{
+q:"இந்தியாவின் தேசிய பறவை எது?",
+options:["கிளி","மயில்","கழுகு","அன்னம்"],
+answer:1,
+explanation:"இந்தியாவின் தேசிய பறவை இந்திய மயில்."
+},
+
+{
+q:"தமிழ்நாட்டின் தலைநகரம் எது?",
+options:["மதுரை","கோயம்புத்தூர்","திருச்சி","சென்னை"],
+answer:3,
+explanation:"தமிழ்நாட்டின் தலைநகரம் சென்னை."
+},
+
+{
+q:"தமிழ்நாட்டின் கிழக்கில் அமைந்துள்ள கடல் எது?",
+options:["அரபிக்கடல்","வங்காள விரிகுடா","இந்தியப் பெருங்கடல் மட்டும்","செங்கடல்"],
+answer:1,
+explanation:"தமிழ்நாட்டின் கிழக்குப் பகுதியில் வங்காள விரிகுடா அமைந்துள்ளது."
+},
+
+{
+q:"உலகின் மிகப்பெரிய பெருங்கடல் எது?",
+options:["அட்லாண்டிக்","இந்திய","பசிபிக்","ஆர்க்டிக்"],
+answer:2,
+explanation:"பசிபிக் பெருங்கடல் உலகின் மிகப்பெரிய பெருங்கடல்."
+},
+
+{
+q:"பூமியின் வளிமண்டலத்தில் அதிகமாக உள்ள வாயு எது?",
+options:["ஆக்சிஜன்","நைட்ரஜன்","கார்பன் டை ஆக்சைடு","ஹைட்ரஜன்"],
+answer:1,
+explanation:"பூமியின் வளிமண்டலத்தில் நைட்ரஜன் மிக அதிக அளவில் உள்ளது."
+},
+
+{
+q:"ஒளிச்சேர்க்கைக்கு தேவையான முக்கிய ஆற்றல் மூலம் எது?",
+options:["சந்திரன்","சூரிய ஒளி","காற்று","மண்"],
+answer:1,
+explanation:"தாவரங்கள் ஒளிச்சேர்க்கையின் போது சூரிய ஒளியை ஆற்றல் மூலமாகப் பயன்படுத்துகின்றன."
+},
+
+{
+q:"மனித உடலில் இரத்தத்தை பம்ப் செய்யும் உறுப்பு எது?",
+options:["நுரையீரல்","இதயம்","சிறுநீரகம்","கல்லீரல்"],
+answer:1,
+explanation:"இதயம் உடல் முழுவதும் இரத்தத்தை பம்ப் செய்கிறது."
+},
+
+{
+q:"நீரின் வேதியியல் வாய்பாடு என்ன?",
+options:["CO2","O2","H2O","NaCl"],
+answer:2,
+explanation:"நீரின் வேதியியல் வாய்பாடு H2O."
+},
+
+{
+q:"25 + 35 = ?",
+options:["50","55","60","65"],
+answer:2,
+explanation:"25 + 35 = 60."
+},
+
+{
+q:"200-ன் 10% எவ்வளவு?",
+options:["10","20","30","40"],
+answer:1,
+explanation:"200 × 10 / 100 = 20."
+},
+
+{
+q:"144 ÷ 12 = ?",
+options:["10","11","12","14"],
+answer:2,
+explanation:"144 ÷ 12 = 12."
+},
+
+{
+q:"3² இன் மதிப்பு என்ன?",
+options:["6","9","12","18"],
+answer:1,
+explanation:"3 × 3 = 9."
+},
+
+{
+q:"2, 4, 6, 8, ?",
+options:["9","10","11","12"],
+answer:1,
+explanation:"ஒவ்வொரு எண்ணிலும் 2 சேர்க்கப்படுகிறது. அடுத்த எண் 10."
+},
+
+{
+q:"ஒரு பேனாவின் விலை ₹10 என்றால் 5 பேனாக்களின் விலை என்ன?",
+options:["₹40","₹45","₹50","₹60"],
+answer:2,
+explanation:"10 × 5 = ₹50."
+},
+
+{
+q:"ஒரு மணி நேரத்தில் எத்தனை நிமிடங்கள்?",
+options:["30","45","60","100"],
+answer:2,
+explanation:"ஒரு மணி நேரம் = 60 நிமிடங்கள்."
+},
+
+{
+q:"இந்தியாவின் மத்திய வங்கி எது?",
+options:["SBI","RBI","SEBI","NABARD"],
+answer:1,
+explanation:"Reserve Bank of India (RBI) இந்தியாவின் மத்திய வங்கி."
+},
+
+{
+q:"GDP என்பதன் விரிவாக்கம் என்ன?",
+options:[
+"Gross Domestic Product",
+"General Development Plan",
+"Government Domestic Policy",
+"Gross Development Programme"
+],
+answer:0,
+explanation:"GDP என்பது Gross Domestic Product என்பதன் சுருக்கம்."
+},
+
+{
+q:"இந்தியாவில் தேர்தல்களை நடத்தும் அரசியலமைப்பு அமைப்பு எது?",
+options:[
+"UPSC",
+"Election Commission of India",
+"RBI",
+"Finance Commission"
+],
+answer:1,
+explanation:"இந்திய தேர்தல் ஆணையம் நாட்டின் தேர்தல்களை நடத்துகிறது."
+}
+
+];
+
+
+/* VARIABLES */
+
+let currentQuestion = 0;
+
+let score = 0;
+
+let answered = false;
+
+
+/* START */
+
+function startQuiz(){
+
+    document.getElementById("startBox").style.display="none";
+
+    document.getElementById("quizBox").style.display="block";
+
+    currentQuestion=0;
+
+    score=0;
+
+    loadQuestion();
+
+}
+
+
+/* LOAD QUESTION */
+
+function loadQuestion(){
+
+    answered=false;
+
+    const q=questions[currentQuestion];
+
+    document.getElementById("questionNumber").textContent =
+        "Question " + (currentQuestion+1) + " / " + questions.length;
+
+    document.getElementById("score").textContent =
+        "Score: " + score;
+
+    document.getElementById("questionText").textContent=q.q;
+
+
+    const optionsDiv=document.getElementById("options");
+
+    optionsDiv.innerHTML="";
+
+
+    q.options.forEach((option,index)=>{
+
+        const div=document.createElement("div");
+
+        div.className="option";
+
+        div.innerHTML =
+            "<strong>" +
+            String.fromCharCode(65+index) +
+            ")</strong> " +
+            option;
+
+        div.onclick=function(){
+
+            selectAnswer(index,div);
+
+        };
+
+        optionsDiv.appendChild(div);
+
+    });
+
+
+    document.getElementById("progress").style.width =
+        ((currentQuestion)/questions.length*100)+"%";
+
+
+    document.getElementById("resultMessage").style.display="none";
+
+    document.getElementById("explanation").style.display="none";
+
+    document.getElementById("nextButton").style.display="none";
+
+}
+
+
+/* SELECT ANSWER */
+
+function selectAnswer(index,element){
+
+    if(answered) return;
+
+    answered=true;
+
+    const q=questions[currentQuestion];
+
+    const allOptions=document.querySelectorAll(".option");
+
+
+    allOptions.forEach(option=>{
+        option.style.pointerEvents="none";
+    });
+
+
+    if(index===q.answer){
+
+        score++;
+
+        element.classList.add("correct");
+
+        document.getElementById("resultMessage").className =
+            "result-message correct-message";
+
+        document.getElementById("resultMessage").textContent =
+            "✅ Correct Answer!";
+
+    }else{
+
+        element.classList.add("wrong");
+
+        allOptions[q.answer].classList.add("correct");
+
+        document.getElementById("resultMessage").className =
+            "result-message wrong-message";
+
+        document.getElementById("resultMessage").textContent =
+            "❌ Incorrect Answer";
+
+    }
+
+
+    document.getElementById("resultMessage").style.display="block";
+
+
+    document.getElementById("explanation").innerHTML =
+        "<strong>Explanation:</strong> " +
+        q.explanation;
+
+    document.getElementById("explanation").style.display="block";
+
+
+    document.getElementById("score").textContent =
+        "Score: " + score;
+
+
+    document.getElementById("nextButton").style.display="inline-block";
+
+}
+
+
+/* NEXT */
+
+function nextQuestion(){
+
+    currentQuestion++;
+
+    if(currentQuestion < questions.length){
+
+        loadQuestion();
+
+    }else{
+
+        showResult();
+
+    }
+
+}
+
+
+/* RESULT */
+
+function showResult(){
+
+    document.getElementById("quizBox").style.display="none";
+
+    document.getElementById("finalResult").style.display="block";
+
+
+    document.getElementById("finalScore").textContent =
+        score + " / " + questions.length;
+
+
+    const percentage =
+        Math.round((score/questions.length)*100);
+
+
+    let message="";
+
+
+    if(percentage>=90){
+
+        message="🌟 Excellent! Your preparation is very strong.";
+
+    }else if(percentage>=75){
+
+        message="👏 Very good! Keep practising and revise regularly.";
+
+    }else if(percentage>=50){
+
+        message="👍 Good effort! More revision will improve your score.";
+
+    }else{
+
+        message="📚 Keep studying. Try the test again after revision.";
+
+    }
+
+
+    document.getElementById("resultText").innerHTML =
+        "Your Score: <strong>" +
+        percentage +
+        "%</strong><br><br>" +
+        message;
+
+}
+
+
+/* RESTART */
+
+function restartQuiz(){
+
+    document.getElementById("finalResult").style.display="none";
+
+    document.getElementById("quizBox").style.display="block";
+
+    currentQuestion=0;
+
+    score=0;
+
+    loadQuestion();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
